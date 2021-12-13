@@ -1,0 +1,148 @@
+-
+    let myClassPart = "specialFeaturesP2Series"
+    let myClass = "specialFeatures122021"
+    let localPath = "./../../_images/p1/"
+    let metaTitle = "Special Features P2"
+//-  colors
+-   let silverLakeBlue = "color-silverLakeBlue"; // #5785B7 lakeblue
+-   let burlywood = "color-burlywood"; // #DFBA79 lightbrown
+-   let independence = "color-independence"; // #4F576C darkgray
+-   let operaMauve = "color-operaMauve"; // #BC7DAA pink
+-   let grenSheen = "color-grenSheen"; // #6CAB9C green
+-   let elecBrown = "color-elecBrown"; // #53A5B4 green
+-   let roseDust = "color-roseDust"; // #9D5F72  green
+
+-
+ let cards = [
+     {
+        class: "color-operaMauve",
+        label: "第1の皿",
+        title: "東海",
+        body: "XYTK 代表取締役社長<br>XY 専務執行役員<br>商業不動産サポート事業部<br>担当",
+        name: "東浦 定宏"
+     },
+     {
+        class: "color-elecBrown",
+        label: "第1の皿",
+        title: "PBM/工事/FM/警備/清掃",
+        body: "XY 執行役員<br>不動産マネジメント部<br>業務推進部<br>担当",
+        name: "吉田 源弘"
+     },
+     {
+        class: "color-roseDust",
+        label: "第1の皿",
+        title: "関西",
+        body: "XYK 代表取締役社長",
+        name: "吉田 正"
+     },
+ ]
+
+ let profile = [
+     {
+        no: "第1の皿",
+        labelText: "東海",
+        description: "東海エリアに密着して、不動産の管理運営業務をワンストップで総合的に担う。",
+        bubbleContent: "いまはチャンスの時！<br>必ず会社は大きくなる！<br>その自信があるよ。",
+        body: "XYTK 代表取締役社長<br>XY 専務執行役員<br>商業不動産サポート事業部<br>担当",
+        profName: "東浦 定宏",
+        img: "article121021_prof_kv-01.png"
+     },
+ ]
+
+ let questContent = [
+    {
+        qNo: "Q1.",
+        title: "なぜ今期、中部支社からXYTKへと会社<br class='u-pcDb'>化したのでしょうか？",
+        body: "グループの1皿事業の総和で1,000億円規模を目指している今。中部東海エリアでは、これまでのみんなの頑張りで、売上も今期50億円の着地が見えて、事業の足腰が整い、さらに加えて、地元の事業法人と戦略的パートナー関係を築くチャンスができて、事業飛躍の大チャンスを目の前にしている。<span class='specialFeatures122021__questItemContentTextBold'>「事業基盤が整い、拡大の目途が立った」ことから、会社化が決定</span>されました。",
+    },
+    {
+        qNo: "Q2.",
+        title: "東海マーケットの特徴は？<br>いま、どんなことを描いているんですか？",
+        body: "東京・大阪と違って、名古屋はオフィス市場規模には限界がある。東海グループでは<span class='specialFeatures122021__questItemContentTextBold'>2025年100億円の売上を目指してる</span>けど、オフィスPBMだけでは、頑張っても75億円ぐらい。なので、新たな挑戦も必要になるんです！そのために、商業施設に加え、<span class='specialFeatures122021__questItemContentTextBold'>製造業の街・名古屋で工場や物流など新アセット</span>を獲りに行きたい。近い将来トヨタグループ様にも挑戦したいよね！<br><br>そのためには、PBMにとどまらず、<span class='specialFeatures122021__questItemContentTextBold'>事業会社の不動産パートナーポジション</span>も獲りに行く。バロー様とは、今期工事売上を15億円に伸ばす等、ここ数年で取引を拡大中。また名鉄様とは、駅ナカなど保有資産の有効活用に取り組み続け、今期新設された「名鉄プロパティマネジメント㈱」を起点に大きな取り組みへと発展させます。このように、<span class='specialFeatures122021__questItemContentTextBold'>企業の経営に入り込み、不動産パートナーとして大きくビジネスをする。</span>グループで規模拡大を目指す以上、今までの延長線上ではないやり方が必要。その試金石に、東海は挑みます。",
+    },
+    {
+        qNo: "Q3.",
+        title: "なぜ、XYTKは多くの地元優良大手企業と<br>タッグを組めているのでしょう？",
+        body: "「タッグを組む」っていうのは「一つ一つの仕事をください～」ということではなくて「企業の経営に入り込み、不動産パートナーになる」ことで、<span class=''>「もう全部任せるよ」</span>という状態になってるのが理想形なんだよね。<br><br>でも、入り込むための処方箋なんて無いし、逆にそこにこだわりすぎると、卑屈になる。僕らの強みであるPBMの仕事のやり方とか、長年培った実績とか、極めてシンプルな事が一番大事になるんだよ。そして、<span class='specialFeatures122021__questItemContentTextBold'>事業法人にとって「自分のために、自分の横に座って、一緒にやってくれるパートナー」</span>が求められている時に、それならＸＹ！って言われるようでありたいよね。",
+    },
+ ]
+
+doctype html
+html(lang="en")
+    include ../_inc/_head.pug
+    body
+        .secSingle(class=`${myClass}`)
+            .secSingle__content(class=`${myClassPart}`)
+                article.specialFeatures122021__wrapper
+                    .specialFeatures122021__cards.col3
+                        -
+                        each card in cards
+                            .specialFeatures122021__cardsItem(class=card.class)
+                                .specialFeatures122021__cardsItemLabel
+                                    p.specialFeatures122021__cardsItemLabelText=card.label
+                                .specialFeatures122021__cardsItemTitle
+                                    p.specialFeatures122021__cardsItemTitleText=card.title
+                                .specialFeatures122021__cardsItemBody
+                                    p.specialFeatures122021__cardsItemBodyContent!=card.body
+                                .specialFeatures122021__cardsItemAuthor
+                                    p.specialFeatures122021__cardsItemAuthorName!=card.name
+                                        span.specialFeatures122021__cardsItemAuthorNameExtra さん
+                    |
+                    |
+                    .specialFeatures122021__inner
+                        .specialFeatures122021__innerBorder
+                            .specialFeatures122021__prof
+                                .specialFeatures122021__profLabel
+                                    p.specialFeatures122021__profLabelNo=profile[0].no
+                                    span.specialFeatures122021__profLabelText=profile[0].labelText
+                                p.specialFeatures122021__profDesc=profile[0].description
+                                .specialFeatures122021__profFlex
+                                    .specialFeatures122021__profContent
+                                        .specialFeatures122021__profContentBuble
+                                            p.specialFeatures122021__profContentBubleData=profile[0].bubbleContent
+                                        p.specialFeatures122021__profContentText=profile[0].body
+                                        .specialFeatures122021__profContentName
+                                            p.specialFeatures122021__profContentNameText=profile[0].profName
+                                                span.specialFeatures122021__profContentNameExt さん
+                                    figure.specialFeatures122021__profKv
+                                        img.specialFeatures122021__profKvImg(src=`./../../_images/p2/${profile[0].img}`)
+                            .specialFeatures122021__quest
+                                .specialFeatures122021__questItem: each item in questContent
+                                    .specialFeatures122021__questItemHeader
+                                        p.specialFeatures122021__questItemHeaderNo=item.qNo
+                                        h2.specialFeatures122021__questItemHeaderNo!=item.title
+                                    .specialFeatures122021__questItemContent
+                                        p.specialFeatures122021__questItemContentText!=item.body
+                        |
+                        |
+                        .specialFeatures122021__qoute
+                            .specialFeatures122021__qouteText Web版限定記事へ
+
+                    .specialFeatures122021__closing
+                        .specialFeatures122021__closingHeader
+                            figure.specialFeatures122021__closingHeaderKv
+                                img.specialFeatures122021__closingHeaderImg(src=``, alt="")
+                        ul.specialFeatures122021__closingList
+                            li.specialFeatures122021__closingListText
+                                | プロレス好きな（そして、見かけによらずスイーツ男子で机の中に必ず甘いものを常備されている）東浦定宏さん、若い頃から社内イベントでアントニオ猪木の「1・2・3・ダー！」で場を盛り上げてきたそうですが、実は本当に一番好きだったのは長州力らしい。（XYTK 不マネ　平石和明／名鉄プロパティマネジメント㈱出向　杉原大介）
+                |
+                |
+                .specialFeatures122021__footer
+                    .specialFeatures122021__next.karitLeft(class=`${operaMauve}`)
+                        p.specialFeatures122021__nextText NEXT
+                        a.specialFeatures122021__nextItem(href="")
+                            span.specialFeatures122021__nextItemLabel.label32 第1の皿
+                            p.specialFeatures122021__nextItemTitle.title24 東海
+
+                    .specialFeatures122021__next.karitRight(class=`${independence}`)
+                        a.specialFeatures122021__nextItem(href="")
+                            span.specialFeatures122021__nextItemLabel.label30
+                                | 事業
+                                small.specialFeatures122021__nextItemLabelSm の
+                                | いま
+                            span.specialFeatures122021__nextItemYear.year16 2021
+                            p.specialFeatures122021__nextItemTitle.title15 登場事業一覧はこちら
+                            figure.specialFeatures122021__nextItemIcon.floatIcon01.icon-dotBr
+                                img.specialFeatures122021__nextItemIconImg(src=`./../../_images/p1/article121021_icon_dotLeft-burlywood.png`, alt=``)
+                            figure.specialFeatures122021__nextItemIcon.floatIcon02.icon-exClamBl
+                                img.specialFeatures122021__nextItemIconImg(src=`./../../_images/p1/article121021_icon_exClamRight-silverlakeblue.png`, alt=``)
