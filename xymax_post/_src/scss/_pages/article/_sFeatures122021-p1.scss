@@ -1,0 +1,1253 @@
+.secSingle.specialFeatures122021 {}
+
+.secSingle__content.specialFeaturesP1 {}
+
+.secSingle__content.specialFeaturesP1-02 {}
+
+.specialFeaturesP1 {}
+
+.specialFeatures122021 {
+  // variables
+  $silverLakeBlue: #5785B7;
+  $burlywood: #DFBA79;
+  $independence: #4F576C;
+  $operaMauve: #BC7DAA;
+  $grenSheen: #6CAB9C;
+
+  $white: #fff;
+  $black: #000;
+
+  // shared / common
+  %title-41 {
+    font-size: 41px;
+    line-height: 1.4;
+    font-weight: bold;
+
+    @include u-mqMax {
+      font-size: 26px;
+    }
+  }
+
+  %title-40 {
+    font-size: 40px;
+    line-height: 1.4;
+    font-weight: bold;
+  }
+
+  %title-40vw {
+    font-size: 40px;
+    line-height: 1.4;
+    font-weight: bold;
+
+    @include u-mqMax {
+      font-size: 7.5vw;
+    }
+  }
+
+  %title-30 {
+    font-size: 30px;
+    line-height: 1.4;
+    font-weight: bold;
+
+    @include u-mqMax {
+      font-size: 5.469vw;
+    }
+  }
+
+  %title-32 {
+    font-size: 32px;
+    line-height: 1.4;
+    font-weight: bold;
+
+    @include u-mqMax {
+      font-size: 5vw;
+    }
+  }
+
+  %title-24 {
+    font-size: 24px;
+    line-height: 1.4;
+    font-weight: bold;
+
+    @include u-mqMax {
+      font-size: 4.375vw;
+    }
+  }
+
+  %title-24vw {
+    font-size: 24px;
+    line-height: 1.4;
+    font-weight: bold;
+
+    @include u-mqMax {
+      font-size: 4.375vw;
+    }
+  }
+
+  %title-23 {
+    font-size: 23px;
+    line-height: 1.4;
+    font-weight: bold;
+
+    @include u-mqMax {
+      font-size: 16px;
+    }
+  }
+
+  %title-20 {
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: bold;
+
+    @include u-mqMax {
+      font-size: 10vw;
+    }
+  }
+
+  %title-20vw {
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: bold;
+
+    @include u-mqMax {
+      font-size: 3.125vw;
+    }
+  }
+
+  %labelTitle-18 {
+    height: 47px;
+    color: $white;
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 36px;
+    background: $independence;
+    @include u-flex($fd: row, $fw: nowrap, $jc: center, $ai: center);
+
+    @include u-mqMax {
+      font-size: 16px;
+      padding: 0 15px;
+      height: 30px;
+      padding: 0 4.69vw;
+      height: 9.38vw;
+      font-size: 5vw;
+    }
+  }
+
+  %title-18 {
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: bold;
+
+    @include u-mqMax {
+      font-size: 16px;
+    }
+  }
+
+  %title-18vw {
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: bold;
+
+    @include u-mqMax {
+      font-size: 5vw;
+    }
+  }
+
+  %title-16 {
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: bold;
+
+    @include u-mqMax {
+      font-size: 9px;
+      display: block;
+    }
+  }
+
+  %title-15 {
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: bold;
+
+    @include u-mqMax {
+      font-size: 3.125vw;
+    }
+  }
+
+  %description-17 {
+    font-size: 17px;
+    line-height: 1.6;
+
+    @include u-mqMax {
+      font-size: 4.375vw;
+    }
+  }
+
+  %description-17vw {
+    font-size: 17px;
+    line-height: 1.6;
+
+    @include u-mqMax {
+      font-size: 4.69vw;
+    }
+  }
+
+  %description-16 {
+    font-size: 16px;
+    line-height: 1.6;
+
+    @include u-mqMax {
+      font-size: 2.813vw;
+    }
+  }
+
+
+  &__wrapper {
+    .specialFeaturesP1-02 & {
+      width: 100%;
+      max-width: 855px;
+      margin: 0 auto;
+      border-radius: 30px;
+      padding: 20px;
+      background: $independence;
+
+      @include u-mqMax {
+        background: none;
+        border-radius: 0;
+        width: 100%;
+        padding: 0 3.623vw;
+        box-sizing: border-box;
+        background: $independence;
+      }
+    }
+
+  }
+
+  &__inner {
+    background: $white;
+    border-radius: 30px;
+  }
+
+  &__intro {
+    @extend %title-18vw;
+    text-align: center;
+    padding: 97px 0 60px;
+
+    @include u-mqMax {
+      padding: 40px 0 110px;
+      text-align: left;
+    }
+  }
+
+  &__data {
+    position: relative;
+    width: 100%;
+    max-width: 698px;
+    border-top: 3px solid $independence;
+    margin: 0 auto;
+    padding: 75px 0 20px;
+
+    @include u-mqMax {
+      // padding: 170px 0 210px;
+      border-top: 7.5px solid $independence;
+      border-bottom: 7.5px solid $independence;
+
+      padding: 53.13vw 0 65.63vw;
+    }
+  }
+
+  &__dataFloatKv {
+    // remove me later
+    // opacity: 0;
+
+    &.floatKv01,
+    &.floatKv02,
+    &.floatKv03 {
+      position: absolute;
+    }
+
+    &.floatKv01 {
+      width: 158px;
+      left: 0;
+      top: 35px;
+
+      @include u-mqMax {
+        top: 25px;
+        width: 129px;
+
+        top: 7.81vw;
+        width: 40.31vw;
+      }
+    }
+
+    &.floatKv02 {
+      width: 160px;
+      right: 0;
+      top: 43px;
+
+      @include u-mqMax {
+        // width: 130px;
+        // top: 51px;
+
+        width: 40.63vw;
+        top: 15.94vw;
+      }
+    }
+
+    &.floatKv03 {
+      top: 191px;
+      right: 25px;
+      width: 145px;
+
+      @include u-mqMax {
+        right: -3.623vw;
+        // top: -20px;
+        // width: 110px;
+
+        top: -6.25vw;
+        width: 34.38vw;
+      }
+    }
+
+    &.floatKv04 {
+      width: 280px;
+
+      @include u-mqMax {
+        position: absolute;
+        // left: -3.623vw;
+        // top: 5px;
+        // width: 175px;
+
+        left: -3.623vw;
+        top: 1.563vw;
+        width: 54.688vw;
+      }
+    }
+
+    &.floatKv05 {
+      width: 196px;
+      margin-top: 11px;
+
+      @include u-mqMax {
+        position: absolute;
+        // top: 61px;
+        // right: 65px;
+        // width: 107px;
+
+        top: 19.063vw;
+        right: 20.313vw;
+        width: 33.438vw;
+      }
+    }
+  }
+
+  &__dataFloatFlex {
+    @include u-flex($fd: row, $fw: nowrap, $jc: space-between, $ai: flex-start);
+    padding: 0 20px;
+    margin-top: -28px;
+
+    @include u-mqMax {
+      margin-top: 0;
+      padding: 0;
+
+      @include u-mqMax {
+        position: relative;
+      }
+    }
+  }
+
+  &__dataFloatImg {}
+
+  &__dataTitle {
+    @include u-flex($fd: row, $fw: nowrap, $jc: center, $ai: center);
+  }
+
+  &__dataTitleText {
+    @extend %labelTitle-18;
+  }
+
+  &__dataLabel {
+    width: 100%;
+    height: 60px;
+    max-width: 297px;
+    margin: 32px auto 0;
+    border-top: 2px solid $independence;
+    border-bottom: 2px solid $independence;
+    @include u-flex($fd: row, $fw: nowrap, $jc: space-between, $ai: center);
+
+    @include u-mqMax {
+      // height: 4.267vw;
+      // max-width: 240px;
+
+      height: 10vw;
+      max-width: 75vw;
+    }
+  }
+
+  &__dataLabelItem {
+    // width: 50%;
+    white-space: nowrap;
+    @include u-flex($fd: row, $fw: nowrap, $jc: flex-start, $ai: center);
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: black;
+      margin-right: 8px;
+
+      @include u-mqMax {
+        width: 10px;
+        height: 10px;
+        margin-right: 3px;
+
+        width: 3.125vw;
+        height: 3.125vw;
+        margin-right: 0.938vw;
+      }
+    }
+
+    &.color-silverLakeBlue {
+      &:before {
+        background: $silverLakeBlue;
+      }
+    }
+
+    &.color-burlywood {
+      &:before {
+        background: $burlywood;
+      }
+    }
+  }
+
+  &__dataLabelItemText {
+    @extend %title-18vw;
+
+    @include u-mqMax {
+      letter-spacing: 0;
+    }
+  }
+
+  &__dataTable {
+    width: 100%;
+    position: relative;
+    margin-top: 60px;
+    padding-bottom: 30px;
+
+    @include u-mqMax {
+      margin-top: 30px;
+    }
+
+    &:before {
+      content: '';
+      top: 0;
+      left: 120px;
+      position: absolute;
+      height: 100%;
+      border-left: 2px dashed $independence;
+
+      @include u-mqMax {
+        // left: 65px;
+        left: 20.31vw;
+        height: 95%;
+        border-left: 2px dashed $independence;
+      }
+    }
+  }
+
+  &__dataItem {
+    width: 100%;
+    @include u-flex($fd: row, $fw: nowrap, $jc: flex-start, $ai: stretch);
+
+    &:not(:first-child) {
+      margin-top: 50px;
+
+      @include u-mqMax {
+        margin-top: 35px;
+      }
+    }
+
+    @include u-mqMax {
+      &:first-child {
+        .specialFeatures122021__dataRightList {
+          margin-top: 8.75vw;
+        }
+      }
+    }
+  }
+
+  &__dataLeft {
+    width: 118px;
+    padding-right: 26px;
+
+    @include u-mqMax {
+      // width: 65px;
+      // padding-right: 10px;
+      width: 20.31vw;
+      padding-right: 3.13vw;
+    }
+  }
+
+  &__dataLeftDate {
+    @extend %description-17vw;
+    text-align: right;
+    font-weight: bold;
+
+    @include u-mqMax {
+      letter-spacing: 0;
+    }
+  }
+
+  &__dataRight {
+    flex: 1;
+    margin-left: 27px;
+
+    @include u-mqMax {
+      margin-left: 14px;
+    }
+  }
+
+  &__dataRightList {
+    @include u-flex($fd: row, $fw: wrap, $jc: flex-start, $ai: stretch);
+    position: relative;
+    padding-left: 20px;
+
+    @include u-mqMax {
+      // padding-left: 15px;
+      padding-left: 4.69vw;
+    }
+
+    &:not(:first-child) {
+      margin-top: 5px;
+
+      @include u-mqMax {
+        // margin-top: 15px;
+        margin-top: 4.69vw;
+      }
+    }
+
+    &:before {
+      content: '';
+      top: 5px;
+      left: 0;
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      border-radius: 50%;
+
+      @include u-mqMax {
+        // width: 10px;
+        // height: 10px;
+        // top: 6px;
+        width: 3.13vw;
+        height: 3.13vw;
+        top: 1.88vw;
+      }
+    }
+
+    &.color-silverLakeBlue {
+      &:before {
+        background: $silverLakeBlue;
+      }
+    }
+
+    &.color-burlywood {
+      &:before {
+        background: $burlywood;
+      }
+    }
+
+    &.ml90 {
+      margin-left: 90px;
+
+      &:before {
+        content: none;
+      }
+    }
+  }
+
+  &__dataRightListNo,
+  &__dataRightListText {
+    position: relative;
+    z-index: 1;
+
+    @include u-mqMax {
+      letter-spacing: 0.04em;
+    }
+
+    &:before {
+      content: '';
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+    }
+
+    .color-silverLakeBlue & {
+      &:before {
+        background: $silverLakeBlue;
+      }
+    }
+
+    .color-burlywood & {
+      &:before {
+        background: $burlywood;
+      }
+    }
+
+  }
+
+  &__dataRightListNo {
+    min-width: 90px;
+    @extend %description-17vw;
+    font-weight: bold;
+
+    @include u-mqMax {
+      // min-width: 40px;
+      min-width: 12.5vw;
+    }
+  }
+
+  &__dataRightListText {
+    @extend %description-17vw;
+    font-weight: bold;
+
+    &.mt5 {
+      margin-top: 5px;
+
+      @include u-mqMax {
+        // width: 100%;
+        // margin-right: 17px;
+      }
+    }
+  }
+
+  &__footer {
+    margin-top: 108px;
+
+    @include u-mqMax {
+      .specialFeaturesP1-02 & {
+        margin-top: 9.375vw;
+      }
+    }
+
+    // remove me later
+    padding-bottom: 300px;
+  }
+
+  &__next {
+
+    .specialFeaturesP1 & {
+      width: 428px;
+      margin: 0 auto;
+
+      @include u-mqMax {
+        // width: 262px;
+        width: 81.875vw;
+      }
+    }
+
+    .specialFeaturesP1-02 & {
+      width: 240px;
+      margin: 0 auto;
+
+      @include u-mqMax {
+        // width: 100%;
+        width: 37.5vw;
+      }
+
+      &:not(:first-child) {
+        margin-top: 120px;
+
+        @include u-mqMax {
+          margin-top: 12.5vw;
+          width: 48.438vw;
+        }
+      }
+    }
+  }
+
+  &__nextText {
+    @extend %title-20;
+
+    .specialFeaturesP1 &,
+    .specialFeaturesP1-02 & {
+      @extend %title-20vw;
+    }
+
+    .color-independence & {
+      color: $independence;
+    }
+
+    .color-operaMauve & {
+      color: $operaMauve;
+    }
+  }
+
+  &__nextItem {
+    padding: 20px 48px;
+    display: block;
+    text-align: center;
+    border-radius: 65px;
+    position: relative;
+    @include u-trs;
+
+    @include u-mqMax {
+      padding: 15px 25px;
+    }
+
+    &:hover {
+      opacity: .7;
+    }
+
+    &:before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 17px solid transparent;
+      border-right: 17px solid transparent;
+      top: 80%;
+      position: absolute;
+      z-index: -1;
+
+      @include u-mqMax {
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        top: auto;
+        bottom: -15px;
+
+        .specialFeaturesP1-02 & {
+          border-left: 3.125vw solid transparent;
+          border-right: 3.125vw solid transparent;
+        }
+
+        .specialFeaturesP1 & {
+          border-left: 3.125vw solid transparent;
+          border-right: 3.125vw solid transparent;
+        }
+      }
+    }
+
+    .color-independence & {
+      background: $independence;
+    }
+
+    .color-operaMauve & {
+      background: $operaMauve;
+    }
+
+    .karitLeft & {
+      &::before {
+        left: 49%;
+        transform: rotate(-45deg);
+      }
+    }
+
+    .karitRight & {
+      &::before {
+        right: 42%;
+        transform: rotate(45deg);
+      }
+    }
+
+    .karitLeft.color-independence & {
+      &::before {
+        border-top: 51px solid $independence;
+
+        .specialFeaturesP1 & {
+          border-top: 9.688vw solid $independence;
+        }
+      }
+    }
+
+    .karitRight.color-independence & {
+      &::before {
+        border-top: 51px solid $independence;
+
+        @include u-mqMax {
+          border-top: 7.813vw solid $independence;
+        }
+      }
+    }
+
+    .karitLeft.color-operaMauve & {
+      &::before {
+        border-top: 7.813vw solid $operaMauve;
+      }
+    }
+  }
+
+  &__nextItemLabel,
+  &__nextItemTitle {
+    color: $white;
+  }
+
+  &__nextItemLabel {
+    &.label24 {
+      @extend %title-24;
+
+      .specialFeaturesP1 & {
+        @extend %title-24vw;
+      }
+    }
+
+    &.label32 {
+      @extend %title-32;
+    }
+
+    &.label30 {
+      @extend %title-30;
+    }
+  }
+
+  &__nextItemTitle {
+    &.title40 {
+      @extend %title-40;
+
+      .specialFeaturesP1 & {
+        @extend %title-40vw;
+      }
+    }
+
+    &.title24 {
+      @extend %title-24;
+    }
+
+    &.title15 {
+      @extend %title-15;
+      letter-spacing: 0;
+    }
+  }
+
+  &__nextItemLabelSm {
+    @extend %description-16;
+    font-weight: normal;
+  }
+
+  &__nextItemYear {
+    color: $white;
+
+    &.year16 {
+      @extend %title-16;
+    }
+  }
+
+  &__nextItemIcon {
+
+    &.floatIcon01,
+    &.floatIcon02 {
+      position: absolute;
+    }
+
+    &.floatIcon01 {
+      top: 0;
+      left: -28px;
+
+      .specialFeaturesP1-02 & {
+        width: 68px;
+        top: -21px;
+        left: -26px;
+      }
+    }
+
+    &.floatIcon02 {
+      bottom: -12px;
+      right: -16px;
+
+      .specialFeaturesP1-02 & {
+        width: 52px;
+
+        @include u-mqMax {
+          width: 13.438vw;
+          right: -24px;
+        }
+      }
+    }
+
+    &.icon-dotBr {}
+
+    &.icon-exClamBl {}
+  }
+
+  // End of part 1 - 01
+
+
+  // Start of part 1 - 02
+  &__box {
+    background: $independence;
+    padding: 30px 20px 118px;
+
+    @include u-mqMax {
+      padding: 7.813vw 3.623vw 29.063vw;
+    }
+  }
+
+  &__boxHeader {
+    margin-bottom: 50px;
+
+    @include u-mqMax {
+      margin-bottom: 16.25vw;
+    }
+  }
+
+  &__boxHeaderTitle {
+    text-align: center;
+
+    &.titleSm {
+      @extend %title-23;
+      color: $white;
+    }
+
+    &.titleLg {
+      @extend %title-41;
+      color: $white;
+    }
+  }
+
+  &__boxMessages {}
+
+  &__boxMessagesItem {
+    background: $white;
+    border-radius: 55.5px;
+    padding: 35px;
+    position: relative;
+    @include u-flex($fd: row, $fw: wrap, $jc: flex-start, $ai: flex-start);
+
+    @include u-mqMax {
+      width: 100% !important;
+      padding: 6.25vw 4.688vw;
+      border-radius: 8.5vw;
+    }
+
+    &:nth-child(even) {
+      margin: 0 0 0 auto;
+    }
+
+    &:not(:first-child) {
+      margin-top: 30px;
+
+      @include u-mqMax {
+        margin-top: 10vw;
+      }
+    }
+
+    &.karitLeft,
+    &.karitRight {
+      &:before {
+        content: '';
+        position: absolute;
+        width: 42px;
+        height: 33px;
+        bottom: -21px;
+      }
+    }
+
+    &.karitRight {
+      &:before {
+        background: url(./../../_images/p1/article121021_icon_karitRight-white.png);
+        background-size: 100% 100%;
+        right: 116px;
+
+        @include u-mqMax {
+          right: 23vw;
+        }
+      }
+    }
+
+    &.karitLeft {
+      &:before {
+        background: url(./../../_images/p1/article121021_icon_karitLeft-white.png);
+        background-size: 100% 100%;
+        left: 110px;
+
+        @include u-mqMax {
+          left: 19.875vw;
+        }
+      }
+    }
+
+    &.w675 {
+      width: 675px;
+    }
+
+    &.w495 {
+      width: 495px;
+    }
+
+    &.w552 {
+      width: 522px;
+    }
+
+    &.w510 {
+      width: 510px;
+    }
+
+    &.w621 {
+      width: 621px;
+    }
+
+    &.w510 {
+      width: 510px;
+    }
+
+    &.w565 {
+      width: 565px;
+    }
+
+    &.w535 {
+      width: 535px;
+      margin-right: 60px;
+    }
+
+    &.w534 {
+      width: 534px;
+    }
+
+    &.w556 {
+      width: 556px;
+    }
+
+    &.w554 {
+      width: 554px;
+      margin-left: 60px;
+
+      @include u-mqMax {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__boxMessagesItemContentText {
+    @extend %description-17;
+  }
+
+  &__boxMessagesItemContent {
+    flex: 1;
+  }
+
+  &__boxMessagesProf {
+    width: 79px;
+    height: 79px;
+    margin: 12px 20px 0 0;
+
+    @include u-mqMax {
+      width: 12.5vw;
+      margin: 0 4.688vw 0 0;
+    }
+
+    .noMt & {
+      margin-top: 0;
+    }
+  }
+
+  &__boxMessagesIcon {
+    position: absolute;
+
+    .icon-qMarkGr & {
+      width: 123px;
+
+      @include u-mqMax {
+        width: 19.375vw;
+      }
+    }
+
+    .icon-qMarkGr.icon-dotBr & {
+      &:nth-child(3) {
+        width: 123px;
+
+        @include u-mqMax {
+          width: 19.375vw;
+        }
+      }
+    }
+
+    .icon-dotBr & {
+      width: 163px;
+
+      @include u-mqMax {
+        width: 25.313vw;
+      }
+    }
+
+    .icon-exClamBl121 & {
+      width: 121px;
+
+      @include u-mqMax {
+        width: 19.375vw;
+      }
+    }
+
+    .icon-exClamBl & {
+      width: 139px;
+
+      @include u-mqMax {
+        width: 18.75vw;
+      }
+    }
+
+    .icon-qMarkBr & {
+      width: 184px;
+
+      @include u-mqMax {
+        width: 28.75vw;
+      }
+    }
+
+    // positioning
+    .messagesItem1 & {
+      top: -85px;
+      right: -110px;
+
+      @include u-mqMax {
+        top: -17.875vw;
+        left: 0;
+        right: auto;
+      }
+    }
+
+    .messagesItem1.icon-qMarkGr & {
+
+      &:nth-child(3) {
+        left: 7px;
+        top: -100px;
+
+      }
+
+      @include u-mqMax {
+        &:nth-child(5) {
+          left: auto;
+          top: auto;
+          right: 0;
+          width: 19.063vw;
+          bottom: -52px;
+          z-index: 2;
+        }
+
+      }
+    }
+
+    .messagesItem2 & {
+      top: 45px;
+      left: -146px;
+
+      @include u-mqMax {
+        top: auto;
+        bottom: -20px;
+        left: -5px;
+      }
+    }
+
+    .messagesItem3 & {
+      top: 60px;
+      right: -146px;
+
+      @include u-mqMax {
+        top: auto;
+        right: -12px;
+        bottom: -42px;
+        z-index: 2;
+      }
+    }
+
+    .messagesItem4 & {
+      top: 0;
+      left: -210px;
+
+      @include u-mqMax {
+        top: auto;
+        bottom: -47px;
+        left: 0;
+        width: 21.875vw;
+        z-index: 2;
+      }
+    }
+
+    .messagesItem5 & {
+      top: 60px;
+      right: -146px;
+
+      @include u-mqMax {
+        top: auto;
+        bottom: -26px;
+        right: -5px;
+      }
+    }
+
+    .messagesItem6 & {
+      top: 23px;
+      left: -169px;
+
+      @include u-mqMax {
+        display: none;
+      }
+    }
+
+    .messagesItem7 & {
+      top: 20px;
+      right: -185px;
+
+      @include u-mqMax {
+        top: auto;
+        right: auto;
+        bottom: -24px;
+        width: 25.313vw;
+        left: -15px;
+      }
+    }
+
+    .messagesItem8 & {
+      top: 15px;
+      left: -189px;
+
+      @include u-mqMax {
+        top: auto;
+        left: auto;
+        bottom: -54px;
+        right: -10px;
+        width: 19.063vw;
+        z-index: 2;
+      }
+    }
+
+    .messagesItem9 & {
+      top: 0;
+      right: -185px;
+
+      @include u-mqMax {
+        display: none;
+      }
+    }
+
+    .messagesItem10 & {
+      top: 30px;
+      left: -210px;
+
+      @include u-mqMax {
+        top: auto;
+        bottom: -45px;
+        left: 0;
+        width: 19.063vw;
+        z-index: 2;
+      }
+    }
+
+    .messagesItem11 & {
+      top: 60%;
+      right: -175px;
+
+      @include u-mqMax {
+        top: auto;
+        bottom: -58px;
+        right: 0;
+        width: 25.313vw;
+      }
+    }
+  }
+
+  // End of part 1 - 02
+}

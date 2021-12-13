@@ -1,0 +1,171 @@
+@mixin u-visualEditArea {
+  font-size: 17px;
+  line-height: 1.6;
+
+  @include u-mqMax($maxW: $windowSP) {
+    font-size: 4.1vw;
+  }
+
+  * {
+    margin-top: 1.75em;
+
+    &:nth-child(1) {
+      margin-top: 0;
+    }
+  }
+
+  a {
+    @include u-trsPC;
+    @include u-hoverOp;
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: 34px;
+    line-height: 1.4;
+
+    @include u-mqMax($maxW: $windowSP) {
+      font-size: 6.76vw;
+    }
+  }
+
+  h2 {
+    margin-top: 2em;
+    font-size: 34px;
+    line-height: 1.6;
+
+    @include u-mqMax($maxW: $windowSP) {
+      font-size: 7.24vw;
+    }
+  }
+
+  h3 {
+    font-size: 22px;
+    line-height: 1.6;
+
+    @include u-mqMax($maxW: $windowSP) {
+      font-size: 5.31vw;
+    }
+  }
+
+  h4,h5,h6 {
+    font-size: 16px;
+    line-height: 1.6;
+
+    @include u-mqMax($maxW: $windowSP) {
+      font-size: 3.86vw;
+    }
+  }
+
+  hr {
+    border-bottom: 0;
+    border-top: 1px solid $blue;
+    border-style: outset;
+  }
+
+  h1 + h2,
+  h2 + h3,
+  h3 + h4,
+  h4 + h5,
+  h5 + h6 {
+    margin-top: 0.5em;
+  }
+  p {
+    margin-top: 0.5em;
+    font-size: 17px;
+    line-height: 1.6;
+
+    @include u-mqMax($maxW: $windowSP) {
+      font-size: 4.1vw;
+    }
+  }
+  strong {
+    font-weight: bold;
+    
+    * {
+      font-weight: bold;
+    }
+  }
+
+  em {
+    font-style: italic;
+  
+    * {
+      font-style: italic;
+    }
+  }
+  ul {list-style-type: disc;}
+  ol {list-style-type: decimal;}
+  ul,ol {
+    margin-top: 1em;
+    padding-left: 1.4em;
+
+    li {
+      margin-top: 0.6em;
+      line-height: 1.5;
+    }
+  }
+  sup,sub {font-size: 10px;}
+  table {
+    margin-top: 3em;
+    width: 100% !important;
+    height: auto !important;
+    border-collapse: collapse;
+
+    thead {
+      th,td {
+        font-weight: bold;
+        text-align: center;
+      }
+    }
+
+    tr {
+      th,td {
+        padding: 15px 20px;
+        border: $black 1px solid;
+        line-height: 1.5;
+        text-align: left;
+        vertical-align: middle;
+      }
+
+      th {
+        width: 25%;
+        font-weight: bold;
+        text-align: center;
+      }
+    }
+  }
+
+  img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    margin-top: 2em;
+
+    &.alignnone,
+    &.alignleft {
+      &:not(:first-child) {
+        margin-top: 2em;  
+      }
+    }
+
+    &.aligncenter {
+      display: block;
+
+      &:not(:first-child) {
+        margin: 2em auto 0;
+      }
+    }
+
+    &.alignright {
+      display: block;
+
+      &:not(:first-child) {
+        margin: 2em 0 0 auto;
+      }
+    }
+  }
+}

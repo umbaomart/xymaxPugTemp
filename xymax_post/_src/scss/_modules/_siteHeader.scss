@@ -1,0 +1,552 @@
+/*====================================================================
+siteHeader
+====================================================================*/
+.siteHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include u-flex(row, nowrap, space-between, flex-end);
+  padding: 20px 0 0 20px;
+  height: 93px;
+  width: 100%;
+  background: $white;
+  box-sizing: border-box;
+  z-index: 5;
+  border-bottom: 1px solid $gray;
+  min-width: 1280px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 8;
+  }
+
+  .logged-in & {
+    top: $wpAdminBarPC;
+  }
+
+  &__logo {
+    position: relative;
+    max-width: 483px;
+    margin-bottom: 18px;
+    z-index: 20;
+    @include u-trs();
+    @include u-hoverOp();
+  }
+
+  &__navMenu {
+    @include u-flex(row, nowrap, space-between, flex-end);
+  }
+
+  &__navList {
+    @include u-flex(row, nowrap, space-between, flex-end);
+    z-index: 10;
+  }
+
+  &__navLi {
+    &:not(:first-child) {
+      margin-left: 30px;
+    }
+  }
+
+  .js-linkSerial {
+    padding-right: 30px;
+    margin-right: -30px;
+    padding-left: 30px;
+    margin-left: 0;
+
+    &:hover {
+      .siteHeader__tag {
+        //display: block;
+      }
+    }
+  }
+
+  &__navLink {
+    position: relative;
+    display: block;
+    color: $black02;
+    font-size: 16px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    @include u-trs();
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 0;
+      height: 2px;
+      background: $green;
+      @include u-trs();
+    }
+
+    &:hover,
+    &.u-hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  &__searchBtn {
+    position: relative;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    display: block;
+    width: 125.56px;
+    height: 55.56px;
+    background-image: url("../images/common/ico_search.svg");
+    background-size: 35.56px auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    @include u-trs($duration: 0.2s);
+    z-index: 10;
+
+    @include u-mqMin {
+      &:hover,
+      &.u-hover {
+        transform: scale(1.4);
+        background-image: url("../images/common/ico_search_hover.svg");
+      }
+
+      &:hover + .siteHeader__searchCont {
+        top: calc(100% + 1px);
+        opacity: 1;
+      }
+    }
+  }
+
+  &__tag {
+    padding: 15px 0 15px;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    background: $white;
+    z-index: 10;
+
+    &:hover {
+      display: block;
+    }
+  }
+
+  &__tagInner {
+    @include u-flex(row, nowrap, flex-start, flex-start);
+    padding: 8px 15px 0;
+    margin: 0 auto;
+    max-width: $innerContent;
+    color: $green;
+  }
+
+  &__tagName {
+    margin-right: 20px;
+    min-width: 82px;
+    font-size: 17px;
+    letter-spacing: 0.2em;
+  }
+
+  &__tagCont {
+    margin-top: -8px;
+    margin-left: 20px;
+    @include u-flex(row, wrap, flex-start, flex-start);
+  }
+
+  &__tagLink {
+    margin-bottom: 15px;
+    padding: 10px;
+    color: $green;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    border: 1px solid $green;
+    border-radius: 50px;
+    box-sizing: border-box;
+    @include u-trs();
+
+    &:hover {
+      background: $green;
+      color: $white;
+    }
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  &__searchCont {
+    padding: 28px;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    background: $white;
+    opacity: 1;
+    z-index: 6;
+    @include u-trs();
+
+    &:hover {
+      top: calc(100% + 1px);
+      opacity: 1;
+    }
+  }
+
+  &__searchInner {
+    @include u-flex(row, nowrap, center, center);
+    margin: 0 auto;
+    max-width: $innerContent;
+    color: $green;
+  }
+
+  &__searchTxt {
+    padding: 11px 20px;
+    width: 550px;
+    height: 58px;
+    font-size: 17px;
+    line-height: 2;
+    letter-spacing: 0.1em;
+    border: 1px solid $green;
+    box-sizing: border-box;
+  }
+
+  &__searchItem {
+    @include u-flex(row, nowrap, center, center);
+  }
+
+  &__searchSubmit {
+    display: block;
+    width: 58px;
+    height: 58px;
+    background-image: url("../images/common/ico_search_bar.svg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    outline: none;
+    @include u-trs();
+    @include u-hoverOp();
+  }
+
+  &__searchTags {
+    margin-left: 25px;
+    padding: 14px 16px;
+    display: block;
+    color: $green;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    border: 1px solid $green;
+    border-radius: 50px;
+    @include u-trs();
+
+    &:hover {
+      background: $green;
+      color: $white;
+    }
+  }
+}
+
+@include u-mqMax {
+  .siteHeader {
+    min-width: auto;
+    height: 14.49vw;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    border-width: 0.242vw;
+    border-bottom: 1px solid $gray;
+
+    .logged-in & {
+      top: 46px;
+    }
+
+    .menu {
+      position: absolute;
+      top: 50%;
+      left: 2.41vw;
+      transform: translateY(-50%);
+      display: block;
+      text-align: center;
+      z-index: 20;
+
+      &__btn {
+        margin: 0 auto;
+        display: block;
+        position: relative;
+        width: 8.45vw;
+        height: 8.45vw;
+        z-index: 5;
+        outline: none;
+      }
+
+      &__btn::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 8.45vw;
+        height: 3px;
+        border-radius: 4.83vw;
+        background: $green;
+      }
+
+      &__btnBar {
+        position: absolute;
+        top: 3.62vw;
+        right: 0;
+        width: 8.45vw;
+        height: 3px;
+        border-radius: 4.83vw;
+        background: $green;
+      }
+
+      &__btn::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 7.24vw;
+        right: 0;
+        width: 8.45vw;
+        height: 3px;
+        border-radius: 4.83vw;
+        background: $green;
+      }
+    }
+
+    .js--menu__btn {
+      &::before {
+        border-top-color: $green02;
+        top: 3.3vw;
+        transform: rotate(135deg);
+        transition: top 0.17s ease, -webkit-transform 0.13s ease-out 0.23s,
+          transform 0.13s ease-out 0.23s !important;
+      }
+
+      .menu__btnBar {
+        opacity: 0;
+        right: 5px;
+        transition: opacity 0.15s ease 0.05s, right 0.15s ease 0s;
+      }
+
+      &::after {
+        border-top-color: $green02;
+        top: 3.3vw;
+        transform: rotate(45deg);
+        transition: top 0.17s ease, -webkit-transform 0.13s ease-out 0.23s,
+          transform 0.13s ease-out 0.23s !important;
+      }
+    }
+
+    &__logo {
+      max-width: 36.12vw;
+      margin-bottom: 0;
+    }
+
+    &__navList {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: $lightyellow;
+      max-height: calc(100vh - 14.49vw);
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+
+    &__navMenu {
+      @include u-flex(row, nowrap, space-between, flex-end);
+    }
+
+    &__navLi {
+      padding: 4.83vw 2.41vw !important;
+      border-bottom: 1px solid $green;
+
+      &:not(:first-child) {
+        margin-left: 0;
+      }
+    }
+
+    &__navLink {
+      position: relative;
+      display: inline-block;
+      color: $green;
+      font-size: 3.86vw;
+      padding-bottom: 0;
+
+      &::after {
+        content: none;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -4.34vw;
+        display: block;
+        width: 1.55vw;
+        height: 2.85vw;
+        background-image: url("../images/common/ico_arrow_gr.svg");
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .u-navEmail {
+      padding-left: 8.21vw;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 5.26vw;
+        height: 3.67vw;
+        background-color: transparent;
+        background-image: url("../images/common/sp_ico_email.svg");
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &__searchBtn {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 0;
+      width: 14.25vw;
+      height: 14.25vw;
+      background-image: url("../images/common/ico_search_bar.svg");
+      background-size: 100% auto;
+
+      &:hover,
+      &.u-hover {
+        //transform: translateY(-50%);
+      }
+    }
+
+    .u-spHover + .siteHeader__searchCont {
+      top: 100%;
+      opacity: 1;
+    }
+
+    .js-linkSerial {
+      padding: 0;
+      margin-right: 0;
+
+      .siteHeader__navLink {
+        &::before {
+          content: none;
+        }
+      }
+    }
+
+    &__tag {
+      padding: 2.14vw 0 0;
+      display: block;
+      position: relative;
+      left: auto;
+      top: auto;
+      width: 100%;
+      background: transparent;
+
+      &:hover {
+        display: block;
+      }
+    }
+
+    &__tagInner {
+      padding: 0;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__tagName,
+    &__tagDivider {
+      display: none;
+    }
+
+    &__tagCont {
+      margin-top: 0;
+      margin-left: 0;
+    }
+
+    &__tagLink {
+      margin-bottom: 3.62vw;
+      padding: 2.89vw;
+      font-size: 2.89vw;
+      border-radius: 12.07vw;
+      background: $white;
+
+      &:not(:last-child) {
+        margin-right: 1.2vw;
+      }
+    }
+
+    &__tagPage {
+      position: relative;
+      font-size: 3.62vw;
+      font-weight: bold;
+      color: $green;
+      letter-spacing: 0.2em;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -4.34vw;
+        display: block;
+        width: 1.55vw;
+        height: 2.85vw;
+        background-image: url("../images/common/ico_arrow_gr.svg");
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &__searchCont {
+      display: block;
+      padding: 2.89vw 3.38vw;
+      position: absolute;
+      top: -100%;
+      left: 0;
+      width: 100%;
+
+      &.u-spHover {
+        top: calc(100% + 1px);
+        opacity: 1;
+      }
+    }
+
+    &__searchInner {
+      max-width: 100%;
+    }
+
+    &__searchTxt {
+      padding: 2.89vw 2.41vw;
+      width: 82.6vw;
+      height: 9.66vw;
+      font-size: 3.38vw;
+    }
+
+    &__searchSubmit {
+      width: 9.66vw;
+      height: 9.66vw;
+    }
+
+    &__searchTags {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,1802 @@
+@import "./article/_comArticle.scss";
+
+$steelblue: #5977BA;
+$parisdaisy: #FFF477;
+$mineshaft: #333;
+
+.karakusaPost {
+
+    /*===========================
+        dirSec
+    ===========================*/
+
+    &__dirSec {
+        margin: 70px auto 0;
+        max-width: 917px;
+        position: relative;
+
+        &:after {
+            margin: auto;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            right: 0;
+            content: '';
+            background: $gray;
+            width: 1px;
+            height: 181px;
+        }
+    }
+
+    /*===========================
+    speakerSec
+    ===========================*/
+
+    &__speakerSec {
+        margin: 106px auto 0;
+        max-width: 712px;
+    }
+
+    .speakerSec {
+
+        &__title {
+            text-align: center;
+            @include u-font($fsPC: 18px, $fsTab: 1.25vw, $fsSP: 4.348vw, $ff: $fontHiragino, $fw: bold, $flh: 0.8, $fc: $viking);
+        }
+
+        &__inner {
+            margin-top: 17px;
+        }
+
+        &__block {
+            position: relative;
+            display: block;
+            min-height: 491px;
+            padding: 30px 50px;
+            box-sizing: border-box;
+
+            &:not(:first-child) {
+                margin-top: 40px;
+            }
+
+            &.u-block01 {
+                background: center / cover no-repeat url('../../../../uploads/2020/08/karakusaPost_speakSecBG01.png');
+            }
+
+            &.u-block02 {
+                background: center / cover no-repeat url('../../../../uploads/2020/08/karakusaPost_speakSecBG02.png');
+            }
+
+            &.u-block03 {
+                background: center / cover no-repeat url('../../../../uploads/2020/08/karakusaPost_speakSecBG03.png');
+            }
+
+            &.u-block04 {
+                background: center / cover no-repeat url('../../../../uploads/2020/08/karakusaPost_speakSecBG04.png');
+            }
+
+            &.u-block05 {
+                background: center / cover no-repeat url('../../../../uploads/2020/08/karakusaPost_speakSecBG05.png');
+            }
+
+            &.u-block06 {
+                background: center / cover no-repeat url('../../../../uploads/2020/08/karakusaPost_speakSecBG06.png');
+            }
+
+            &.u-block07 {
+                background: center / cover no-repeat url('../../../../uploads/2020/08/karakusaPost_speakSecBG07.png');
+            }
+
+            &.u-block08 {
+                background: center / cover no-repeat url('../../../../uploads/2020/08/karakusaPost_speakSecBG08.png');
+            }
+
+            &:before {
+                position: absolute;
+                top: 24px;
+                left: 24px;
+                margin: auto;
+                width: 0;
+                height: calc(100% - 48px);
+                content: '';
+                box-sizing: border-box;
+                border: 2px solid transparent;
+                @include u-trs($duration: .2s);
+                pointer-events: none;
+            }
+
+            &:hover {
+                &:before {
+                    width: calc(100% - 48px);
+                    border-color: $white;
+                }
+
+                .speakerSec__personNameImageArea {
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        &__anchorArea {
+            width: 100%;
+            display: block;
+            padding: 30px 53px 30px 53px;
+        }
+
+        &__personNameImageArea {
+            display: inline-block;
+            position: relative; 
+
+            &:after {
+                position: absolute;
+                top: 15%;
+                transform: translate(-50%);
+                right: -28px;
+                content: '';
+                width: 23px;
+                height: 41px;
+                opacity: 0;
+                background: center / contain no-repeat url('../images/common/ico_right_white.svg');
+                @include u-trs($duration: .5s);
+            }
+        }
+
+        &__personNameImage {
+            margin-left: -18px;
+
+            &.personNameImage01 {
+                max-width: 224px;
+            }
+
+            &.personNameImage02 {
+                max-width: 395px;
+            }
+
+            &.personNameImage03 {
+                max-width: 236px;
+            }
+
+            &.personNameImage04 {
+                max-width: 310px;
+            }
+
+            &.personNameImage05 {
+                max-width: 591px;
+            }
+
+            &.personNameImage06 {
+                max-width: 262px;
+            }
+
+            &.personNameImage07 {
+                max-width: 271px;
+            }
+
+            &.personNameImage08 {
+                max-width: 358px;
+            }
+        }
+
+        // &__personName {
+        //     margin-left: -18px;
+        //     @include u-font($fsPC: 78px, $fsTab: 5.417vw, $fsSP: 10vw, $ff: $fontTimes, $flh: 0.8, $fc: $white);
+        // }
+
+        &__personAdd {
+            margin-top: 24px;
+            @include u-font($fsPC: 16px, $fsTab: 1.111vw, $fsSP: 3.865vw, $fw: bold, $ff: $fontHiragino, $flh: 0.8, $fc: $white);
+        }
+
+        &__personAssoc {
+            margin-top: 15px;
+            @include u-font($fsPC: 16px, $fsTab: 1.111vw, $fsSP: 3.865vw, $fw: bold, $ff: $fontHiragino, $flh: 0.8, $fc: $white);
+        }
+
+        &__personDept {
+            margin-top: 15px;
+            @include u-font($fsPC: 16px, $fsTab: 1.111vw, $fsSP: 3.865vw, $fw: bold, $ff: $fontHiragino, $flh: 0.8, $fc: $white);
+        }
+
+        &__personCountry {
+            margin-top: 14px;
+            @include u-flex($ai: center);
+        }
+
+        &__countryFlag {
+            margin-right: 10px;
+
+            &.flagTurkey {
+                max-width: 106px;
+            }
+
+            &.flagChina {
+                max-width: 98px;
+            }
+
+            &.flagMyanmar {
+                max-width: 126px;
+            }
+
+            &.flagIndonesia {
+                max-width: 124px;
+            }
+
+            &.flagKorea {
+                max-width: 100px;
+            }
+
+            &.flagBulgaria {
+                max-width: 117px;
+            }
+        }
+
+        &__countryText {
+            @include u-font($fsPC: 16px, $fsTab: 1.111vw, $fsSP: 3.865vw, $fw: bold, $ff: $fontHiragino, $flh: 0.8, $fc: $white);
+        }
+
+        &__personSpeech {
+            padding-right: 161px;
+            margin-top: 10px;
+            @include u-font($fsPC: 16px, $fsTab: 1.111vw, $fsSP: 3.865vw, $fw: 600, $ff: $fontHiragino, $flh: 1.8, $fc: $white);
+        }
+
+        &__personImage {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            max-width: 187px;
+        }
+    }
+
+    /*===========================
+    featSec
+    ===========================*/
+
+    &__featSec {
+        margin: 65px auto 0;
+        max-width: 855px;
+
+        &.featSecBlue {
+            .featTitleArea {
+                &__number {
+                    color: $curiousblue
+                }
+            
+                &__titleText {
+                    color: $curiousblue;
+                    
+                    &:after {
+                        background-color: $curiousblue;
+                    }
+                }
+            }
+
+            .featSubTitleArea {
+                &__subtitleText {
+                    color: $curiousblue;
+                }
+            }
+
+            .conSec__person {
+                color: $curiousblue;
+            }
+        }
+
+        &.featSecRed {
+            .featTitleArea {
+                &__number {
+                    color: $red02
+                }
+            
+                &__titleText {
+                    color: $red02;
+                    
+                    &:after {
+                        background-color: $red02;
+                    }
+                }
+            }
+
+            .featSubTitleArea {
+                &__subtitleText {
+                    color: $red02;
+                }
+            }
+
+            .conSec__person {
+                color: $red02;
+            }
+        }
+    }
+
+    .featTitleArea {
+        
+        &__miniLabel {
+            @include u-font($fsPC: 18px, $fsTab: 1.25vw, $fsSP: 4.348vw, $fw: bold, $ff: $fontHiragino, $fc: $pureblack);
+        }
+
+        &__number {
+            display: inline;
+            @include u-font($fsPC: 62px, $fsTab: 4.306vw, $fsSP: 14.976vw, $flh: 0.9, $ff: $fontMukta, $fc: $pureblack);
+        }
+
+        &__titleText {
+            margin-top: 5px;
+            display: inline-block;
+            overflow: hidden;
+            position: relative;
+            @include u-font($fsPC: 34px, $fsTab: 2.361vw, $fsSP: 6.763vw, $flh: 1.5, $fw: bold, $ff: $fontHiragino, $fc: $pureblack);
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom:  0;
+                left: 0;
+                width: 0;
+                margin: auto;
+                background: $curiousblue;
+                height: 1px;
+                width: 100%;
+
+            }
+        }
+    }
+
+    .featSubTitleArea {
+        margin-top: 52px;
+
+        &__subtitleText {
+            @include u-font($fsPC: 22px, $fsTab: 1.528vw, $fsSP: 5.314vw, $flh: 1.3, $fw: bold, $ff: $fontHiragino, $fc: $pureblack);
+            color: #DEDEDE;
+        }
+
+        &.u-subtitleAreaMFix {
+            margin-top: 57.6px;
+        }
+    }
+
+    &__conSec {
+        margin-top: 38px;
+    }
+
+    .conSec {
+        &__row {
+            @include u-flex($ai: stretch);
+    
+            &:not(:first-child) {
+                margin-top: 40px;
+            }
+
+            &.u-withThumbnail {
+                align-items: center;
+
+                .conSec__personImage {
+                    margin-left: -7px;
+                }
+            }
+        }
+    
+        &__personImage {
+            margin-bottom: 5px;
+            width: 75px;
+            border-radius: 50%;
+        }
+
+        &__personNameText {
+            margin-left: 12px;
+        }
+    
+        &__person {
+            margin-left: -15px;
+            padding-top: 6px;
+            padding-right: 86px; 
+            width: 161px;
+            @include u-flex($fd: column, $ai: flex-start, $jc: flex-start);
+            @include u-font($fsPC: 18px, $fsTab: 1.25vw, $fsSP: 4.348vw, $fw: bold, $ff: $fontHiragino, $fc: $pureblack);
+        }
+    
+        &__speech {
+            width: calc(100% - 161px);
+            @include u-font($fsPC: 17px, $fsTab: 1.181vw, $fsSP: 4.106vw, $fw: 400, $flh: 1.6, $ff: $fontHiragino, $fc: $black02);
+        }
+    }
+
+    /*===========================
+    gallerySec
+    ===========================*/
+
+    &__gallerySec {
+        margin-top: 72px;
+    }
+    
+    &__galleryImageArea {
+        margin: 0 auto;
+        
+        &.galleryImage01 {
+            max-width: 257px;
+        }
+
+        &.galleryImage02 {
+            max-width: 528px;
+        }
+
+        &.galleryImage05 {
+            max-width: 450px;
+        }
+
+        &.galleryImage06 {
+            max-width: 389px;
+        }
+
+        &.galleryImage07 {
+            max-width: 582px;
+        }
+
+        &:not(:first-child) {
+            margin-top: 40px;
+        }
+
+    }
+
+    &__galleryImageCaption {
+        margin-top: 10px;
+        @include u-font($fsPC: 13px, $fsTab: 0.903vw, $fsSP: 3.382vw, $flh: 1.3, $fw: 400, $ff: $fontHiragino, $fc: $black02);
+    }
+
+    /*===========================
+    highlightSec
+    ===========================*/
+
+    &__highlightSec {
+        margin: 57.6px auto 0;
+        max-width: 711px;
+    }
+
+    .highlightSec {
+
+        &__imageArea {
+            position: relative;
+    
+            &:before {
+                margin: 0 auto;
+                content: '';
+                position: absolute;
+                display: block;
+                top: 50%;
+                transform: translate(-50%);
+                left: 50%;
+                width: 100%;
+                height: 1px;
+                background: $gray;
+            }
+        }
+    
+        &__image {
+            position: relative;
+            z-index: 2;
+            display: block;
+            max-width: 260px;
+            padding: 0 23px;
+            box-sizing: border-box;
+            background: $white;
+            margin: 0 auto;
+        }
+    
+        &__list {
+            margin-top: 18px;
+            padding-bottom: 21.6px;
+            border-bottom: 1px solid $gray;
+        }
+
+        &__item {
+            padding-left: 15px;
+            @include u-font($fsPC: 13px, $fsTab: 0.903vw, $fsSP: 3.623vw, $fw: 400, $flh: 1.3, $ff: $fontHiragino, $fc: $black02);
+    
+            &:not(:first-child) {
+                margin-top: 37px;
+            }
+    
+            &:before {
+                content: '\0026AB';
+                font-size: 5px;
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: -15px;
+                margin-right: 7px;
+            }
+        }
+    }
+
+    /*===========================
+    feedSec
+    ===========================*/
+
+    &__feedSec {
+        margin-top: 80px;
+    }
+
+    /*===========================
+    qaSec
+    ===========================*/
+
+    &__qaSec {
+        margin: 0 auto;
+        max-width: 711px;
+    }
+    
+    &__qaSecAnchorPoint {
+        position: absolute;
+        display: block;
+        top: -93px;
+    }
+    
+    &__qaSecItem {
+        position: relative;
+        margin: 74px auto 0;
+
+        &.qaOrange {
+            
+            .qaSecItem__questionTitleText {
+                color: $burningorange;
+            }
+        }
+
+        &.qaMona {
+
+            .qaSecItem__questionTitleText {
+                color: $monalisa;
+            }
+        }
+
+        &.qaBlue {
+
+            .qaSecItem__questionTitleText {
+                color: $bostonblue;
+            }
+        }
+
+        &.qaGreen {
+
+            .qaSecItem__questionTitleText {
+                color: $deyork;
+            }
+        }
+
+        &.qaPurple {
+            
+            .qaSecItem__questionTitleText {
+                color: $purple;
+            }
+        }
+
+        &.qaLightBlue {
+
+            .qaSecItem__questionTitleText {
+                color: $lightblue;
+            }
+        }
+    }
+
+    .qaSecItem {
+
+        &__qaSecTextArea {
+    
+            &.qaMTFix {
+                margin-top: 25.92px;
+            }    
+        }
+    
+        &__questionTitle {
+            @include u-flex($ai: flex-end);
+        }
+        
+        &__questionTitleNo {
+            position: relative;
+            top: 5px;
+            @include u-font($fsPC: 40px, $fsTab: 2.778vw, $fsSP: 9.662vw, $flh: 1, $fw: 300, $ff: $fontTimes, $fc: $pureblack);
+
+            @media not all and (min-resolution:.001dpcm) { 
+                top: 0.7vw;
+            }
+        }
+
+        &__questionTitleLetter {
+            @include u-font($fsPC: 40px, $fsTab: 2.778vw, $fsSP: 9.662vw, $flh: 1, $fw: 300, $ff: $fontTimes, $fc: $pureblack);
+        }
+    
+        &__questionTitleText {
+            width: 100%;
+            margin-left: 5px;
+            @include u-font($fsPC: 20px, $fsTab: 1.389vw, $fsSP: 4.831vw, $flh: 1, $fw: bold, $ff: $fontHiragino, $fc: $pureblack);
+        }
+    
+        &__questionAnswer {
+            margin-top: 20px;
+            @include u-font($fsPC: 17px, $fsTab: 1.181vw, $fsSP: 4.106vw, $fw: 400, $flh: 1.6, $ff: $fontHiragino, $fc: $pureblack);
+        }
+    
+        &__qaSecImageArea {
+            margin: 0 auto;
+            max-width: 474px;
+        }
+    
+        &__refer {
+            margin-top: 28.8px;
+            padding: 40px;
+            border: 1px solid $gray;
+        }
+    
+        &__referImage {
+            margin: 0 auto;
+            max-width: 225px;
+        }
+    
+        &__referText {
+            margin-top: 30px;
+            @include u-font($fsPC: 16px, $fsTab: 1.111vw, $fsSP: 3.865vw, $fw: 400, $flh: 1.625, $ff: $fontHiragino, $fc: $black);
+        }
+    }
+}
+
+/*============================
+    karakusaPost102020
+=============================*/
+.karakusaPost102020 {
+
+    .u-blueHighlight {
+        padding: 10.5px 18px;
+        background: $steelblue;
+        line-height: 2.4;
+    }
+
+    .u-textHighlight {
+        color: $steelblue;
+        font-weight: bold;
+        background: rgba($parisdaisy, .55);
+    }
+
+    /*====================
+        introSec
+    =====================*/
+
+    .introSec {
+        &__imageArea {
+            margin: 54px auto 0;
+            max-width: 1077px;
+        }
+    }
+
+    /*====================
+        qaSec
+    =====================*/
+
+    .qaSec {
+        &__inner {
+            margin: auto;
+            max-width: 712px;
+        }
+
+        &__partListItem {
+            margin-top: 70px;
+
+            &.u-noHeadText {
+                margin-top: 30px;
+                .qaSec__partListItemUnderText {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        &__partListItemHeadText {
+            display: inline-block;
+            @include u-font($fsPC: 22px, $fsSP: 5.31vw, $flh: 2, $ff: $fontHiragino, $fw: bold, $fc: $white);
+        }
+
+        &__partListItemUnderText {
+            margin-top: 43px;
+            @include u-font($fsPC: 20px, $fsSP: 17px, $flh: 1.6, $ff: $fontHiragino, $fw: bold, $fc: $steelblue, $td: underline);
+        }
+
+        &__partListItemParaText {
+            margin-top: 32px;
+            text-indent: 0px;
+            @include u-font($fsPC: 17px, $fsSP: 4.106vw, $flh: 1.6, $ff: $fontHiragino, $fc: $mineshaft);
+        }
+    }
+
+    /*====================
+        outroSec
+    =====================*/
+
+    .outroSec {
+        &__imageArea {
+            margin: 73px auto 0;
+            max-width: 712px;
+        }
+    }
+
+    /*====================
+        linkSec
+    =====================*/
+
+    .linkSec {
+        &__anchorArea {
+            position: relative;
+            display: block;
+            margin: 70px auto 0;
+            max-width: 429px;
+
+            &:hover {
+                .linkSec__imageAreaArrow {
+                    width: calc(100% - 47px);
+                }
+            }
+        }
+
+        &__imageArea {
+            position: relative;
+        }
+
+        &__imageAreaArrow {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 85%;
+            z-index: -1;
+            width: 0;
+            background: rgba($parisdaisy, .55);
+            transition: .5s ease;
+
+            &:before {
+                content: '';
+                position: absolute;
+                right: -100px;
+                top: 0;
+                width: 0;
+                height: 0;
+                border: 50px solid transparent;
+                border-left: 50px solid $parisdaisy;
+            }
+        }
+    }
+
+    /*====================
+        pageSpecific
+    =====================*/
+ 
+    &.page02, &.page03, &.page04 {
+        padding-bottom: 80px;
+        border: 25px solid $steelblue;
+    }
+ 
+    &.page02 {
+        .subLinkSec {
+            left: -20px;
+            max-width: 370px;
+
+            @media all and (-ms-high-contrast: none){
+                max-width: 380px;
+            }
+        }
+    }
+
+    &.page03 {
+        .subLinkSec {
+            max-width: 465px;
+
+            .subLinkSec__anchorArrow {
+    
+                &:after {
+                    bottom: -3px;
+                    right: -35px;
+                    width: 35px;
+                    height: 72px;
+                    background: bottom right/ 35px 72px no-repeat url('../../../../uploads/2020/10/karakusaPost102020_subPage02Arrow.png');
+                }
+            }
+        }
+    }
+
+
+    /*====================
+        page header
+    =====================*/
+
+    .pageHeader {
+        &__inner {
+            @include u-flex;
+        }
+
+        &__innerBubble {
+            position: relative;
+            width: 275px;
+            padding: 20px;
+            background: $steelblue;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: -34px;
+                width: 0;
+                height: 0;
+                border: 15px solid transparent;
+                border-left: 20px solid $steelblue;
+            }
+        }
+
+        &__innerBubbleText {
+            @include u-font($fsPC: 31px, $fsSP: 6.28vw, $flh: 1.4, $ff: $fontHiragino, $fw: bold, $fc: $white);
+        }
+        
+        &__innerVerse {
+            padding: 30px 40px;
+            width: calc(100% - 275px);
+            background: rgba($parisdaisy, .55);
+            @include u-flex($ai: center);
+        }
+
+        &__innerVerseText {
+            @include u-font($fsPC: 38px, $fsSP: 8.21vw, $flh: 1.8, $ff: $fontHiragino, $fw: bold, $fc: $steelblue, $fa: center);
+        }
+
+        &.subPage {
+            .pageHeader__innerBubble {
+                padding: 5px 10px 5px 0;
+                width: auto;
+
+                &:after {
+                    right: -17px;
+                    width: 0;
+                    height: 0;
+                    border: 7px solid transparent;
+                    border-left: 10px solid $steelblue;
+                }
+            }
+            
+            .pageHeader__innerBubbleText {
+                @include u-font($fsPC: 18px, $fsSP: 4.348vw, $flh: 1.3, $ff: $fontHiragino, $fw: bold, $fc: $white);
+            }
+
+            .pageHeader__innerVerse {
+                padding: 10px 28px;
+                width: auto;
+            }
+
+            .pageHeader__innerVerseText {
+                @include u-font($fsPC: 21px, $fsSP: 22px, $flh: 1.8, $ff: $fontHiragino, $fw: bold, $fc: $steelblue);
+            }
+        }
+
+    }
+
+    /*====================
+        interSec
+    =====================*/
+    .interSec {
+        &__inner {
+            margin: 70px auto 0;
+            max-width: 853px;
+            position: relative;
+
+            &.u-flex {
+                @include u-flex($jc: center);
+    
+                .interSec__innerDetailArea {
+                    margin-left: 13px;
+                    position: relative;
+                    top: auto;
+                    right: auto;
+                }
+            }
+
+            &.u-reverse {
+                flex-direction: row-reverse;
+
+                .interSec__innerDetailArea {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        &__innerImageArea {
+            &.u-PersonImage01 {
+                max-width: 624px;
+            }
+
+            &.u-PersonImage02 {
+                max-width: 368px;
+            }
+
+            &.u-PersonImage03 {
+                max-width: 341px;
+            }
+        }
+
+        &__innerDetailArea {
+            position: absolute;
+            top: 0;
+            right: 0;
+            max-width: 500px;
+
+            &.u-postMessage01 {
+                margin-top: 8px;
+            }
+
+            &.u-postMessage02 {
+                margin-top: 62px;
+            }
+
+            &.u-postMessage03 {
+                margin-top: 30px;
+            }
+        }
+
+        &__innerDetailAreaMessageText {
+            @include u-font($fsPC: 32px, $fsSP: 5.8vw, $flh: 1.5, $ff: $fontHiragino, $fw: bold, $fc: $steelblue,);
+        }
+
+        &__innerDetailAreaTitleText {
+            margin-top: 14px;
+            @include u-font($fsPC: 15px, $fsSP: 3.62vw, $flh: 1.2, $ff: $fontHiragino, $fw: bold, $fc: $black);
+        }
+
+        &__innerDetailAreaNameText {
+            margin-top: 17px;
+            @include u-font($fsPC: 20px, $fsSP: 4.83vw, $flh: 1.2, $ff: $fontHiragino, $fw: bold, $fc: $black);
+        }
+
+        &__innerDetailAreaSmallText {
+            @include u-font($fsPC: 15px, $fsSP: 3.62vw, $flh: 1.2, $ff: $fontHiragino, $fw: bold, $fc: $black);
+        }
+    }
+
+    /*====================
+        messageSec
+    =====================*/
+    .messageSec {
+        &__inner {
+            margin: auto;
+            max-width: 712px;
+        }
+
+        &__innerParaText {
+            margin-top: 72px;
+            @include u-font($fsPC: 17px, $fsSP: 4.106vw, $flh: 1.6, $fw: 400, $ff: $fontHiragino, $fc: $mineshaft);
+        }
+    }
+    
+    /*====================
+        subLinkSec
+    =====================*/
+    .subLinkSec {
+        position: relative;
+        margin: 108px auto 0;
+        max-width: 418px;
+
+        &__anchorArea {
+            display: block;
+
+            &:hover {
+                .subLinkSec__anchorArrow {
+                    width: 100%;
+                    opacity: 1;
+                }
+            }
+        }
+        
+        &__anchorBody {
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        &__anchorArrow {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            opacity: 0;
+            border-bottom: 3px solid $steelblue;
+            transition: .7s ease;
+            z-index: 2;
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: -3px;
+                right: -35px;
+                width: 37px;
+                height: 99px;
+                background: bottom right/ 37px 99px no-repeat url('../../../../uploads/2020/10/karakusaPost102020_subPageArrow.png');
+            }
+        }
+
+        &__anchorTopLabel {
+            @include u-flex($ai: center);
+        }
+        
+        &__anchorLabelBox {
+            background: $steelblue;
+            position: relative;
+            padding: 3.5px 4px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                right: -23px;
+                top: 50%;
+                transform: translateY(-50%);
+                border: 13.5px solid transparent;
+                border-left: 10px solid $steelblue;
+            }
+        }
+        
+        &__anchorLabelText {
+            @include u-font($fsPC: 20px, $fsSP: 4.83vw, $flh: 1, $ff: $fontMukta, $fw: bold, $fc: $white);
+        }
+
+        &__anchorSmallText {
+            margin-left: 15px;
+            @include u-font($fsPC: 15px, $fsSP: 4.5vw, $flh: 1.7, $ff: $fontHiragino, $fw: bold, $fc: $steelblue);
+            @media all and (-ms-high-contrast: none) {
+                line-height: 2;
+            }
+
+        }
+
+        &__anchorParaText {
+            margin-top: 11px;
+            position: relative;
+            z-index: 2;
+            @include u-font($fsPC: 17px, $fsSP: 4.5vw, $flh: 1.6, $ff: $fontHiragino, $fw: bold, $fc: $steelblue);
+        }
+    }
+}
+
+/*===========================
+    SP
+===========================*/
+@include u-mqMax {
+
+    .karakusaPost {
+
+        /*===========================
+            dirSec
+        ===========================*/
+
+        &__dirSec {
+            // margin: 16.908vw auto 0;
+            margin: 11.111vw auto 0;
+            padding: 0 10.435vw;
+            max-width: 100%;
+
+            &:after {
+                width: 80.193vw;
+                height: 1px;
+            }
+        }
+
+
+        /*===========================
+            speakerSec
+        ===========================*/
+
+        &__speakerSec {
+            margin: 9.662vw auto 0;
+            padding: 0 3.623vw;
+            max-width: 100%;
+        }
+
+        .speakerSec {
+
+            &__titleDesc {
+                margin-top: 4vw;
+                font-size: 3.382vw;
+            }
+
+            &__inner {
+                margin-top: 3.623vw;
+            }
+
+            &__anchorArea {
+                padding: 5.072vw;
+            }
+
+            &__block {
+                padding: 20px;
+                min-height: auto;
+                padding-bottom: 0;
+
+                &:before {
+                    content: none;
+                }
+
+                &:not(:first-child) {
+                    margin-top: 7.246vw;
+                }
+
+                &.u-block01 {
+
+                    .speakerSec__personNameImageArea {
+                        &::after {
+                            bottom: 0;
+                        }
+                    }
+                }
+
+                &.u-block02 {
+                    
+                    .speakerSec__personImage {
+                        top: 17%;
+                    }
+                }
+
+                &.u-block04 {
+
+                    .speakerSec__personNameImageArea {
+                        &::after {
+                            bottom: 2vw;
+                        }
+                    }
+                }
+
+                &.u-block05 {
+
+                    .speakerSec__personNameImageArea {
+                        &::after {
+                            bottom: 2.5vw;
+                        }
+                    }
+
+                    .speakerSec__personImage {
+                        top: 25%;
+                    }
+                }
+
+                &.u-block06 {
+
+                    .speakerSec__personNameImageArea {
+                        &::after {
+                            bottom: 2vw;
+                        }
+                    }
+                }
+
+                &.u-block08 {
+
+                    .speakerSec__personImage {
+                        top: 19%;
+                    }
+                }
+            }
+
+            &__personNameImageArea {
+                
+                &:after {
+                    top: auto;
+                    bottom: 0;
+                    transform: none;
+                    opacity: 1;
+                    right: -11.2vw;
+                    width: 4.046vw;
+                    height: 7.222vw;
+                }
+            }
+
+            &__personNameImage {
+                position: relative;
+                margin-left: 0;
+
+                &.personNameImage01 {
+                    max-width: 38.164vw;
+                }
+    
+                &.personNameImage02 {
+                    max-width: 67.391vw;
+                }
+    
+                &.personNameImage03 {
+                    max-width: 40.097vw;
+                }
+    
+                &.personNameImage04 {
+                    max-width: 52.657vw;
+                }
+    
+                &.personNameImage05 {
+                    max-width: 59.903vw;
+                }
+    
+                &.personNameImage06 {
+                    max-width: 44.686vw;
+                }
+    
+                &.personNameImage07 {
+                    max-width: 46.135vw;
+                }
+    
+                &.personNameImage08 {
+                    max-width: 60.87vw;
+                }
+            }
+
+            &__personName {
+                position: relative;
+                margin-left: -1.25vw;
+            }
+
+            &__personAdd {
+                margin-top: 4.155vw;
+                padding-right: 29vw;
+            }
+
+            &__personAssoc {
+                margin-top: 4.106vw;
+                padding-right: 29vw;
+                line-height: 1.3;
+            }
+
+            &__personDept {
+                margin-top: 2vw;
+                padding-right: 29vw;
+                line-height: 1.3;
+            }
+
+            &__personCountry {
+                margin-top: 4.106vw;
+            }
+
+            &__countryFlag {
+                margin-right: 2.415vw;
+                max-width: 10.386vw;
+            }
+
+            &__personSpeech {
+                margin-top: 4.589vw;
+                padding-right: 0;
+            }
+
+            &__personImage {
+                top: 16.227vw;
+                right: 4.106vw;
+                max-width: 28.502vw;
+            }
+        }
+
+        /*===========================
+            featSec
+        ===========================*/
+
+        &__featSec {
+            margin: 8.213vw auto 0;
+            padding: 0 5.072vw;
+            max-width: 100%;
+        }
+
+        .featTitleArea {
+            &__titleText {
+                margin-top: 0;
+                padding-bottom: 3.9vw;
+                width: 100%;
+                overflow: visible;
+    
+                &:after {
+                    bottom: -2.5vw;
+                    height: 0.242vw;
+                }
+            }
+        }
+
+        .featSubTitleArea {
+            margin-top: 12.611vw;
+
+            &.u-subtitleAreaMFix {
+                margin-top: 13.831vw;
+            }
+
+            &__subtitleText {
+                line-height: 1.6;
+            }
+        }
+
+        &__conSec {
+            margin-top: 6.522vw;
+        }
+
+        .conSec {
+
+            &__row {
+                &:not(:first-child) {
+                    margin-top: 9.179vw;
+                }
+
+                &.u-withThumbnail {
+                    .conSec__personImage {
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            &__personImage {
+                margin-bottom: 0.676vw;
+                width: 18.116vw;
+            }
+    
+            &__person {
+                padding-top: 0.2vw;
+                margin-left: 0;
+                padding-right: 5.972vw; 
+                width: 24.638vw;
+                align-items: center;
+                padding-left: 0;
+            }
+
+            &__personNameText {
+                margin-left: 0;
+            }
+    
+            &__speech {
+                width: calc(100vw - 24.638vw);
+            }            
+        }
+
+
+        /*===========================
+        gallerySec
+        ===========================*/
+
+        &__gallerySec {
+            margin-top: 6.944vw;
+        }
+        
+        &__galleryImageArea {
+            
+            &.galleryImage01 {
+                max-width: 52.899vw;
+            }
+
+            &.galleryImage02 {
+                max-width: 90.338vw;
+            }
+
+            &.galleryImage05 {
+                max-width: 100%;
+            }
+
+            &.galleryImage06 {
+                max-width: 100%;
+            }
+    
+            &.galleryImage07 {
+                max-width: 100%;
+            }
+
+            &:not(:first-child) {
+                margin-top: 11.594vw;
+            }
+        }
+
+        &__galleryImageCaption {
+            margin-top: 3.865vw;
+            line-height: 1.4;
+        }
+
+        /*===========================
+        highlightSec
+        ===========================*/
+
+        &__highlightSec {
+            margin: 12.56vw auto 0;
+            padding: 0 4.831vw;
+            max-width: 100%;
+        }
+
+        .highlightSec {
+            &__imageArea {
+
+                &:before {
+                    height: 0.242vw;
+                }
+            }
+    
+            &__image {
+                max-width: 50.725vw;
+                padding: 0 4.831vw;
+            }
+    
+            &__list {
+                margin-top: 4.632vw;
+                padding-bottom: 10.145vw;
+                border-bottom: 0.242vw solid $gray;
+            }
+            
+            &__item {
+                padding-left: 4vw;
+                line-height: 1.4;
+    
+                &:before {
+                    font-size: 0.8vw;
+                    margin-left: -4vw;
+                    margin-right: 2vw;
+                }
+            }
+        }
+
+        /*===========================
+        feedSec
+        ===========================*/
+
+        &__feedSec {
+            margin-top: 14.251vw;
+        }
+
+        /*===========================
+        qaSec
+        ===========================*/
+
+        &__qaSec {
+            max-width: 100%;
+            padding: 0 4.831vw;
+        }
+
+        &__qaSecAnchorPoint {
+            top: -12vw;
+        }
+        
+        &__qaSecItem {
+            margin: 12vw auto 0;
+        }
+
+        .qaSecItem {
+
+            &__qaSecTextArea {
+        
+                &.qaMTFix {
+                    margin-top: 5.498vw;
+                }    
+            }
+
+            &__questionTitleNo {
+                top: 1.208vw;
+
+                @media not all and (min-resolution:.001dpcm) { 
+                    top: 0.7vw;
+                }
+            }
+    
+            &__questionTitleText {
+                margin-left: 3.14vw;
+            }
+    
+            &__questionAnswer {
+                margin-top: 6.039vw;
+            }
+    
+            &__qaSecImageArea {
+                max-width: 100%;
+            }
+    
+            &__refer {
+                margin-top: 5.324vw;
+                padding: 7.246vw 4.831vw;
+                border-width: 0.242vw;
+            }
+    
+            &__referImage {
+                max-width: 54.348vw;
+            }
+    
+            &__referText {
+                margin-top: 7.246vw;
+                line-height: 1.75;
+            }
+        }
+    }
+
+    /*============================
+    karakusaPost102020 SP
+    =============================*/
+    .karakusaPost102020 {
+
+        .u-blueHighlight {
+            padding: 2.42vw 2vw;
+        }
+
+        .postDescription {
+            margin-top: 15vw;
+        }
+
+        /*====================
+            introSec
+        =====================*/
+
+        .introSec {
+            &__imageArea {
+                margin-top: 20.05vw;
+            }
+
+            padding: 0 3.623vw;
+        }
+
+        /*====================
+            qaSec
+        =====================*/
+
+        .qaSec {
+            padding: 0 3.623vw;
+
+            &__partListItem {
+                margin-top: 13.04vw;
+                
+                &:not(:first-child) {
+                    margin-top: 14.98vw;
+                }
+    
+                &.u-noHeadText {
+                    margin-top: 10.87vw;
+                }
+            }
+
+            &__partListItemParaText {
+                margin-top: 4.35vw;
+            }
+        }
+
+        /*====================
+        outroSec
+        =====================*/
+
+        .outroSec {
+            padding: 0 3.623vw;
+
+            &__imageArea {
+                margin-top: 12.2vw;
+            }
+        }
+
+        /*====================
+        linkSec
+        =====================*/
+
+        .linkSec {
+            overflow: hidden;
+            margin: 14.25vw auto;
+            padding: 0 3.623vw;
+
+            &__anchorArea {
+                margin-top: 0;
+            }
+
+            &__imageAreaArrow {
+                width: calc(100% - 40px);
+
+                &:before {
+                    right: -22vw;
+                    border-width: 11.11vw;
+                }
+            }
+        }
+
+        /*====================
+            pageSpecific
+        =====================*/
+    
+        &.page02, &.page03, &.page04 {
+            padding-bottom: 9.42vw;
+            border: 0.97vw solid $steelblue;
+            margin-bottom: 14.25vw;
+        }
+
+        &.page02 {
+            .subLinkSec {
+                left: 0;
+                max-width: 69.08vw;
+            }
+        }
+
+        &.page03 {
+            .subLinkSec {
+                margin: 7.97vw auto 0;
+                max-width: 71.5vw;
+            }
+        }
+        
+        /*====================
+            page header
+        =====================*/
+
+        .pageHeader {
+            &__inner {
+                flex-direction: column;
+            }
+
+            &__innerBubble {
+                width: 100%;
+                padding: 15px 33px;
+
+                &:after {
+                    bottom: -98px;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    width: 0;
+                    height: 0;
+                    border: 13px solid transparent;
+                    border-top: 20px solid $steelblue;
+                }
+            }
+
+            &__innerBubbleText {
+                text-align: center;
+                line-height: 1.8;
+            }
+
+            &__innerVerse {
+                padding: 27.5px 33px;
+                width: 100%;
+            }
+
+            &__innerVerseText {
+                line-height: 1.6;
+                text-align: left;
+            }
+
+            &.subPage {
+                .pageHeader__innerBubble {
+                    position: relative;
+                    padding: 13.5px 15px;
+
+                    &:after {
+                        position: absolute;
+                        bottom: -55px;
+                        margin: auto;
+                        left: 0;
+                        right: 0;
+                        width: 0;
+                        height: 0;
+                        border: 7px solid transparent;
+                        border-top: 10px solid $steelblue;
+                    }
+                }
+                
+                .pageHeader__innerVerse {
+                    padding: 15.5px 15px;
+                    width: auto;
+                }
+                
+                .pageHeader__innerVerseText {
+                }
+            }
+
+        }
+
+        /*====================
+            interSec
+        =====================*/
+        .interSec {
+            &__inner {
+                margin: 45px auto 0;
+                @include u-flex($fd: column-reverse);
+
+                &.u-flex {
+                    flex-direction: column-reverse;
+        
+                    .interSec__innerDetailArea {
+                        margin-left: 0;
+                        position: relative;
+                        top: auto;
+                        right: auto;
+                    }
+                }
+            }
+
+            &__innerImageArea {
+                position: relative;
+                z-index: -1;
+                
+                &.u-PersonImage01 {
+                    margin-top: 20px;
+                    max-width: 100%;
+
+                    .interSec__innerImageThumb {
+                        width: 88.65vw;    
+                    }
+                }
+
+                &.u-PersonImage02 {
+                    margin-top: -10px;
+                    max-width: 100%;
+
+                    .interSec__innerImageThumb {
+                        margin-left: auto;
+                        width: 49.03vw;
+                    }
+                    
+                    .interSec__innerDetailAreaProfileSP {
+                        top: 15vw;
+                        left: 3.62vw;
+                    }
+                }
+
+                &.u-PersonImage03 {
+                    margin-top: 3.62vw;
+                    max-width: 100%;
+
+                    .interSec__innerImageThumb {
+                        width: 54.59vw;
+                    }
+
+                    .interSec__innerDetailAreaProfileSP {
+                        top: 11vw;
+                        left: auto;
+                        right: 12.56vw;
+                    }
+                }
+            }
+
+            &__innerDetailArea {
+                width: 100%;
+                padding: 0 3.62vw;
+                position: relative;
+                top: auto;
+                right: auto;
+
+                &.u-postMessage01,
+                &.u-postMessage02,
+                &.u-postMessage03 {
+                    margin-top: 0;
+                }
+
+                &.u-postMessage02 {
+                    .interSec__innerDetailAreaMessageText {
+                        font-size: 24px;
+                    }
+                }
+            }
+
+            &__innerDetailAreaTitleText {
+                line-height: 1.6;
+            }
+
+            &__innerDetailAreaNameText {
+                margin-top: 3.62vw;
+            }
+
+            &__innerDetailAreaProfileSP {
+                position: absolute;
+                top: 9.18vw;
+                right: 2.66vw;
+            }
+        }
+
+        /*====================
+            messageSec
+        =====================*/
+        .messageSec {
+            &__inner {
+                padding: 0 3.62vw;
+            }
+
+            &__innerParaText {
+                margin-top: 8.45vw;
+            }
+        }
+        
+        /*====================
+            subLinkSec
+        =====================*/
+        .subLinkSec {
+            margin: 7.97vw auto 0;
+            max-width: 63.53vw;
+
+            &__anchorBody {
+                padding-bottom: 2.42vw;
+            }
+        }
+    }
+}

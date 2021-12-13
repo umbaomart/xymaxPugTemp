@@ -1,0 +1,15 @@
+.secSingle {
+  margin: 0 auto;
+  max-width: 75vw;
+}
+
+.karakusaPost__dirSec {
+  max-width: 63.681vw;
+}
+.karakusaPost__dirSec .dirSec__columnArea {
+  display: flex;
+  justify-content: space-between;
+}
+.karakusaPost__dirSec .columnArea__item {
+  width: 27.977vw;
+}

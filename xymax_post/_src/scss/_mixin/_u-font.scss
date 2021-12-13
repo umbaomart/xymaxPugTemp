@@ -1,0 +1,31 @@
+@mixin u-font($fw: 100, $fsPC: 1rem, $fsTab: 1rem,$fsSP: 0.5rem, $flh: 1.5, $fc: inherit, $ff: $fontMukta, $fa: inherit, $ls: normal, $tt: '', $td: '') {
+  font: $fw $fsPC + / + $flh $ff;
+
+  @if $ls !=normal {
+    letter-spacing: $ls;
+  }
+
+  @if $fc !=inherit {
+    color: $fc;
+  }
+
+  @if $fa !=inherit {
+    text-align: $fa;
+  }
+
+  @if($tt !='') {
+    text-transform: $tt;
+  }
+
+  @if($td !='') {
+    text-decoration: $td;
+  }
+
+  @include u-mqMaxMin($mainSize, $windowPC) {
+    //font-size: $fsTab;
+  }
+
+  @include u-mqMax {
+    font-size: $fsSP;
+  }
+}

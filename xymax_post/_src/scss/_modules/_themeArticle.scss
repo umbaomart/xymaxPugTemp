@@ -1,0 +1,122 @@
+/*====================================================================
+theme color for feature page
+====================================================================*/
+$themeblue: #5977BA;
+
+.u-themeBlue {
+  .postSec__postCategoryText,
+  .postSec__postCategoryDate,
+  .postSec__postLikeText,
+  .postSec__postLikeNumber,
+  .feedSecContainer__text {
+    color: $themeblue !important;
+  }
+  
+  .postSec__postRight .click #Path_675 {
+    fill: #fff !important;
+  }
+  
+  .click #Path_675 {
+    fill: $themeblue;
+    stroke: $themeblue !important;
+  }
+  .u-heartSvg:hover #Path_675,
+  .u-heartSvg.js-liked #Ellipse_9 {
+    fill: $themeblue !important;
+  }
+  
+  .feedSecContainer.js-liked #Ellipse_9 {
+    fill: $themeblue;
+    stroke: #fff !important;
+  }
+  
+  .feedSecContainer.js-liked #Path_675 {
+    fill: $themeblue !important;
+    stroke: $themeblue !important;
+  }
+  
+  .feedSecContainer.js-liked .feedSecContainer__text {
+    color: #fff !important;
+  }
+  
+  .postSec__postTagText {
+    color: $themeblue !important;
+  }
+  
+  .postSec__postTagItem:hover {
+    background: $themeblue !important;
+
+    .postSec__postTagText {
+      color: $white !important;
+    }
+  }
+  
+  .u-heartSvg.hover #Path_675  {
+    fill: $themeblue  !important;
+  }
+  
+  #Ellipse_9,
+  #Path_675 {
+    stroke: $themeblue !important;
+  }
+  
+  .secSingle__contentFlex a {
+    color: $themeblue;
+  }
+  
+  .feedSecContainer.js-liked:hover .u-heartSvg #Path_675 {
+    fill: $themeblue;
+  }
+
+  .feedSecContainer {
+      border-color: $themeblue !important;
+  }
+
+  .postSec__postCategoryText:after,
+  .postSec__postTagItem {
+    border-color: $themeblue;
+}
+  
+  .feedSecContainer__likeText,
+  .u-heartSvgTxt,
+  .u-heartCount {
+    color: $themeblue!important;
+  }
+  
+  .feedSecContainer.js-liked .u-heartSvgTxt,
+  .feedSecContainer.js-liked .u-heartCount {
+    color: #fff!important;
+  }
+  
+  .feedSecContainer.js-liked .feedSecContainer__likeText {
+    color: #fff!important;
+  }
+  
+  .postDescription__catMain {
+    background: $themeblue;
+  }
+  
+  .feedSecContainer.js-liked {
+    background: $themeblue!important;
+  }
+  
+  .u-tagRevert {
+    background: $themeblue !important;
+    border: 1px solid $themeblue !important;
+    color: #fff !important;
+  }   
+  
+  .u-tagRevert .postSec__postTagText {
+    color: #fff !important;
+  }
+  
+  
+  .u-tagRevert:hover {
+    background: #fff !important;
+    color: $themeblue !important;
+  }
+  
+  .u-tagRevert:hover .postSec__postTagText {
+    color: $themeblue !important;
+  }
+}

@@ -1,0 +1,94 @@
+.secTags {
+  padding: 62px 0 0;
+
+  &__inner {
+    position: relative;
+    margin: 0 auto;
+    max-width: 712px;
+  }
+
+  &__mainHeader {
+    color: $green;
+    font-size: 1.37rem;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+    text-align: center;
+  }
+
+  &__mainCont {
+    margin-top: 46px;
+  }
+
+  &__contHeader {
+    color: $green;
+    font-size: 1.06rem;
+    font-weight: bold;
+    padding-bottom: 11px;
+    border-bottom: 1px solid $green;
+  }
+
+  &__mainInner {
+    margin-top: 20px;
+    @include u-flex(row, wrap, flex-start, flex-start);
+  }
+
+  &__tagLink {
+    display: inline-block;
+    padding: 10px;
+    margin-bottom: 15px;
+    color: $green;
+    font-size: 0.81rem;
+    font-weight: bold;
+    border: 1px solid $green;
+    letter-spacing: 0.1em;
+    border-radius: 50px;
+    @include u-trs();
+
+    &:hover {
+      color: $white;
+      background: $green;
+    }
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+}
+
+@include u-mqMax($maxW: $windowSP) {
+  .secTags {
+    padding: 10.49vw 0 0;
+  
+    &__inner {
+      max-width: $innerContentSP;
+    }
+  
+    &__mainHeader {
+      font-size: 5.31vw;
+    }
+  
+    &__mainCont {
+      margin-top: 10.62vw;
+    }
+  
+    &__contHeader {
+      font-size: 4.1vw;
+      padding-bottom: 2.65vw;
+    }
+  
+    &__mainInner {
+      margin-top: 4.83vw;
+    }
+  
+    &__tagLink {
+      padding: 2.41vw;
+      margin-bottom: 3.62vw;
+      font-size: 3.14vw;
+      border-radius: 12.07vw;
+  
+      &:not(:last-child) {
+        margin-right: 3.62vw;
+      }
+    }
+  }  
+}

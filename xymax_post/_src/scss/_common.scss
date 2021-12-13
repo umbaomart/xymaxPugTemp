@@ -1,0 +1,258 @@
+/*====================================================================
+COMMON LAYOUT
+====================================================================*/
+body {
+  color: $black02;
+  @include fontFeature;
+  min-width: 1280px;
+  letter-spacing: 0.1em;
+}
+
+@include u-mqMax {
+  body {
+    min-width: auto;
+  }
+}
+
+/*-----------------------------------------------
+PC/SP
+------------------------------------------------*/
+.u-pcDb { display: block !important; }
+.u-pcDib { display: inline-block !important; }
+.u-pcDin { display: inline !important; }
+.u-pcDf { display: flex !important; }
+.u-pcDt { display: table !important; }
+.u-pcDtc { display: table-cell !important; }
+
+.u-spDb,
+.u-spDib,
+.u-spDin,
+.u-spDf,
+.u-spDt,
+.u-spDtc { display: none !important; }
+
+@include u-mqMax {
+  .u-pcDb,
+  .u-pcDib,
+  .u-pcDin,
+  .u-pcDf,
+  .u-pcDt,
+  .u-pcDtc { display: none !important; }
+
+  .u-spDb { display: block !important; }
+  .u-spDib { display: inline-block !important; }
+  .u-spDin { display: inline !important; }
+  .u-spDf { display: flex !important; }
+  .u-spDt { display: table !important; }
+  .u-spDtc { display: table-cell !important; }
+}
+
+
+/*-----------------------------------------------
+WP Tool bar
+------------------------------------------------*/
+@include u-mqMax($maxW: 600px) {
+  #wpadminbar {
+    .is_login_user & {
+      position: fixed;
+    }
+  }
+}
+
+
+/*-----------------------------------------------
+COMMON
+------------------------------------------------*/
+.mainSection {
+  display: block;
+  margin-top: 93px;
+  position: relative;
+}
+
+.btnMore {
+  margin: 68px auto 0;
+  display: block;
+  width: 100%;
+  max-width: 230px;
+  padding: 15px 10px;
+  color: $green;
+  text-align: center;
+  font-family: $fontMukta;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  border: 1px solid $green;
+  border-radius: 50px;
+  box-sizing: border-box;
+  @include u-trs();
+
+  &:hover {
+    background: $green;
+    color: $white;
+  }
+}
+
+.btnTop {
+  position: absolute;
+  bottom: 60px;
+  right: 40px;
+  display: block;
+  width: 62px;
+  height: 62px;
+  background-image: url('../images/common/ico_backToTop.svg');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  @include u-trs();
+
+  &:hover {
+    background-image: url('../images/common/ico_backToTop_hover.svg');
+  }
+}
+
+.u-noResult {
+  width: 100%;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.secHeader {
+  @include u-flex(row, nowrap, center, center);
+
+  &__main {
+    color: $green;
+    font-family: $fontMukta;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__subTxt {
+    margin-left: 5px;
+    color: $gray02;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+  }
+}
+
+.swiper-button-prev {
+  background-image: url('../images/common/ico_swiper_prev.svg');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  @include u-trs();
+  @include u-hoverOp();
+
+  &::after {
+    content: none;
+  }
+}
+
+.swiper-button-next {
+  background-image: url('../images/common/ico_swiper_next.svg');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  @include u-trs();
+  @include u-hoverOp();
+
+  &::after {
+    content: none;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+}
+
+.swiper-pagination-bullet-active {
+  background: $green;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 0;
+}
+
+.simplefavorite-button.active {
+  opacity: 1 !important;
+}
+
+.u-heartSvg {
+  & > img {
+    display: none;
+  }
+}
+
+.u-hiddenText {
+  width: 0;
+  height: 0;
+  font-size: 0;
+  overflow: hidden;
+}
+
+@include u-IEhack {
+}
+
+@include u-mqMax($maxW: $windowSP) {
+  .mainSection {
+    margin-top: 2.2vw;
+  }
+
+  #wpadminbar {
+    position: fixed !important;
+  }
+
+  .btnTop {
+    bottom: 10.38vw;
+    right: 1.44vw;
+    width: 9.66vw;
+    height: 9.66vw;
+  }
+
+  .btnMore {
+    margin-top: 6.03vw;
+    display: block;
+    width: 100%;
+    max-width: 230px;
+    padding: 15px 10px;
+    color: $green;
+    text-align: center;
+    font-family: $fontMukta;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    border: 1px solid $green;
+    border-radius: 50px;
+    box-sizing: border-box;
+    @include u-trs();
+  
+    &:hover {
+      background: $green;
+      color: $white;
+    }
+  }
+
+  .u-noResult {
+    font-size: 5.31vw;
+  }
+
+  .secHeader {
+    flex-direction: column;
+    text-align: center;
+    
+    &__main {
+      font-size: 6.03vw;
+      margin-right: 0;
+      flex-direction: column;
+    }
+  
+    &__subTxt {
+      display: block;
+      margin-left: 0;
+      margin-top: 1.7vw;
+      font-size: 3.62vw;
+    }
+  }
+}

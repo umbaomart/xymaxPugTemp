@@ -1,0 +1,290 @@
+-
+ let myClassPart = "specialFeaturesP1"
+ let myClass = "specialFeatures122021"
+ let localPath = "./../../_images/p1/"
+ let metaTitle = "Special Features P1"
+//-  colors
+-   let silverLakeBlue = "color-silverLakeBlue"; // #5785B7 lakeblue
+-   let burlywood = "color-burlywood"; // #DFBA79 lightbrown
+-   let independence = "color-independence"; // #4F576C darkgray
+
+-
+    let listData = [
+        {date: "2021年2月", class: "color-burlywood", no: "2/1", text: "第1回からくさTV 開催"},
+        {date: "3月", class: "color-burlywood", no: "3/27", text: "オンライングループマネ会 開催"},
+        {date: "4月", class: "color-burlywood", no: "4/1", text: "MF関西 設立",
+            child: [
+                {class: "color-burlywood", no: "4/2",
+                    text: [
+                        {itemText: "ザイマックスビルメンテナンス技能研修センター開所式"}
+                    ]
+                },
+                {class: "color-silverLakeBlue",
+                    text: [
+                        {itemText: "東京・大阪・兵庫・京都に3回目の緊急事態宣言発令"},
+                        {itemText: "一般向けワクチン接種、各地で開始", class: "mt5"},
+                    ]
+                },
+            ]
+        },
+        {date: "5月", class: "color-burlywood", no: "5/17", text: "ワクチン接種当日に「特別有給休暇」を付与"},
+        {date: "6月", class: "color-burlywood", no: "6/1", text: "XYK 神戸支社オープン"},
+        {date: "7月", class: "color-burlywood", no: "7/1", text: "XYTK 事業開始",
+            child: [
+                {class: "color-burlywood", no: "7/1", text: [{itemText: "XYTK ザイマックスカレス北海道 設立"}]},
+                {class: "color-silverLakeBlue", no: "7/23", text: [{itemText: "東京オリンピック無観客で開催（～8/8）"}]},
+            ]
+        },
+        {date: "8月", class: "color-burlywood", text: "出社率3割以下に、来客・会食などより厳しく制限",
+            child: [
+                {class: "color-burlywood", text: [{itemText: "東京オフィス再編スタート"}]},
+                {class: "color-silverLakeBlue", no: "8/20", text: [{itemText: "全国で1日の感染者 過去最多の2万5千人に"}]},
+            ]
+        },
+        {date: "9月", class: "color-silverLakeBlue", no: "9/30", text: "緊急事態宣言・まん延防止等重点措置の全面解除"},
+        {date: "10月", class: "color-burlywood", no: "10/1", text: "ジョブ型人事制度の開始",
+            child: [
+                {class: "color-burlywood", no: "10/1", text: [{itemText: "初の完全オンライン内定式"}]},
+                {class: "color-silverLakeBlue", no: "10/4", text: [{itemText: "岸田内閣発足"}]},
+            ]
+        },
+        {date: "11月", class: "color-burlywood", no: "11/1", text: "ザイマックス、ザイマックスアルファ、",
+            child: [
+                {class: "color-burlywood ml90", text: [{itemText: "ザイマックス・スクェア合併"}]},
+            ]
+        },
+    ]
+
+
+    let listDataSp = [
+        {date: "2021年2月", class: "color-burlywood", no: "2/1",
+            text: [
+                {itemText: "第1回からくさTV 開催"}
+            ]
+        },
+        {date: "3月", class: "color-burlywood", no: "3/27",
+            text: [
+                {itemText: "オンライングループマネ"},
+                {itemText: "会 開催", class: "mt5"},
+            ],
+        },
+        {date: "4月", class: "color-burlywood", no: "4/1",
+            text: [
+                {itemText: "MF関西 設立"},
+            ],
+            child: [
+                {class: "color-burlywood", no: "4/2",
+                    text: [
+                        {itemText: "ザイマックスビルメ"},
+                        {itemText: "ンテナンス技能研修センタ", class: "mt5"},
+                        {itemText: "ー開所式", class: "mt5"},
+                    ],
+                },
+                {class: "color-silverLakeBlue",
+                    text: [
+                        {itemText: "東京・⼤阪・兵庫・京都に"},
+                        {itemText: "3回⽬の緊急事態宣⾔発令", class: "mt5"},
+                        {itemText: "⼀般向けワクチン接種、各", class: "mt5"},
+                        {itemText: "地で開始", class: "mt5"},
+                    ],
+                },
+            ]
+        },
+        {date: "5月", class: "color-burlywood", no: "5/17",
+            text: [
+                {itemText: "ワクチン接種当⽇に"},
+                {itemText: "「特別有給休暇」を付与", class: "mt5"},
+            ]
+        },
+        {date: "6月", class: "color-burlywood", no: "6/1",
+            text: [
+                {itemText: "XYK 神⼾⽀社オープン"},
+            ]
+        },
+        {date: "7月", class: "color-burlywood", no: "7/1",
+            text: [
+                {itemText: "XYTK 事業開始"},
+            ],
+            child: [
+                {class: "color-burlywood", no: "7/1",
+                    text: [
+                        {itemText: "ザイマックスカレス"},
+                        {itemText: "北海道 設⽴", class: "mt5"}
+                    ]
+                },
+                {class: "color-silverLakeBlue", no: "7/23",
+                    text: [
+                        {itemText: "東京オリンピック無"},
+                        {itemText: "観客で開催（〜8/8）", class: "mt5"}
+                    ]
+                },
+            ]
+        },
+        {date: "8月", class: "color-burlywood",
+            text: [
+                {itemText: "出社率3割以下に、来客・"},
+                {itemText: "会⾷などより厳しく制限", class: "mt5"},
+            ],
+            child: [
+                {class: "color-burlywood",
+                    text: [
+                        {itemText: "東京オフィス再編スタート"}
+                    ]
+                },
+                {class: "color-silverLakeBlue", no: "8/20",
+                    text: [
+                        {itemText: "全国で1⽇の感染者"},
+                        {itemText: "過去最多の2万5千⼈に", class: "mt5"},
+                    ]
+                },
+            ]
+        },
+        {date: "9月", class: "color-silverLakeBlue", no: "9/30",
+            text: [
+                {itemText: "緊急事態宣⾔・まん延"},
+                {itemText: "防⽌等重点措置の全⾯解除", class: "mt5"},
+            ]
+        },
+        {date: "10月", class: "color-burlywood", no: "10/1",
+            text: [
+                {itemText: "ジョブ型⼈事制度の"},
+                {itemText: "開始", class: "mt5"},
+            ],
+            child: [
+                {class: "color-burlywood", no: "10/1",
+                    text: [
+                        {itemText: "初の完全オンライン"},
+                        {itemText: "内定式", class: "mt5"},
+                    ]
+                },
+                {class: "color-silverLakeBlue", no: "10/4",
+                    text: [
+                        {itemText: "岸⽥内閣発⾜"}
+                    ]
+                },
+            ]
+        },
+        {date: "11月", class: "color-burlywood", no: "11/1",
+            text: [
+                {itemText: "ザイマックス、"},
+                {itemText: "ザイマックスアルファ、", class: "mt5"},
+                {itemText: "ザイマックス・スクェア", class: "mt5"},
+                {itemText: "合併", class: "mt5"},
+            ],
+        },
+    ]
+
+doctype html
+html(lang="en")
+
+    include ../_inc/_head.pug
+
+    body
+        .secSingle(class=`${myClass}`)
+            .secSingle__content(class=`${myClassPart}`)
+                article.specialFeatures122021__wrapper
+                    .specialFeatures122021__inner
+                        p.specialFeatures122021__intro
+                            | 2021年、世の中では新型コロナのワクチン接種開始や、
+                            br.u-pcDb
+                            | 史上初の無観客での東京オリンピックパラリンピック開催、
+                            br.u-pcDb
+                            | グループでは初のオンライングループマネ会、
+                            br.u-pcDb
+                            | 新生ザイマックス始動など、社内外で私たちの記憶に残る
+                            br
+                            | 数多くの出来事があったと思います。
+                            br
+                            | そこで、社員の皆さんから募った「今年印象的だった出来事」も交え
+                            br
+                            | 1年の総括として振り返り、皆さんで共有できればと思います。
+                            br
+                            br
+                            | そして、そんな2021年は
+                            br
+                            | 「グループの各事業」にどんな変化があったのか？
+                            br
+                            | 今年も皆さんから質問を募り、
+                            br
+                            | キーとなる事業の役員・部長の皆さんに
+                            br
+                            | 「事業のいま」をお答えいただきました！
+                            br
+                            | この機にぜひ、じっくり読んでみてくださいね。
+                        .specialFeatures122021__data
+                            figure.specialFeatures122021__dataFloatKv.floatKv01
+                                img.specialFeatures122021__dataFloatImg(src=`${localPath}article121021_img-01.png`, alt="")
+                            figure.specialFeatures122021__dataFloatKv.floatKv02
+                                img.specialFeatures122021__dataFloatImg(src=`${localPath}article121021_img-02.png`, alt="")
+                            .u-pcDb
+                                figure.specialFeatures122021__dataFloatKv.floatKv03
+                                    img.specialFeatures122021__dataFloatImg(src=`${localPath}article121021_img-03.png`, alt="")
+                            .specialFeatures122021__dataTitle
+                                h2.specialFeatures122021__dataTitleText 2021年の出来事
+                            .specialFeatures122021__dataLabel
+                                .specialFeatures122021__dataLabelItem(class=`${silverLakeBlue}`)
+                                    p.specialFeatures122021__dataLabelItemText 世間の動き
+                                .specialFeatures122021__dataLabelItem(class=`${burlywood}`)
+                                    p.specialFeatures122021__dataLabelItemText グループの動き
+                            .specialFeatures122021__dataTable
+                                .u-pcDb
+                                    - //- Loop into listData
+                                    each item in listData
+                                        .specialFeatures122021__dataItem
+                                            .specialFeatures122021__dataLeft
+                                                p.specialFeatures122021__dataLeftDate=item.date
+                                            .specialFeatures122021__dataRight
+                                                .specialFeatures122021__dataRightList(class=`${item.class}`)
+                                                    if(item.no)
+                                                        p.specialFeatures122021__dataRightListNo=item.no
+                                                    p.specialFeatures122021__dataRightListText=item.text
+                                                if (item.child)
+                                                    each innerItem in item.child
+                                                        .specialFeatures122021__dataRightList(class=`${innerItem.class}`)
+                                                            if(innerItem.no)
+                                                                p.specialFeatures122021__dataRightListNo=innerItem.no
+                                                            each innerText in innerItem.text
+                                                                p.specialFeatures122021__dataRightListText(class=innerText.class)!=innerText.itemText
+
+                                .u-spDb
+                                    - //- Loop into listData
+                                    each item in listDataSp
+                                        .specialFeatures122021__dataItem
+                                            .specialFeatures122021__dataLeft
+                                                p.specialFeatures122021__dataLeftDate=item.date
+                                            .specialFeatures122021__dataRight
+                                                .specialFeatures122021__dataRightList(class=`${item.class}`)
+                                                    if(item.no)
+                                                        p.specialFeatures122021__dataRightListNo=item.no
+                                                    each itemData in item.text
+                                                        if(itemData.class)
+                                                            p.specialFeatures122021__dataRightListText(class=itemData.class)=itemData.itemText
+                                                            br
+                                                        else
+                                                            p.specialFeatures122021__dataRightListText=itemData.itemText
+                                                            br
+                                                if (item.child)
+                                                    each innerItem in item.child
+                                                        .specialFeatures122021__dataRightList(class=`${innerItem.class}`)
+                                                            if(innerItem.no)
+                                                                p.specialFeatures122021__dataRightListNo=innerItem.no
+                                                            each innerText in innerItem.text
+                                                                p.specialFeatures122021__dataRightListText(class=innerText.class)!=innerText.itemText
+
+                            .specialFeatures122021__dataFloatFlex
+                                figure.specialFeatures122021__dataFloatKv.floatKv04
+                                    img.specialFeatures122021__dataFloatImg(src=`${localPath}article121021_img-04.png`, alt="")
+                                figure.specialFeatures122021__dataFloatKv.floatKv05
+                                    img.specialFeatures122021__dataFloatImg(src=`${localPath}article121021_img-05.png`, alt="")
+                                .u-spDb
+                                    figure.specialFeatures122021__dataFloatKv.floatKv03
+                                        img.specialFeatures122021__dataFloatImg(src=`${localPath}article121021_img-03.png`, alt="")
+                |
+                |
+                .specialFeatures122021__footer
+                    .specialFeatures122021__next.karitLeft(class=`${independence}`)
+                        p.specialFeatures122021__nextText NEXT
+                        .specialFeatures122021__nextWrapper
+                            a.specialFeatures122021__nextItem(href="")
+                                span.specialFeatures122021__nextItemLabel.label24 2021年を振り返って…
+                                p.specialFeatures122021__nextItemTitle.title40 印象的だったこと

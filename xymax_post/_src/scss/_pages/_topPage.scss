@@ -1,0 +1,157 @@
+/*====================================================================
+topPage
+====================================================================*/
+
+.topPageSecKv {
+  .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+  }
+
+  .swiper-container {
+    padding-bottom: 20px;
+  }
+
+  .swiper-container-horizontal
+    > .swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    margin: 0 9px;
+  }
+
+  .swiper-slide {
+    width: 100%;
+    max-width: 984px;
+    @include u-trs();
+    @include u-hoverOp();
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 38px;
+    height: 38px;
+  }
+
+  .swiper-button-next {
+    right: 34px;
+  }
+
+  .swiper-button-prev {
+    left: 34px;
+  }
+
+  &__imgItem {
+    width: 984px;
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__btnCont {
+    width: 100%;
+    max-width: $innerContent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+}
+
+.topPageSecRecTags {
+  margin-top: 80px;
+
+  &__inner {
+    @include u-flex(row, wrap, center, flex-start);
+    margin: 0 auto;
+    max-width: $innerContent;
+    color: $green;
+  }
+
+  &__txt {
+    margin-top: 9px;
+    margin-right: 25px;
+    color: $green;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+  }
+
+  &__divider {
+    margin-top: 6px;
+  }
+
+  &__container {
+    margin-left: 25px;
+    max-width: 898px;
+  }
+
+  &__tags {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: $green;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    border: 1px solid $green;
+    border-radius: 50px;
+    box-sizing: border-box;
+    @include u-trs($duration: 0.1s);
+
+    &:hover {
+      background: $green;
+      color: $white;
+    }
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+}
+
+@include u-mqMax {
+  .topPageSecKv {
+    .swiper-container {
+      padding-bottom: 7.24vw;
+    }
+
+    .swiper-slide {
+      max-width: 100%;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 7.72vw;
+      height: 7.72vw;
+    }
+
+    .swiper-button-next {
+      right: 2.41vw;
+    }
+
+    .swiper-button-prev {
+      left: 2.41vw;
+    }
+
+    &__imgItem {
+      width: 100%;
+      height: 62.07vw;
+    }
+
+    &__btnCont {
+      width: 100%;
+      max-width: $innerContent;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+    }
+  }
+
+  .topPageSecRecTags {
+    display: none;
+  }
+}
+
+@include u-IEhack {
+}

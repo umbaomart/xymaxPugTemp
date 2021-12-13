@@ -1,0 +1,7 @@
+@function u-zIndex($key) {
+    @return map-get($u-zIndex, $key);
+}
+  
+@mixin u-zIndex($key) {
+    z-index: u-zIndex($key);
+}

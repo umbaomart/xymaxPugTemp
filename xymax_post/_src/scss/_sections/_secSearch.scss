@@ -1,0 +1,157 @@
+.secSearch {
+    padding: 64px 0 81px;
+
+    &__header {
+        text-align: center;
+    }
+
+    &__headerTitle {
+        color: $green;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    &__content {
+        margin: 107px auto 0;
+        width: 100%;
+        max-width: 1080px;
+    }
+
+    &__item {
+        display: none;
+
+        &.u-show {
+            display: block;
+        }
+        
+        &:not(:first-child) {
+            margin-top: 30px;
+            border-top: 1px solid $green;
+            padding-top: 30px;
+        }
+    }
+
+    &__itemCat {
+        @include u-flex(row, nowrap, flex-start, center);
+        color: $green;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    &__itemCatMain {
+        font-size: 14px;
+        font-weight: bold;
+        margin-right: 15px;
+    }
+
+    .u-divider {
+        display: inline-block;
+        margin-right: 15px;
+    }
+
+    &__itemCatSub {
+        font-size: 14px;
+        font-weight: bold;
+        color: $green;
+    }
+
+    &__itemHeader {
+        position: relative;
+        margin-top: 25px;
+        display: block;
+        color: $black;
+        font-size: 22px;
+        line-height: 1.2;
+        font-weight: bold;
+        padding-bottom: 5px;
+        @include u-trs();
+        @include u-hoverOp();
+
+        &:visited {
+            color: $visited;
+        }
+
+        br {
+            display: none;
+        }
+    }
+
+    &__itemDesc {
+        margin-top: 15px;
+        display: block;
+        font-size: 16px;
+        line-height: 1.5;
+        max-height: 50px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+    }
+
+    &__noResult {
+        font-size: 22px;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+
+
+
+@include u-mqMax {
+    .secSearch {
+        padding: 15.45vw 0 19.32vw;
+    
+        &__headerTitle {
+            font-size: 5.31vw;
+        }
+    
+        &__content {
+            margin: 25.84vw auto 0;
+            width: 100%;
+            max-width: 90.57vw;
+        }
+    
+        &__item {
+            &:not(:first-child) {
+                margin-top: 7.24vw;
+                padding-top: 7.24vw;
+            }
+        }
+    
+        &__itemCat {
+            font-size: 3.38vw;
+        }
+    
+        &__itemCatMain {
+            font-size: 3.38vw;
+            margin-right: 3.62vw;
+        }
+    
+        .u-divider {
+            margin-right: 3.62vw;
+        }
+    
+        &__itemCatSub {
+            font-size: 3.38vw;
+        }
+    
+        &__itemHeader {
+            margin-top: 6.03vw;
+            font-size: 5.31vw;
+            padding-bottom: 1.2vw;
+        }
+    
+        &__itemDesc {
+            margin-top: 3.62vw;
+            font-size: 3.86vw;
+            max-height: none;
+            -webkit-line-clamp: 2;
+        }
+    
+        &__noResult {
+            font-size: 5.31vw;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+/*====================================================================
+siteFooter
+====================================================================*/
+.siteFooter {
+  margin-top: 140px;
+  background: $green;
+  padding: 10px 0;
+  box-sizing: border-box;
+  
+  &__copyright {
+    display: block;
+    color: $white;
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+@include u-mqMax {
+  .siteFooter {
+    margin-top: 18.6vw;
+    padding: 3.18vw 0;
+    
+    &__copyright {
+      font-size: 2.41vw;
+    }
+  }    
+}

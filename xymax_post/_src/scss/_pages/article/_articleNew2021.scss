@@ -1,0 +1,468 @@
+.articleNew2021 {
+  letter-spacing: normal;
+
+  .u-dash {
+    margin-left: 2px;
+    display: inline-block;
+    width: 34px;
+    height: 1px;
+    background: $red02;
+    vertical-align: middle;
+    margin-bottom: 5px;
+
+    @include u-mqMax {
+      width: 30px;
+    }
+  }
+
+  .post-ratings + .articleNew2021__cont {
+    .articleNew2021__imgCont {
+      margin-top: 70px;
+
+      @include u-mqMax {
+        margin-top: -30px;
+      }
+    }
+  }
+
+  &__cont {
+    margin: 60px auto 0;
+    max-width: 1080px;
+
+    @include u-mqMax {
+      margin-top: 50px;
+      padding: 0 20px;
+    }
+  }
+
+  &__txt {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.7;
+  }
+
+  &__imgCont {
+    margin-top: 120px;
+    @include u-flex(row, nowrap, space-between, center);
+
+    @include u-mqMax {
+      margin-top: 70px;
+    }
+  }
+
+  &__imgContItem {
+    max-width: 541px;
+
+    @include u-mqMax {
+      margin-top: 20px;
+      max-width: 100%;
+    }
+  }
+
+  &__imgContDetails {
+    max-width: 551px;
+    color: $red02;
+
+    @include u-mqMax {
+      max-width: 100%;
+    }
+  }
+
+  &__imgContDetailsOne {
+    max-width: 551px;
+    color: $red02;
+    position: relative;
+    right: 16%;
+
+    @include u-mqMax {
+      right: auto;
+    }
+  }
+
+  &__imgContDetailsTwo {
+    max-width: 551px;
+    color: $red02;
+    position: relative;
+    right: -2%;
+
+    @include u-mqMax {
+      right: auto;
+    }
+  }
+
+  &__imgContDetailsThree {
+    max-width: 551px;
+    color: $red;
+    position: relative;
+    right: 0%;
+
+    @include u-mqMax {
+      right: auto;
+    }
+  }
+
+  &__imgHeading {
+    display: inline;
+    font-size: 38px;
+    font-weight: bold;
+    line-height: 1.7;
+    padding-bottom: 12px;
+    border-bottom: 2px solid $red02;
+
+    @include u-mqMax {
+      font-size: 23px;
+      padding-bottom: 5px;
+    }
+  }
+
+  &__imgPos {
+    margin-top: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.7;
+
+    @include u-mqMax {
+      margin-top: 20px;
+    }
+  }
+
+  &__imgSpan {
+    margin-top: 20px;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  &__articleCont {
+    margin: 85px auto 0;
+    max-width: 711px;
+
+    @include u-mqMax {
+      margin: 55px auto 0;
+    }
+  }
+
+  &__heading {
+    position: relative;
+    padding-left: 32px;
+    color: $red02;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.7;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      display: block;
+      width: 12px;
+      height: 59px;
+      background-image: url("../images/common/newYear2021_heading-bg.png");
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+    }
+
+    @include u-mqMax {
+      font-size: 20px;
+      line-height: 1.6;
+
+      &::before {
+        height: 55px;
+        background-image: url("../images/common/newYear2021_heading-bg-sp.png");
+      }
+    }
+  }
+
+  &__headingThree {
+    margin-top: 50px;
+    position: relative;
+    padding-left: 32px;
+    color: $red02;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.7;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      display: block;
+      width: 12px;
+      height: 59px;
+      background-image: url("../images/common/newYear2021_heading-bg.png");
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+    }
+
+    @include u-mqMax {
+      margin-top: 25px;
+      font-size: 20px;
+      line-height: 1.6;
+
+      &::before {
+        height: 84px;
+        background-image: url("../images/common/newYear2021_heading-bg-sp.png");
+      }
+    }
+
+    &.u-pcThree {
+      &::before {
+        height: 95px;
+        background-image: url("../images/common/newYear2021_heading-bg02.png");
+        transform: translateY(-50%);
+      }
+
+      @include u-mqMax {
+        &::before {
+          height: 84px;
+          background-image: url("../images/common/newYear2021_heading-bg-sp.png");
+        }
+      }
+    }
+  }
+
+  &__articleTxt {
+    margin-top: 50px;
+    font-size: 17px;
+    line-height: 1.6;
+    letter-spacing: 0.16em;
+
+    @include u-mqMax {
+      margin-top: 30px;
+    }
+  }
+
+  &__articleTxt + &__heading {
+    margin-top: 50px;
+
+    @include u-mqMax {
+      margin-top: 25px;
+    }
+  }
+
+  &__headingBoxCont {
+    margin: 100px auto 180px;
+    @include u-flex(row, nowrap, center, center);
+    box-sizing: border-box;
+
+    @include u-mqMax {
+      margin-bottom: 90px;
+    }
+  }
+
+  &__headingBox {
+    position: relative;
+    padding: 23px;
+    color: $red02;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2;
+    box-sizing: border-box;
+
+    @include u-mqMax {
+      width: 100%;
+      font-size: 20px;
+      line-height: 1.6;
+      padding: 18px 15px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 31px;
+      height: 31px;
+
+      @include u-mqMax {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+      border-top: 3px solid $mossGreen03;
+      border-left: 3px solid $mossGreen03;
+    }
+
+    &::after {
+      bottom: 0;
+      right: 0;
+      border-bottom: 3px solid $mossGreen03;
+      border-right: 3px solid $mossGreen03;
+    }
+  }
+
+  &__articleImg {
+    margin: 100px auto 0;
+
+    @include u-mqMax {
+      margin-top: 80px;
+    }
+  }
+
+  &__nextBtn {
+    margin: 160px auto 0;
+    display: block;
+    max-width: 483px;
+    color: $red02 !important;
+    position: relative;
+
+    @include u-mqMax {
+      margin-top: 80px;
+    }
+
+    &:hover {
+      &::after {
+        right: -10px;
+        opacity: 1;
+
+        @include u-mqMax {
+          opacity: 0;
+          right: 0;
+        }
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      display: block;
+      width: 53px;
+      height: 53px;
+      background-image: url("../images/common/articleNew2021__arrow.svg");
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      opacity: 0;
+      @include u-trs();
+    }
+  }
+
+  &__nextCont {
+    @include u-flex(row, nowrap, flex-start, center);
+    margin-bottom: 20px;
+  }
+
+  &__nextTxt {
+    padding: 5px;
+    color: $white;
+    font-size: 14px;
+    font-weight: bold;
+    background: $red02;
+  }
+
+  &__next02 {
+    margin-left: 15px;
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+
+    @include u-mqMax {
+      margin-left: 10px;
+    }
+  }
+
+  &__nextName {
+    margin-left: 15px;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+
+    @include u-mqMax {
+      margin-left: 10px;
+    }
+  }
+
+  &__nextSpan {
+    display: inline;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.8;
+    padding-bottom: 10px;
+    border-bottom: 2px solid $red02;
+
+    @include u-mqMax {
+      font-size: 23px;
+      padding-bottom: 5px;
+    }
+  }
+
+  &__artTitle {
+    color: $red02;
+  }
+
+  &__artSpan {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  &__artTxt {
+    margin-top: 10px;
+    display: block;
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: bold;
+
+    @include u-mqMax {
+      font-size: 17px;
+    }
+  }
+}
+
+.articleNew2021 + .karakusaPost__feedSec {
+  .feedSecContainer {
+    border-color: $red02;
+
+    svg.main {
+      stroke: $red02;
+    }
+
+    svg.hover {
+      #Path_675 {
+        stroke: $red02;
+        fill: $red02;
+      }
+
+      #Ellipse_9 {
+        stroke: $red02;
+      }
+    }
+
+    svg.click {
+      #Ellipse_9 {
+        fill: $red02;
+        stroke: $white;
+      }
+
+      #Path_675 {
+        fill: $red02;
+        stroke: $red02;
+      }
+    }
+
+    &.js-liked {
+      background-color: $red02;
+
+      .feedSecContainer__text {
+        color: $white;
+      }
+
+      .feedSecContainer__likeText {
+        color: $white;
+      }
+    }
+
+    .feedSecContainer__likeText {
+      color: $red02;
+    }
+  }
+}

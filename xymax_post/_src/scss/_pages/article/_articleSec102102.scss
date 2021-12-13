@@ -1,0 +1,376 @@
+.articleSec102102 {
+  $blue: #4E98E1;
+  $blue02: #034DA9;
+  $blue03: #DFF0FA;
+  $blue04: #04419C;
+  $blue05: #64BEE7;
+
+  .postSec__postCategoryText,
+  .postSec__postCategoryDate,
+  .postSec__postLikeText,
+  .postSec__postLikeNumber {
+    color: $black;
+  }
+
+  .postSec__postTagText {
+    color: $black;
+  }
+
+  .postSec__postTagItem:hover {
+    background: $black;
+  }
+
+  .postSec__postTagItem {
+    border-color: $black;
+  }
+
+  .postSec__postTagItem.u-tagRevert {
+    background: $black;
+  }
+
+  .postSec__postTagItem.u-tagRevert:hover .postSec__postTagText {
+    color: $black;
+  }
+
+  .postSec {
+    .click #Path_675 {
+      fill: $white;
+      stroke: $black !important;
+    }
+
+    .u-heartSvg:hover #Path_675,
+    .u-heartSvg.js-liked #Ellipse_9 {
+      fill: $black;
+    }
+
+    .u-heartSvgTxt,
+    .u-heartCount {
+      color: $black !important;
+    }
+
+    .postSec__postRight .main #Ellipse_9 {
+      stroke: $black;
+    }
+
+    .postSec__postRight .main #Path_675 {
+      stroke: $black;
+    }
+
+    .postSec__postRight .hover #Ellipse_9 {
+      stroke: $black;
+    }
+
+    .postSec__postRight .hover #Path_675 {
+      stroke: $black;
+      fill: $black;
+    }
+
+    .postSec__postRight .click #Ellipse_9 {
+      stroke: $black;
+    }
+
+    .postSec__postCategoryText:after {
+      border-color: $black;
+    }
+  }
+
+  &__content {
+    margin: 40px auto 0;
+    max-width: 840px;
+
+    @include u-mqMax {
+      margin-top: 42.5px;
+      max-width: calc(100% - 35px);
+    }
+  }
+
+  &__mainTxt {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.7;
+    text-align: center;
+
+    @include u-mqMax {
+      text-align: left;
+    }
+
+    &.u-txt02 {
+      margin-top: 35px;
+
+      @include u-mqMax {
+        margin-top: 25px;
+        text-align: center;
+      }
+    }
+  }
+
+  &__figureLine {
+    margin: 88px auto 0;
+    width: 100%;
+    max-width: 840px;
+
+    @include u-mqMax {
+      margin-top: 56px;
+      max-width: 100%;
+    }
+  }
+
+  &__mainImg {
+    margin: 47px auto 0;
+    width: 100%;
+    max-width: 680px;
+
+    @include u-mqMax {
+      margin-top: 44px;
+      max-width: 280px;
+    }
+  }
+
+  &__qLogo {
+    margin: 35px auto 0;
+    max-width: 22px;
+
+    @include u-mqMax {
+      margin-top: 30px;
+    }
+  }
+
+  &__txtBlue {
+    margin-top: 15px;
+    color: $blue;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.64;
+    text-align: center;
+
+    @include u-mqMax {
+      margin-top: 30px;
+      color: $blue05;
+      font-size: 17px;
+    }
+  }
+
+  &__aLogo {
+    margin: 38px auto 0;
+    max-width: 38px;
+
+    @include u-mqMax {
+      margin-top: 27px;
+      max-width: 31px;
+    }
+  }
+
+  &__txtBlue02 {
+    margin: 30px auto 0;
+    color: $blue02;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.7;
+    text-align: center;
+
+    @include u-mqMax {
+      margin-top: 22px;
+      font-size: 17px;
+    }
+  }
+
+  &__txtBox {
+    margin: 40px auto 0;
+    font-size: 17px;
+    line-height: 1.64;
+    max-width: 695px;
+
+    @include u-mqMax {
+      margin-top: 43px;
+      letter-spacing: 0.03em;
+    }
+  }
+
+  &__txtBoxSpan {
+    background: $blue03;
+    padding: 5px 0;
+    color: $blue02;
+    font-weight: bold;
+    line-height: 1.8;
+    box-sizing: border-box;
+
+    @include u-mqMax {
+      line-height: 2;
+    }
+  }
+
+  &__people {
+    margin: 50px auto 0;
+    max-width: 695px;
+    text-align: right;
+
+    @include u-mqMax {
+      margin-top: 34px;
+      max-width: 285px;
+      text-align: center;
+    }
+
+    img {
+      max-width: 633px;
+
+      @include u-mqMax {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__peopleHiddenDesc {
+    display: none;
+  }
+
+  &__headerImg {
+    margin-top: 77px;
+    color: $blue02;
+    font-size: 17px;
+    font-weight: bold;
+
+    @include u-mqMax {
+      margin-top: 46px;
+      text-align: center;
+    }
+  }
+
+  &__boxTxt {
+    margin: 10px auto 0;
+    padding: 20px;
+    color: $blue02;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.64;
+    background: $blue03;
+    border-radius: 20px;
+    box-sizing: border-box;
+
+    @include u-mqMax {
+      padding: 9px;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+  }
+
+  &__note {
+    @include u-mqMax {
+      margin-top: 20px;
+      font-size: 12px;
+      font-weight: 500;
+      text-align: center;
+    }
+  }
+
+  &__boxImg {
+    margin-top: 18px;
+    padding: 30px 18px 30px 25px;
+    border: 1px solid $blue04;
+    border-radius: 20px;
+    box-sizing: border-box;
+
+    @include u-mqMax {
+      margin-top: 20px;
+      padding: 15px 10px;
+      border-radius: 10px;
+    }
+  }
+
+  &__headerBoxes {
+    margin: 75px auto 0;
+    color: $blue02;
+    font-size: 17px;
+    font-weight: bold;
+
+    @include u-mqMax {
+      margin-top: 37px;
+      text-align: center;
+    }
+  }
+
+  &__boxes {
+    margin-top: 20px;
+    @include u-flex(row, nowrap, flex-start, flex-start);
+
+    @include u-mqMax {
+      margin-top: 32px;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__boxesItem {
+    width: calc(50% - 5px);
+
+    &:first-child {
+      margin-right: 10px;
+
+      @include u-mqMax {
+        margin-right: 0;
+        margin-bottom: 44px;
+      }
+    }
+
+    @include u-mqMax {
+      width: 236px;
+      max-width: 236px;
+    }
+  }
+
+  &__boxesCaption {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  &__nextTag {
+    position: relative;
+    margin: 90px auto 0;
+    display: block;
+    max-width: 307px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    @include u-trs();
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      display: block;
+      width: calc(100% - 8px);
+      height: calc(100% - 8px);
+      background: $black;
+      z-index: -1;
+    }
+
+    &:hover {
+      padding-top: 8px;
+      padding-left: 8px;
+      padding-right: 0;
+      padding-bottom: 0;
+
+      @include u-mqMax {
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 5px;
+        padding-bottom: 5px;
+      }
+    }
+
+    @include u-mqMax {
+      margin-top: 55px;
+      padding-right: 5px;
+      padding-bottom: 5px;
+      max-width: 155px;
+
+      &::before {
+        top: 5px;
+        left: 5px;
+        display: block;
+        width: calc(100% - 5px);
+        height: calc(100% - 5px);
+      }
+    }
+  }
+}
