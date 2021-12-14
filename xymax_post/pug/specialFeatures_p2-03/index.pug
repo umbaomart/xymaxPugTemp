@@ -1,0 +1,112 @@
+-
+    let myClassPart = "specialFeaturesP2Series"
+    let myClassFooter = "specialFeaturesP2Series03"
+    let myClass = "specialFeatures122021"
+    //- let localPath = "./../../_images/p2/"
+    let localPath = "[uploads_path]/2021/12/"
+    let metaTitle = "Special Features P2-03"
+//-  colors
+-   let silverLakeBlue = "color-silverLakeBlue"; // #5785B7 lakeblue
+-   let burlywood = "color-burlywood"; // #DFBA79 lightbrown
+-   let independence = "color-independence"; // #4F576C darkgray
+-   let operaMauve = "color-operaMauve"; // #BC7DAA pink
+-   let grenSheen = "color-grenSheen"; // #6CAB9C green
+-   let elecBrown = "color-elecBrown"; // #B46253
+-   let roseDust = "color-roseDust"; // #9D5F72
+-   let grullo = "color-grullo"; // #ADA679 yellow green
+-   let pewterBlue = "color-pewterBlue"; // #7EADB1 teal
+
+-
+ let profile = [
+     {
+        no: "第1の皿",
+        labelText: "関西",
+        description: "関西エリアに密着して、不動産の管理運営業務をワンストップで総合的に担う。",
+        bubleKarit: "karitLeft color-roseDust",
+        bubbleContent: "さらなる拡大に向け、<br>新しい領域も<br>“まずはやってみる！”",
+        body: "XYK 代表取締役社長",
+        profName: "吉田 正",
+        img: "article121021_prof_kv-03.png"
+     },
+ ]
+
+ let questContent = [
+    {
+        qNo: "Q1.",
+        title: "XYKを取り巻く現状はいかがですか？",
+        body: "<span class='specialFeatures122021__questItemContentTextBold'>不マネでの皿と料理（工事受注）の拡大を掲げて3年目。これまで順調にきていて、今期もその流れはある。</span><br><br>東京よりオフィス市場が小さい大阪で、XYKはAMなどの投資型物件の世界ではそこそこ名が知れて、オフィス物件の受託が安定。加えて、<span class='specialFeatures122021__questItemContentTextBold'>大型かつ工事も高額のロジ、次いで商業施設を攻めており、順調にとれてきている。ただそれも数に限りがあるから、難易度は高いけど大型物件も多い公共施設もええんちゃう？と。</span>今期、大阪市で2エリアの包括管理を受注したりと、入札の勘所もつかめ始めてる。仕事量も未知で稼げるのかはわからんけど、来期以降に実際にやってみてどうか判断だね。<br><br>工事は昨年度が好調すぎた分、売上は少し厳しくなるかなと。それは仕方ないので、この下期には、他社<span class='specialFeatures122021__questItemContentTextBold'>PMなどの管理外物件の工事受注にも挑戦しようとしていて。加えて、老朽化が進む公共施設の工事にもトライする。</span>でもそれは資格が必要で、税金で行うからコストもシビア。とはいえ<span class='specialFeatures122021__questItemContentTextBold'>まずはやってみる、ってことでこれらの新たな領域を攻めていきます。</span>",
+    },
+    {
+        qNo: "Q2.",
+        title: "「筋肉質化」は進んでますか？",
+        body: "一番分かりやすく変わったのは、スタッフの数が増えたこと。会計部隊やラインスタッフがある程度まわり始めて安定してくれば、PMフロントの仕事を巻き取っていけると思う。ただ、<span class='specialFeatures122021__questItemContentTextBold'>ここ数年で新しい仲間がだいぶ増えて、経験の浅い人が多くなってきている。経験者がいなくても問題なくまわせる業務フローを構築したり、組織のレベルアップは課題として挙げられるかな。</span>",
+    },
+    {
+        qNo: "Q3.",
+        title: "いま、アツい取り組みは何ですか？",
+        body: "<span class='specialFeatures122021__questItemContentTextBold'>JR西日本様との仕事だね。</span>もう苦節何年になるか…<span class='specialFeatures122021__questItemContentTextBold'>拡げまっせ広めまっせPJTやCUTEなどの取り組みから、XYKを先進企業として好意的に見てくれて、</span>今期のJR西日本不動産開発との包括契約につながった。鉄道会社は全般的に、鉄道・レジャー・不動産事業の3本柱がある中、コロナ禍で鉄道・レジャーが苦しくなって、不動産事業に回帰している。JRに留まらず、<span class='specialFeatures122021__questItemContentTextBold'>濃淡はあるけど稼げる見込みのある関西のインフラ系企業から「XYKに声かけよう」と思ってもらえる先を増やしたい。</span>定期的なPJTでのイベント発信を通じて近づき、チャンスを伺っていきます。",
+    },
+ ]
+
+doctype html
+html(lang="en")
+    include ../_inc/_head.pug
+    body
+        .secSingle(class=`${myClass}`)
+            .secSingle__content(class=`${myClassPart}`)
+                article.specialFeatures122021__wrapper
+                    .specialFeatures122021__inner
+                        .specialFeatures122021__innerBorder(class=roseDust)
+                            .specialFeatures122021__prof
+                                .specialFeatures122021__profLabel
+                                    p.specialFeatures122021__profLabelNo=profile[0].no
+                                    span.specialFeatures122021__profLabelText=profile[0].labelText
+                                p.specialFeatures122021__profDesc=profile[0].description
+                                .specialFeatures122021__profFlex
+                                    .specialFeatures122021__profContent
+                                        .specialFeatures122021__profContentBuble(class=profile[0].bubleKarit)
+                                            p.specialFeatures122021__profContentBubleData!=profile[0].bubbleContent
+                                        .specialFeatures122021__profContentBox
+                                            p.specialFeatures122021__profContentText!=profile[0].body
+                                            .specialFeatures122021__profContentName
+                                                p.specialFeatures122021__profContentNameText=profile[0].profName
+                                                    span.specialFeatures122021__profContentNameExt さん
+                                    figure.specialFeatures122021__profKv
+                                        img.specialFeatures122021__profKvImg(src=`${localPath}${profile[0].img}`)
+                            .specialFeatures122021__quest: each item in questContent
+                                .specialFeatures122021__questItem
+                                    .specialFeatures122021__questItemHeader
+                                        p.specialFeatures122021__questItemHeaderNo=item.qNo
+                                        h2.specialFeatures122021__questItemHeaderText!=item.title
+                                    .specialFeatures122021__questItemContent
+                                        p.specialFeatures122021__questItemContentText!=item.body
+                            |
+                            |
+                            .specialFeatures122021__qoute
+                                .specialFeatures122021__qouteText Web版限定記事へ
+
+                    .specialFeatures122021__closing
+                        .specialFeatures122021__closingHeader
+                            figure.specialFeatures122021__closingHeaderKv
+                                img.specialFeatures122021__closingHeaderImg(src=`${localPath}article121021_footer_kv.png`, alt="")
+                        ul.specialFeatures122021__closingList
+                            li.specialFeatures122021__closingListText
+                                | 卵と納豆とFMのお客様であるライフ様のスイカをこよなく愛する吉田正さん。大阪の単身マンションには家電がほとんどなく、少しずつ増えたもののまだ冷蔵庫はなく、1階のファミマが冷蔵庫代わり！そして冬はベランダが冷蔵庫に〜！（XYK 事業アライアンスG　松田智恵／XYK 統括部　服部典子）
+                |
+                |
+                .specialFeatures122021__footer(class=myClassFooter)
+                    .specialFeatures122021__footerFlex
+                        .specialFeatures122021__next.karitLeft(class=`${grullo}`)
+                            p.specialFeatures122021__nextText NEXT
+                            a.specialFeatures122021__nextItem(href="")
+                                span.specialFeatures122021__nextItemLabel.label32 第2の皿
+                                p.specialFeatures122021__nextItemTitle.title24 XI
+
+                        .specialFeatures122021__next.karitLeft(class=`${pewterBlue}`)
+                            a.specialFeatures122021__nextItem(href="")
+                                span.specialFeatures122021__nextItemLabel.label32 第2の皿
+                                p.specialFeatures122021__nextItemTitle.title24 商業
+
+                    .specialFeatures122021__next.listPage
+                        a.specialFeatures122021__nextItem(href="")
+                            span.specialFeatures122021__nextItemLabel.label17 登場事業一覧ページへ

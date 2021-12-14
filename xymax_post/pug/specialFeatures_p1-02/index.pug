@@ -145,40 +145,40 @@ html(lang="en")
                                         if ((index+1)%2)
                                             .specialFeatures122021__boxMessagesItem(class=`${item.class} messagesItem${index+1} karitLeft`)
                                                 figure.specialFeatures122021__boxMessagesProf
-                                                    img.specialFeatures122021__boxMessagesProfImg(src=`./../../_images/p1/${item.img}`, alt=`img${index+1}`)
+                                                    img.specialFeatures122021__boxMessagesProfImg(src=`${localPath}${item.img}`, alt=`img${index+1}`)
                                                 .specialFeatures122021__boxMessagesItemContent
                                                     each contentItem in item.content
                                                         p.specialFeatures122021__boxMessagesItemContentText!=contentItem.text
                                                 if (item.iconSp)
                                                     each iconItem in item.icon
                                                         figure.specialFeatures122021__boxMessagesIcon.u-pcDb
-                                                            img.specialFeatures122021__boxMessagesIconImg(src=`./../../_images/p1/${iconItem.iconName}`, alt=``)
+                                                            img.specialFeatures122021__boxMessagesIconImg(src=`${localPath}${iconItem.iconName}`, alt=``)
                                                     each iconItemSp in item.iconSp
                                                         figure.specialFeatures122021__boxMessagesIcon.u-spDb
-                                                            img.specialFeatures122021__boxMessagesIconImg(src=`./../../_images/p1/${iconItemSp.iconName}`, alt=``)
+                                                            img.specialFeatures122021__boxMessagesIconImg(src=`${localPath}${iconItemSp.iconName}`, alt=``)
                                                 else
                                                     each iconItem in item.icon
                                                         figure.specialFeatures122021__boxMessagesIcon
-                                                            img.specialFeatures122021__boxMessagesIconImg(src=`./../../_images/p1/${iconItem.iconName}`, alt=``)
+                                                            img.specialFeatures122021__boxMessagesIconImg(src=`${localPath}${iconItem.iconName}`, alt=``)
 
                                         else
                                             .specialFeatures122021__boxMessagesItem(class=`${item.class} messagesItem${index+1} karitRight`)
                                                 figure.specialFeatures122021__boxMessagesProf
-                                                    img.specialFeatures122021__boxMessagesProfImg(src=`./../../_images/p1/${item.img}`, alt=`img${index+1}`)
+                                                    img.specialFeatures122021__boxMessagesProfImg(src=`${localPath}${item.img}`, alt=`img${index+1}`)
                                                 .specialFeatures122021__boxMessagesItemContent
                                                     each contentItem in item.content
                                                         p.specialFeatures122021__boxMessagesItemContentText!=contentItem.text
                                                 if (item.iconSp)
                                                     each iconItem in item.icon
                                                         figure.specialFeatures122021__boxMessagesIcon.u-pcDb
-                                                            img.specialFeatures122021__boxMessagesIconImg(src=`./../../_images/p1/${iconItem.iconName}`, alt=``)
+                                                            img.specialFeatures122021__boxMessagesIconImg(src=`${localPath}${iconItem.iconName}`, alt=``)
                                                     each iconItemSp in item.iconSp
                                                         figure.specialFeatures122021__boxMessagesIcon.u-spDb
-                                                            img.specialFeatures122021__boxMessagesIconImg(src=`./../../_images/p1/${iconItemSp.iconName}`, alt=``)
+                                                            img.specialFeatures122021__boxMessagesIconImg(src=`${localPath}${iconItemSp.iconName}`, alt=``)
                                                 else
                                                     each iconItem in item.icon
                                                         figure.specialFeatures122021__boxMessagesIcon
-                                                            img.specialFeatures122021__boxMessagesIconImg(src=`./../../_images/p1/${iconItem.iconName}`, alt=``)
+                                                            img.specialFeatures122021__boxMessagesIconImg(src=`${localPath}${iconItem.iconName}`, alt=``)
                 |
                 |
                 .specialFeatures122021__footer
@@ -197,6 +197,6 @@ html(lang="en")
                             span.specialFeatures122021__nextItemYear.year16 2021
                             p.specialFeatures122021__nextItemTitle.title15 登場事業一覧はこちら
                             figure.specialFeatures122021__nextItemIcon.floatIcon01.icon-dotBr
-                                img.specialFeatures122021__nextItemIconImg(src=`./../../_images/p1/article121021_icon_dotLeft-burlywood.png`, alt=``)
+                                img.specialFeatures122021__nextItemIconImg(src=`${localPath}article121021_icon_dotLeft-burlywood.png`, alt=``)
                             figure.specialFeatures122021__nextItemIcon.floatIcon02.icon-exClamBl
-                                img.specialFeatures122021__nextItemIconImg(src=`./../../_images/p1/article121021_icon_exClamRight-silverlakeblue.png`, alt=``)
+                                img.specialFeatures122021__nextItemIconImg(src=`${localPath}article121021_icon_exClamRight-silverlakeblue.png`, alt=``)
