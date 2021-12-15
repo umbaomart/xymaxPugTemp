@@ -2,8 +2,8 @@
     let myClassPart = "specialFeaturesP2Series"
     let myClassFooter = "specialFeaturesP2Series03"
     let myClass = "specialFeatures122021"
-    //- let localPath = "./../../_images/p2/"
-    let localPath = "[uploads_path]/2021/12/"
+    let localPath = "./../../_images/p2/"
+    //- let localPath = "[uploads_path]/2021/12/"
     let metaTitle = "Special Features P2-03"
 //-  colors
 -   let silverLakeBlue = "color-silverLakeBlue"; // #5785B7 lakeblue
@@ -66,13 +66,17 @@ html(lang="en")
                                     .specialFeatures122021__profContent
                                         .specialFeatures122021__profContentBuble(class=profile[0].bubleKarit)
                                             p.specialFeatures122021__profContentBubleData!=profile[0].bubbleContent
+                                        .u-spDb
+                                            figure.specialFeatures122021__profKv
+                                                img.specialFeatures122021__profKvImg(src=`${localPath}${profile[0].img}`)
                                         .specialFeatures122021__profContentBox
                                             p.specialFeatures122021__profContentText!=profile[0].body
                                             .specialFeatures122021__profContentName
                                                 p.specialFeatures122021__profContentNameText=profile[0].profName
                                                     span.specialFeatures122021__profContentNameExt さん
-                                    figure.specialFeatures122021__profKv
-                                        img.specialFeatures122021__profKvImg(src=`${localPath}${profile[0].img}`)
+                                    .u-pcDb
+                                        figure.specialFeatures122021__profKv
+                                            img.specialFeatures122021__profKvImg(src=`${localPath}${profile[0].img}`)
                             .specialFeatures122021__quest: each item in questContent
                                 .specialFeatures122021__questItem
                                     .specialFeatures122021__questItemHeader

@@ -13,6 +13,13 @@
   $grenSheen: #6CAB9C;
   $grey: #707070;
 
+  // part 3
+  $grullo: #ADA679;
+  $pewterBlue: #7EADB1;
+  $newYorkPink: #DB8172;
+  $metallicSilver: #9DACAC;
+  $glaucous: #667FAA;
+
   $white: #fff;
   $black: #000;
 
@@ -136,7 +143,7 @@
 
     @include u-mqMax {
       display: block;
-      margin-top: 12.5vw;
+      margin: 12.5vw auto 28.594vw;
     }
 
     // .specialFeaturesP2Series & {
@@ -146,9 +153,83 @@
     &.col3 {
       width: 100%;
     }
+
+    &.col2 {
+      width: 100%;
+      max-width: 450px;
+      margin: 60px auto 0;
+      @include u-flex($fd: row, $fw: wrap, $jc: flex-start, $ai: stretch);
+
+      @include u-mqMax {
+        display: block;
+        margin: 12.5vw auto 28.594vw;
+      }
+    }
   }
 
   &__cardsItem {
+    position: relative;
+
+    @include u-mqMax {
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 5%;
+        width: 2.656vw;
+        height: 2.656vw;
+        transform: rotate(-45deg);
+      }
+
+      &.color-operaMauve {
+        &:after {
+          border-right: 0.469vw solid $operaMauve;
+          border-bottom: 0.469vw solid $operaMauve;
+        }
+      }
+
+      &.color-elecBrown {
+        &:after {
+          border-right: 0.469vw solid $elecBrown;
+          border-bottom: 0.469vw solid $elecBrown;
+        }
+      }
+
+      &.color-roseDust {
+        &:after {
+          border-right: 0.469vw solid $roseDust;
+          border-bottom: 0.469vw solid $roseDust;
+        }
+      }
+
+      &.color-grullo {
+        &:after {
+          border-right: 0.469vw solid $grullo;
+          border-bottom: 0.469vw solid $grullo;
+        }
+      }
+
+      &.color-pewterBlue {
+        &:after {
+          border-right: 0.469vw solid $pewterBlue;
+          border-bottom: 0.469vw solid $pewterBlue;
+        }
+      }
+
+      &.color-newYorkPink {
+        &:after {
+          border-right: 0.469vw solid $newYorkPink;
+          border-bottom: 0.469vw solid $newYorkPink;
+        }
+      }
+
+      &.color-metallicSilver {
+        &:after {
+          border-right: 0.469vw solid $metallicSilver;
+          border-bottom: 0.469vw solid $metallicSilver;
+        }
+      }
+    }
 
     .col3 & {
       width: 100%;
@@ -160,6 +241,40 @@
 
         &:not(:first-child) {
           margin-top: 7.188vw;
+        }
+      }
+    }
+
+    .col2 & {
+      width: 100%;
+      max-width: 150px;
+
+      @include u-mqMax {
+        // &:nor(:first-child) {
+        max-width: 63.906vw;
+        margin: 7.188vw auto 0;
+        // }
+      }
+
+      &:nth-child(odd) {
+        margin-right: 150px;
+
+        @include u-mqMax {
+          &:not(:first-child) {
+            margin: 7.188vw auto 0;
+          }
+
+          &:first-child {
+            margin: 0 auto 0;
+          }
+        }
+      }
+
+      &:nth-child(n+3) {
+        margin-top: 85px;
+
+        @include u-mqMax {
+          margin: 7.188vw auto 0;
         }
       }
     }
@@ -191,6 +306,22 @@
     .color-roseDust & {
       background: $roseDust;
     }
+
+    .color-grullo & {
+      background: $grullo;
+    }
+
+    .color-pewterBlue & {
+      background: $pewterBlue;
+    }
+
+    .color-newYorkPink & {
+      background: $newYorkPink;
+    }
+
+    .color-metallicSilver & {
+      background: $metallicSilver;
+    }
   }
 
   &__cardsItemTitle {
@@ -218,6 +349,31 @@
         margin: 3.125vw auto 2.344vw;
       }
     }
+
+    .color-grullo & {
+      margin: 18px auto 32px;
+
+      @include u-mqMax {
+        margin: 3.125vw auto 0.781vw;
+      }
+    }
+
+    .color-pewterBlue & {
+      margin: 18px auto 10px;
+
+      @include u-mqMax {
+        margin: 3.125vw auto 0.781vw;
+      }
+    }
+
+    .color-newYorkPink &,
+    .color-metallicSilver & {
+      margin: 24px auto 12px;
+
+      @include u-mqMax {
+        margin: 3.125vw auto 0.781vw;
+      }
+    }
   }
 
   &__cardsItemTitleText {
@@ -235,6 +391,23 @@
     .color-roseDust & {
       color: $roseDust;
     }
+
+    .color-grullo & {
+      color: $grullo;
+    }
+
+    .color-pewterBlue & {
+      color: $pewterBlue;
+    }
+
+    .color-newYorkPink & {
+      color: $newYorkPink;
+
+    }
+
+    .color-metallicSilver & {
+      color: $metallicSilver;
+    }
   }
 
   &__cardsItemBody {}
@@ -242,9 +415,11 @@
   &__cardsItemBodyContent {
     @extend %desc_15;
     text-align: center;
+    letter-spacing: 0;
   }
 
   &__cardsItemAuthor {
+
     .color-operaMauve & {
       margin: 26px auto 0;
 
@@ -266,6 +441,31 @@
 
       @include u-mqMax {
         margin: 2.344vw auto 0;
+      }
+    }
+
+    .color-grullo & {
+      margin: 42px auto 0;
+
+      @include u-mqMax {
+        margin: 1.563vw auto 0;
+      }
+    }
+
+    .color-pewterBlue & {
+      margin: 18px auto 0;
+
+      @include u-mqMax {
+        margin: 1.563vw auto 0;
+      }
+    }
+
+    .color-newYorkPink &,
+    .color-metallicSilver & {
+      margin: 21px auto 0;
+
+      @include u-mqMax {
+        margin: 1.563vw auto 0;
       }
     }
   }
@@ -302,6 +502,14 @@
       @include u-mqMax {
         padding: 62px 2.344vw;
         box-sizing: border-box;
+      }
+
+      &:not(:first-child) {
+        margin-top: 20px;
+
+        @include u-mqMax {
+          margin-top: 4.688vw;
+        }
       }
     }
   }
@@ -342,6 +550,22 @@
     .color-roseDust & {
       background: $roseDust;
     }
+
+    .color-grullo & {
+      background: $grullo;
+    }
+
+    .color-pewterBlue & {
+      background: $pewterBlue;
+    }
+
+    .color-newYorkPink & {
+      background: $newYorkPink;
+    }
+
+    .color-metallicSilver & {
+      background: $metallicSilver;
+    }
   }
 
   &__profLabelText {
@@ -365,6 +589,22 @@
     .color-roseDust & {
       color: $roseDust;
     }
+
+    .color-grullo & {
+      color: $grullo;
+    }
+
+    .color-pewterBlue & {
+      color: $pewterBlue;
+    }
+
+    .color-newYorkPink & {
+      color: $newYorkPink;
+    }
+
+    .color-metallicSilver & {
+      color: $metallicSilver;
+    }
   }
 
   &__profDesc {
@@ -385,6 +625,22 @@
 
     .color-roseDust & {
       color: $roseDust;
+    }
+
+    .color-grullo & {
+      color: $grullo;
+    }
+
+    .color-pewterBlue & {
+      color: $pewterBlue;
+    }
+
+    .color-newYorkPink & {
+      color: $newYorkPink;
+    }
+
+    .color-metallicSilver & {
+      color: $metallicSilver;
     }
   }
 
@@ -408,12 +664,33 @@
     .color-roseDust & {
       max-width: 680px;
     }
+
+    .color-grullo & {
+      max-width: 655px;
+    }
+
+    .color-pewterBlue & {
+      max-width: 630px;
+    }
+
+    .color-newYorkPink & {
+      max-width: 632px;
+    }
+
+    .color-metallicSilver & {
+      max-width: 630px;
+    }
   }
 
   &__profContent {
     position: relative;
     z-index: 1;
     width: 100%;
+
+    @include u-mqMax {
+      max-width: 82.344vw !important;
+      margin: 0 auto;
+    }
 
     .color-operaMauve & {
       max-width: 319px;
@@ -432,6 +709,38 @@
     }
 
     .color-roseDust & {
+      max-width: 319px;
+
+      @include u-mqMax {
+        max-width: 100%;
+      }
+    }
+
+    .color-grullo & {
+      max-width: 319px;
+
+      @include u-mqMax {
+        max-width: 100%;
+      }
+    }
+
+    .color-pewterBlue & {
+      max-width: 319px;
+
+      @include u-mqMax {
+        max-width: 100%;
+      }
+    }
+
+    .color-newYorkPink & {
+      max-width: 319px;
+
+      @include u-mqMax {
+        max-width: 100%;
+      }
+    }
+
+    .color-metallicSilver & {
       max-width: 319px;
 
       @include u-mqMax {
@@ -472,18 +781,28 @@
 
     &.karitLeft {
       &::before {
-        right: 0;
+        right: 4%;
         top: auto;
-        bottom: 2%;
+        bottom: -2%;
         transform: rotate(-45deg);
 
         @include u-mqMax {
 
+          .color-metallicSilver &,
+          .color-grullo &,
           .color-operaMauve &,
           .color-elecBrown & {
             bottom: -13%;
             right: 35%;
             transform: rotate(45deg);
+          }
+
+          .color-newYorkPink &,
+          .color-pewterBlue &,
+          .color-roseDust & {
+            bottom: -13%;
+            right: 65%;
+            transform: rotate(-45deg);
           }
         }
       }
@@ -494,7 +813,7 @@
         border-top: 51px solid $operaMauve;
 
         @include u-mqMax {
-          border-top: 32px solid $operaMauve;
+          border-top: 7.969vw solid $operaMauve;
         }
       }
     }
@@ -504,7 +823,7 @@
         border-top: 51px solid $elecBrown;
 
         @include u-mqMax {
-          border-top: 32px solid $elecBrown;
+          border-top: 7.969vw solid $elecBrown;
         }
       }
     }
@@ -514,7 +833,47 @@
         border-top: 51px solid $roseDust;
 
         @include u-mqMax {
-          border-top: 32px solid $roseDust;
+          border-top: 7.969vw solid $roseDust;
+        }
+      }
+    }
+
+    &.karitLeft.color-grullo {
+      &::before {
+        border-top: 51px solid $grullo;
+
+        @include u-mqMax {
+          border-top: 7.969vw solid $grullo;
+        }
+      }
+    }
+
+    &.karitLeft.color-pewterBlue {
+      &::before {
+        border-top: 51px solid $pewterBlue;
+
+        @include u-mqMax {
+          border-top: 7.969vw solid $pewterBlue;
+        }
+      }
+    }
+
+    &.karitLeft.color-newYorkPink {
+      &::before {
+        border-top: 51px solid $newYorkPink;
+
+        @include u-mqMax {
+          border-top: 7.969vw solid $newYorkPink;
+        }
+      }
+    }
+
+    &.karitLeft.color-metallicSilver {
+      &::before {
+        border-top: 51px solid $metallicSilver;
+
+        @include u-mqMax {
+          border-top: 7.969vw solid $metallicSilver;
         }
       }
     }
@@ -529,6 +888,22 @@
 
     .color-roseDust & {
       background: $roseDust;
+    }
+
+    .color-grullo & {
+      background: $grullo;
+    }
+
+    .color-pewterBlue & {
+      background: $pewterBlue;
+    }
+
+    .color-newYorkPink & {
+      background: $newYorkPink;
+    }
+
+    .color-metallicSilver & {
+      background: $metallicSilver;
     }
   }
 
@@ -570,11 +945,55 @@
         margin-top: 5.781vw;
       }
     }
+
+    .color-grullo & {
+      width: 115px;
+      margin: 81px 0 0 auto;
+
+      @include u-mqMax {
+        width: 100%;
+        margin: 5.781vw auto 0;
+      }
+    }
+
+    .color-pewterBlue & {
+      width: 115px;
+      margin: 40px 0 0 auto;
+
+
+      @include u-mqMax {
+        width: 100%;
+        margin: 5.781vw auto 0;
+      }
+    }
+
+    .color-newYorkPink & {
+      width: 165px;
+      margin: 18px 0 0 auto;
+
+
+      @include u-mqMax {
+        width: 100%;
+        margin: 5.781vw auto 0;
+      }
+    }
+
+    .color-metallicSilver & {
+      width: 80%;
+      margin: 18px 0 0 auto;
+
+
+      @include u-mqMax {
+        width: 100%;
+        margin: 5.781vw auto 0;
+      }
+    }
   }
 
   &__profContentText {
     @extend %desc_15;
     letter-spacing: 0;
+    // white-space: nowrap;
 
     @include u-mqMax {
       text-align: center;
@@ -620,6 +1039,55 @@
 
     .color-roseDust & {
       max-width: 338px;
+
+      @include u-mqMax {
+        max-width: 61.25vw;
+        margin-left: 15vw;
+      }
+    }
+
+    .color-grullo & {
+      max-width: 300px;
+      bottom: 5px;
+
+      @include u-mqMax {
+        margin-top: 6.563vw;
+        max-width: 62.5vw;
+        margin-left: 17vw;
+      }
+    }
+
+    .color-pewterBlue & {
+      max-width: 300px;
+
+      @include u-mqMax {
+        margin-top: 5.781vw;
+        max-width: 70.625vw;
+        margin-left: 18vw;
+      }
+    }
+
+    .color-newYorkPink & {
+      max-width: 328px;
+      bottom: 5px;
+
+      @include u-mqMax {
+        margin-top: 5.781vw;
+        max-width: 60.313vw;
+        margin-left: 6vw;
+      }
+    }
+
+    .color-metallicSilver & {
+      max-width: 353px;
+      bottom: 5px;
+      right: -65px;
+
+      @include u-mqMax {
+        margin-top: 5.781vw;
+        max-width: 73.125vw;
+        margin-left: 5vw;
+      }
     }
   }
 
@@ -627,6 +1095,10 @@
 
   &__quest {
     margin-top: 82px;
+
+    @include u-mqMax {
+      margin-top: 14.375vw;
+    }
   }
 
   &__questItem {
@@ -728,6 +1200,54 @@
         }
       }
     }
+
+    .color-grullo & {
+      background: $grullo;
+
+      &:before {
+        border-top: 51px solid $grullo;
+
+        @include u-mqMax {
+          border-top: 5.469vw solid $grullo;
+        }
+      }
+    }
+
+    .color-pewterBlue & {
+      background: $pewterBlue;
+
+      &:before {
+        border-top: 51px solid $pewterBlue;
+
+        @include u-mqMax {
+          border-top: 5.469vw solid $pewterBlue;
+        }
+      }
+    }
+
+    .color-newYorkPink & {
+      background: $newYorkPink;
+
+      &:before {
+        border-top: 51px solid $newYorkPink;
+
+        @include u-mqMax {
+          border-top: 5.469vw solid $newYorkPink;
+        }
+      }
+    }
+
+    .color-metallicSilver & {
+      background: $metallicSilver;
+
+      &:before {
+        border-top: 51px solid $metallicSilver;
+
+        @include u-mqMax {
+          border-top: 5.469vw solid $metallicSilver;
+        }
+      }
+    }
   }
 
   &__questItemHeaderText {
@@ -770,6 +1290,26 @@
       color: $roseDust;
       letter-spacing: 0;
     }
+
+    .color-grullo & {
+      color: $grullo;
+      letter-spacing: 0;
+    }
+
+    .color-pewterBlue & {
+      color: $pewterBlue;
+      letter-spacing: 0;
+    }
+
+    .color-newYorkPink & {
+      color: $newYorkPink;
+      letter-spacing: 0;
+    }
+
+    .color-metallicSilver & {
+      color: $metallicSilver;
+      letter-spacing: 0;
+    }
   }
 
   &__qoute {
@@ -787,7 +1327,7 @@
     padding-right: 16px;
 
     @include u-mqMax {
-      padding-right: 2.5vw;
+      padding-right: 3.125vw;
     }
 
     &:after,
@@ -802,8 +1342,9 @@
 
       @include u-mqMax {
         border-radius: 3.125vw;
-        height: 4.063vw;
+        height: 3.125vw;
         width: 0.625vw;
+        right: 0.781vw;
       }
 
       .color-operaMauve & {
@@ -817,6 +1358,22 @@
       .color-roseDust & {
         background: $roseDust;
       }
+
+      .color-grullo & {
+        background: $grullo;
+      }
+
+      .color-pewterBlue & {
+        background: $pewterBlue;
+      }
+
+      .color-newYorkPink & {
+        background: $newYorkPink;
+      }
+
+      .color-metallicSilver & {
+        background: $metallicSilver;
+      }
     }
 
     &:after {
@@ -824,7 +1381,7 @@
       bottom: 18%;
 
       @include u-mqMax {
-        bottom: 11%;
+        bottom: 21%;
       }
     }
 
@@ -833,7 +1390,7 @@
       transform: rotate(-45deg);
 
       @include u-mqMax {
-        top: 11%;
+        top: 20%;
       }
     }
 
@@ -847,6 +1404,22 @@
 
     .color-roseDust & {
       color: $roseDust;
+    }
+
+    .color-grullo & {
+      color: $grullo;
+    }
+
+    .color-pewterBlue & {
+      color: $pewterBlue;
+    }
+
+    .color-newYorkPink & {
+      color: $newYorkPink;
+    }
+
+    .color-metallicSilver & {
+      color: $metallicSilver;
     }
   }
 
