@@ -63,7 +63,7 @@
     line-height: 1.6;
 
     @include u-mqMax {
-      font-size: 6.25vw;
+      font-size: 5vw;
       line-height: 1.4;
       letter-spacing: 0;
     }
@@ -104,7 +104,7 @@
     line-height: 1.8;
 
     @include u-mqMax {
-      font-size: 5.313vw;
+      font-size: 4.5vw;
     }
   }
 
@@ -612,7 +612,8 @@
     margin-top: 22px;
 
     @include u-mqMax {
-      margin-top: 4.688vw;
+      margin: 4.688vw auto 0;
+      max-width: 82.344vw;
     }
 
     .color-operaMauve & {
@@ -937,7 +938,8 @@
     }
 
     .color-roseDust & {
-      width: 175px;
+      width: 200px;
+      margin-right: 0;
       margin-top: 60px;
 
       @include u-mqMax {

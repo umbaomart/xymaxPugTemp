@@ -4,9 +4,15 @@
 
 .secSingle__content.specialFeaturesP1-02 {}
 
-.specialFeaturesP1 {}
+.specialFeaturesP1 {
+  margin-top: 40px;
+
+  @include u-mqMax {}
+}
 
 .specialFeatures122021 {
+  $silverLakeBlueLight: rgba(#82B3DE, .4);
+  $burlywoodLight: rgba(#DFBA79, .4);
   // variables
   $silverLakeBlue: #5785B7;
   $burlywood: #DFBA79;
@@ -215,6 +221,8 @@
 
 
   &__wrapper {
+
+    .specialFeaturesP1 &,
     .specialFeaturesP1-02 & {
       width: 100%;
       max-width: 855px;
@@ -234,7 +242,9 @@
     }
 
     .specialFeaturesP1 & {
-      padding: 0 7.469vw;
+      @include u-mqMax {
+        background: none;
+      }
     }
 
   }
@@ -395,7 +405,7 @@
       // height: 4.267vw;
       // max-width: 240px;
 
-      height: 10vw;
+      height: 11vw;
       max-width: 75vw;
     }
   }
@@ -481,7 +491,7 @@
       margin-top: 50px;
 
       @include u-mqMax {
-        margin-top: 35px;
+        margin-top: 5.469vw;
       }
     }
 
@@ -510,9 +520,11 @@
     @extend %description-17vw;
     text-align: right;
     font-weight: bold;
+    white-space: nowrap;
 
     @include u-mqMax {
       letter-spacing: 0;
+      white-space: normal;
     }
   }
 
@@ -528,7 +540,7 @@
   &__dataRightList {
     @include u-flex($fd: row, $fw: wrap, $jc: flex-start, $ai: stretch);
     position: relative;
-    padding-left: 20px;
+    padding-left: 25px;
 
     @include u-mqMax {
       // padding-left: 15px;
@@ -536,7 +548,7 @@
     }
 
     &:not(:first-child) {
-      margin-top: 5px;
+      margin-top: 3px;
 
       @include u-mqMax {
         // margin-top: 15px;
@@ -595,11 +607,13 @@
 
     &:before {
       content: '';
-      height: 100%;
+      // height: 98%;
+      height: 85%;
       width: 100%;
       position: absolute;
       left: 0;
-      top: 0;
+      top: 50%;
+      transform: translateY(-50%);
       z-index: -1;
     }
 
@@ -618,7 +632,8 @@
   }
 
   &__dataRightListNo {
-    min-width: 90px;
+    // min-width: 90px;
+    min-width: 60px;
     @extend %description-17vw;
     font-weight: bold;
 
@@ -626,14 +641,69 @@
       // min-width: 40px;
       min-width: 12.5vw;
     }
+
+    .color-silverLakeBlue & {
+      &:before {
+        background: $silverLakeBlueLight;
+        left: -3px;
+      }
+    }
+
+    .color-burlywood & {
+      &:before {
+        background: $burlywoodLight;
+        left: -3px;
+      }
+    }
   }
 
   &__dataRightListText {
     @extend %description-17vw;
     font-weight: bold;
 
+    b {
+      @extend %description-17vw;
+      display: inline-block;
+      position: relative;
+
+      &:before {
+        content: '';
+        height: (calc(100%));
+        width: calc(100% + 3px);
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        background: $white;
+
+        @include u-mqMax {
+          width: calc(100% + 8px);
+          left: -3px;
+        }
+      }
+    }
+
+    &:before {
+      width: calc(100% + 6px);
+    }
+
+
+    .color-silverLakeBlue & {
+      &:before {
+        background: $silverLakeBlueLight;
+        left: -3px;
+      }
+    }
+
+    .color-burlywood & {
+      &:before {
+        background: $burlywoodLight;
+        left: -3px;
+      }
+    }
+
     &.mt5 {
-      margin-top: 5px;
+      margin-top: 3px;
 
       @include u-mqMax {
         // width: 100%;
@@ -659,7 +729,7 @@
     margin-bottom: 50px;
 
     @include u-mqMax {
-      margin-bottom: 16.25vw;
+      margin-bottom: 19vw;
     }
   }
 
@@ -792,6 +862,10 @@
 
   &__boxMessagesItemContentText {
     @extend %description-17;
+
+    b {
+      color: $independence;
+    }
   }
 
   &__boxMessagesItemContent {
@@ -820,7 +894,8 @@
       width: 123px;
 
       @include u-mqMax {
-        width: 19.375vw;
+        // width: 19.375vw;
+        width: 24vw;
       }
     }
 
@@ -937,7 +1012,7 @@
 
     .messagesItem5 & {
       top: 60px;
-      right: -146px;
+      right: -165px;
 
       @include u-mqMax {
         top: auto;
@@ -1431,6 +1506,10 @@
       @extend %title-30;
       white-space: nowrap;
       display: block;
+
+      .specialFeaturesP1-02 & {
+        @include u-flex($fd: row, $fw: nowrap, $jc: center, $ai: flex-end);
+      }
     }
 
     &.label17 {
@@ -1468,6 +1547,7 @@
     font-weight: normal;
     display: block;
     white-space: nowrap;
+    line-height: 1.8 !important;
   }
 
   &__nextItemYear {
