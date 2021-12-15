@@ -1,0 +1,120 @@
+-
+    let myClassPart = "specialFeaturesP2Series specialFeaturesP4Series02"
+    let myClassFooter = "specialFeaturesP4Series03"
+    let myClass = "specialFeatures122021"
+    let localPath = "./../../_images/p4/"
+    //- let localPath = "[uploads_path]/2021/12/"
+    let metaTitle = "Special Features P3"
+//-  colors
+-   let silverLakeBlue = "color-silverLakeBlue"; // #5785B7 lakeblue
+-   let burlywood = "color-burlywood"; // #DFBA79 lightbrown
+-   let independence = "color-independence"; // #4F576C darkgray
+-   let operaMauve = "color-operaMauve"; // #BC7DAA pink
+-   let grenSheen = "color-grenSheen"; // #6CAB9C green
+-   let elecBrown = "color-elecBrown"; // #B46253
+-   let roseDust = "color-roseDust"; // #9D5F72
+
+//- part 3
+-   let grullo = "color-grullo"; // #ADA679
+-   let pewterBlue = "color-pewterBlue"; // #7EADB1
+-   let newYorkPink = "color-newYorkPink"; // #DB8172
+-   let metallicSilver = "color-metallicSilver"; // #9DACAC
+
+//- part 4
+-   let glaucous = "color-glaucous"; // #667FAA
+-   let antiqueBrass = "color-antiqueBrass"; // #C79670
+-   let tan = "color-tan"; // #D3B187
+-   let coolGrey = "color-coolGrey"; // #8699B4
+
+-
+ let profile = [
+   {
+        no: "ジザイめっけ",
+        //- labelText: "",
+        description: "「生活をジザイに、事業展開をジザイに」を掲げ、各種ライフマップとリアルタイム情報で構成される「日常生活に役立つ電子かわら版 MEQQE」を提供する。",
+        class: "color-coolGrey",
+        bubleKarit: "karitLeft color-coolGrey",
+        bubbleContent: "MEQQEを<br>もっと世の中に！<br>みなさん、一緒に<br>育てていってください。",
+        body: "XY 常務執行役員<br>ジザイめっけ<br>代表取締役社長",
+        profName: "有地 英之",
+        img: "article121021_prof_kv-11.jpg",
+        questContent: [
+            {
+                qNo: "Q1.",
+                title: "リリースから1年。<br>ジザイめっけの現状は？",
+                body: "目指すコンセプト「日常生活のかわら版」は変わっていませんが、「みんなでつくる」という考えに基づいて「みんなが投稿してくれるのを待つ」のではなく、「アプリのコンテンツを拡充してユーザーを増やす」ことに舵を切りました。というのも、SNSを利用する大多数は「見る」専門のヒト。つまり、そもそも良い情報が集まるメディアとして賑わっていないと「発信する」ヒトも出てこないだろうと。そこで、いまはインフルエンサーにジャンルごとのマップを作ってもらうなど、魅力的な情報を増やしています。<br><br>また、当初から変わらないメインターゲットである「子育て世代」が日常で役立つような、サービス展開も強化。ユーザーが近所の生活情報を簡単に手に入れられ、地域での事業展開を行うお店側が近隣ユーザーにアプロ―チできる「ご近所商圏」づくりを支援したいと考えています。",
+            },
+            {
+                qNo: "Q2.",
+                title: "グループ連携って、<br>いまどんなことをしているんですか？",
+                body: "企活と連携して地銀・信金へ、また、商サポやXYKと連携して私鉄へ、グループの力をフル活用して営業中。「ご近所商圏」を持った地域のプラットフォーマーを目指す彼らに、地域のお店へMEQQEを展開してもらい、マップの充実を狙っています。<br><br>また、ユーザー獲得のための連携としては、ジザイワーク事業部やからくさホテルズにも協力を依頼し、拠点やホテル周辺のおすすめスポットのマップを作成＆利用者へ紹介してもらったりも。今後、MEQQEを世の中に拡げていくためにも、グループ皆さんのご協力をぜひお願いします。",
+            },
+            {
+                qNo: "Q3.",
+                title: "今後の展望を<br>教えてください！",
+                body: "まずは、ジャンルごとの「横」の情報、エリアごとの「縦」の情報を拡充させ、アプリを開くだけでユーザーに身の回りの情報が「掘り起こしもん、めっけ！」と入ってくることが目標。そして、地域の事業者の情報発信ツール＝MEQQEとなり収益化へ。最終的に、情報の皿として成長し、これまでのXYビジネスでは接点が持てなかった企業ともつながり、「なにか不動産ビジネスを始めるならXYに相談！」という姿を実現したいですね。",
+            },
+        ],
+        qoute: "Web版限定記事へ",
+     },
+ ]
+
+doctype html
+html(lang="en")
+    include ../_inc/_head.pug
+    body
+        .secSingle(class=`${myClass}`)
+            .secSingle__content(class=`${myClassPart}`)
+                article.specialFeatures122021__wrapper
+                    |
+                    |
+                    .specialFeatures122021__inner: each prof in profile
+                        .specialFeatures122021__innerBorder(class=prof.class)
+                            .specialFeatures122021__prof
+                                .specialFeatures122021__profLabel
+                                    p.specialFeatures122021__profLabelNo=prof.no
+                                    span.specialFeatures122021__profLabelText!=prof.labelText
+                                p.specialFeatures122021__profDesc!=prof.description
+                                .specialFeatures122021__profFlex
+                                    .specialFeatures122021__profContent
+                                        .specialFeatures122021__profContentBuble(class=prof.bubleKarit)
+                                            p.specialFeatures122021__profContentBubleData!=prof.bubbleContent
+                                        .u-spDb
+                                            figure.specialFeatures122021__profKv
+                                                img.specialFeatures122021__profKvImg(src=`${localPath}${prof.img}`)
+                                        .specialFeatures122021__profContentBox
+                                            p.specialFeatures122021__profContentText!=prof.body
+                                            .specialFeatures122021__profContentName
+                                                p.specialFeatures122021__profContentNameText=prof.profName
+                                                    span.specialFeatures122021__profContentNameExt さん
+                                    .u-pcDb
+                                        figure.specialFeatures122021__profKv
+                                            img.specialFeatures122021__profKvImg(src=`${localPath}${prof.img}`)
+                            .specialFeatures122021__quest: each item in prof.questContent
+                                .specialFeatures122021__questItem
+                                    .specialFeatures122021__questItemHeader
+                                        p.specialFeatures122021__questItemHeaderNo=item.qNo
+                                        h2.specialFeatures122021__questItemHeaderText!=item.title
+                                    .specialFeatures122021__questItemContent
+                                        p.specialFeatures122021__questItemContentText!=item.body
+                            |
+                            |
+                            if(prof.qoute)
+                                .specialFeatures122021__qoute
+                                    .specialFeatures122021__qouteText=prof.qoute
+
+                    .specialFeatures122021__closing
+                        .specialFeatures122021__closingHeader
+                            figure.specialFeatures122021__closingHeaderKv
+                                img.specialFeatures122021__closingHeaderImg(src=`${localPath}article121021_footer_kv.png`, alt="")
+                        ul.specialFeatures122021__closingList
+                            li.specialFeatures122021__closingListText
+                                | 釣りの話題になると目の色が変わる有地英之さん、SUPを1キロくらい漕いで沖へ行き、巨大魚を釣りあげたこともあるそう。ご自宅からのオンライン会議では青空の背景を使用し、たまに娘さんのお部屋を使ったときは真面目なお顔の横に急にテディベアが。（ジザイめっけ　篠澤千加・桒原由希・砂子千皓）
+                |
+                |
+                .specialFeatures122021__footer(class=myClassFooter)
+                    .specialFeatures122021__next.karitLeft(class=`${coolGrey}`)
+                        p.specialFeatures122021__nextText NEXT
+                        a.specialFeatures122021__nextItem(href="./2")
+                            span.specialFeatures122021__nextItemLabel.label32 登場事業一覧ページはこちら
+                            //- p.specialFeatures122021__nextItemTitle.title24 MR/トラスト

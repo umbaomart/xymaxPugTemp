@@ -18,7 +18,12 @@
   $pewterBlue: #7EADB1;
   $newYorkPink: #DB8172;
   $metallicSilver: #9DACAC;
+
+  // part 4
   $glaucous: #667FAA;
+  $antiqueBrass: #C79670;
+  $tan: #D3B187;
+  $coolGrey: #8699B4;
 
   $white: #fff;
   $black: #000;
@@ -165,6 +170,15 @@
         margin: 12.5vw auto 28.594vw;
       }
     }
+
+    &.col2P4 {
+      width: 100%;
+      @include u-flex($fd: row, $fw: wrap, $jc: flex-start, $ai: stretch);
+
+      @include u-mqMax {
+        max-width: 65.469vw;
+      }
+    }
   }
 
   &__cardsItem {
@@ -229,6 +243,34 @@
           border-bottom: 0.469vw solid $metallicSilver;
         }
       }
+
+      &.color-glaucous {
+        &:after {
+          border-right: 0.469vw solid $glaucous;
+          border-bottom: 0.469vw solid $glaucous;
+        }
+      }
+
+      &.color-antiqueBrass {
+        &:after {
+          border-right: 0.469vw solid $antiqueBrass;
+          border-bottom: 0.469vw solid $antiqueBrass;
+        }
+      }
+
+      &.color-tan {
+        &:after {
+          border-right: 0.469vw solid $tan;
+          border-bottom: 0.469vw solid $tan;
+        }
+      }
+
+      &.color-coolGrey {
+        &:after {
+          border-right: 0.469vw solid $coolGrey;
+          border-bottom: 0.469vw solid $coolGrey;
+        }
+      }
     }
 
     .col3 & {
@@ -278,10 +320,46 @@
         }
       }
     }
+
+    .col2P4 & {
+      width: 100%;
+      max-width: 362px;
+
+      &:nth-child(n+3) {
+        margin-top: 70px;
+      }
+
+      @include u-mqMax {
+        max-width: 100%;
+        margin: 0 auto;
+
+        &:not(:first-child) {
+          margin-top: 7.188vw;
+        }
+      }
+    }
   }
 
   &__cardsItemLabel {
     @include u-flex($fd: row, $fw: nowrap, $jc: center, $ai: center);
+
+    .color-tan & {
+      &:not(:first-child) {
+        margin: 15px auto;
+
+        @include u-mqMax {
+          margin: 1.563vw auto 2.344vw;
+        }
+      }
+    }
+
+    .color-coolGrey & {
+      margin: 60px auto 20px;
+
+      @include u-mqMax {
+        margin: 0 auto 2.344vw;
+      }
+    }
   }
 
   &__cardsItemLabelText {
@@ -293,6 +371,15 @@
     @include u-mqMax {
       padding: 1.25vw 3.438vw;
       border-radius: 8.594vw;
+    }
+
+    .specialFeaturesP4Series01 & {
+      min-width: 140px;
+      text-align: center;
+
+      @include u-mqMax {
+        min-width: 27.031vw;
+      }
     }
 
     .color-operaMauve & {
@@ -321,6 +408,30 @@
 
     .color-metallicSilver & {
       background: $metallicSilver;
+    }
+
+    .color-glaucous & {
+      background: $glaucous;
+    }
+
+    .color-antiqueBrass & {
+      background: $antiqueBrass;
+    }
+
+    .color-tan & {
+      background: $tan;
+    }
+
+    .color-coolGrey & {
+      background: $coolGrey;
+    }
+  }
+
+  &__cardsItemFlex {
+    @include u-flex($fd: row, $fw: nowrap, $jc: space-between, $ai: stretch);
+
+    @include u-mqMax {
+      display: block;
     }
   }
 
@@ -374,6 +485,30 @@
         margin: 3.125vw auto 0.781vw;
       }
     }
+
+    .color-glaucous & {
+      margin: 17px auto 20px;
+
+      @include u-mqMax {
+        margin: 3.125vw auto 2.344vw;
+      }
+    }
+
+    .color-antiqueBrass & {
+      margin: 35px auto 40px;
+
+      @include u-mqMax {
+        margin: 3.125vw auto 2.344vw;
+      }
+    }
+
+    .color-tan & {
+      // no title
+    }
+
+    .color-coolGrey & {
+      //
+    }
   }
 
   &__cardsItemTitleText {
@@ -408,9 +543,38 @@
     .color-metallicSilver & {
       color: $metallicSilver;
     }
+
+    .color-glaucous & {
+      color: $glaucous;
+    }
+
+    .color-antiqueBrass & {
+      color: $antiqueBrass;
+    }
+
+    .color-tan & {
+      color: $tan;
+    }
+
+    .color-coolGrey & {
+      color: $coolGrey;
+    }
   }
 
-  &__cardsItemBody {}
+  &__cardsItemBody {
+
+    .color-antiqueBrass & {
+      // margin: 50px 0 25px;
+
+      @include u-mqMax {
+        margin: 0 auto;
+
+        &:nth-child(2) {
+          margin-top: 5.625vw;
+        }
+      }
+    }
+  }
 
   &__cardsItemBodyContent {
     @extend %desc_15;
@@ -462,6 +626,31 @@
 
     .color-newYorkPink &,
     .color-metallicSilver & {
+      margin: 21px auto 0;
+
+      @include u-mqMax {
+        margin: 1.563vw auto 0;
+      }
+    }
+
+    .color-glaucous & {
+      margin: 35px auto 0;
+
+      @include u-mqMax {
+        margin: 1.563vw auto 0;
+      }
+    }
+
+    .color-antiqueBrass & {
+      margin: 25px auto 0;
+
+      @include u-mqMax {
+        margin: 1.563vw auto 0;
+      }
+    }
+
+    .color-tan &,
+    .color-coolGrey & {
       margin: 21px auto 0;
 
       @include u-mqMax {
@@ -566,6 +755,22 @@
     .color-metallicSilver & {
       background: $metallicSilver;
     }
+
+    .color-glaucous & {
+      background: $glaucous;
+    }
+
+    .color-antiqueBrass & {
+      background: $antiqueBrass;
+    }
+
+    .color-tan & {
+      background: $tan;
+    }
+
+    .color-coolGrey & {
+      background: $coolGrey;
+    }
   }
 
   &__profLabelText {
@@ -605,6 +810,22 @@
     .color-metallicSilver & {
       color: $metallicSilver;
     }
+
+    .color-glaucous & {
+      color: $glaucous;
+    }
+
+    .color-antiqueBrass & {
+      color: $antiqueBrass;
+    }
+
+    .color-tan & {
+      color: $tan;
+    }
+
+    .color-coolGrey & {
+      color: $coolGrey;
+    }
   }
 
   &__profDesc {
@@ -642,6 +863,22 @@
 
     .color-metallicSilver & {
       color: $metallicSilver;
+    }
+
+    .color-glaucous & {
+      color: $glaucous;
+    }
+
+    .color-antiqueBrass & {
+      color: $antiqueBrass;
+    }
+
+    .color-tan & {
+      color: $tan;
+    }
+
+    .color-coolGrey & {
+      color: $coolGrey;
     }
   }
 
@@ -681,6 +918,12 @@
     .color-metallicSilver & {
       max-width: 630px;
     }
+
+    .color-glaucous & {
+      // edit me
+      max-width: 630px;
+    }
+
   }
 
   &__profContent {
@@ -742,6 +985,38 @@
     }
 
     .color-metallicSilver & {
+      max-width: 319px;
+
+      @include u-mqMax {
+        max-width: 100%;
+      }
+    }
+
+    .color-glaucous & {
+      max-width: 319px;
+
+      @include u-mqMax {
+        max-width: 100%;
+      }
+    }
+
+    .color-antiqueBrass & {
+      max-width: 319px;
+
+      @include u-mqMax {
+        max-width: 100%;
+      }
+    }
+
+    .color-tan & {
+      max-width: 319px;
+
+      @include u-mqMax {
+        max-width: 100%;
+      }
+    }
+
+    .color-coolGrey & {
       max-width: 319px;
 
       @include u-mqMax {
@@ -879,6 +1154,46 @@
       }
     }
 
+    &.karitLeft.color-glaucous {
+      &::before {
+        border-top: 51px solid $glaucous;
+
+        @include u-mqMax {
+          border-top: 7.969vw solid $glaucous;
+        }
+      }
+    }
+
+    &.karitLeft.color-antiqueBrass {
+      &::before {
+        border-top: 51px solid $antiqueBrass;
+
+        @include u-mqMax {
+          border-top: 7.969vw solid $antiqueBrass;
+        }
+      }
+    }
+
+    &.karitLeft.color-tan {
+      &::before {
+        border-top: 51px solid $tan;
+
+        @include u-mqMax {
+          border-top: 7.969vw solid $tan;
+        }
+      }
+    }
+
+    &.karitLeft.color-coolGrey {
+      &::before {
+        border-top: 51px solid $coolGrey;
+
+        @include u-mqMax {
+          border-top: 7.969vw solid $coolGrey;
+        }
+      }
+    }
+
     .color-operaMauve & {
       background: $operaMauve;
     }
@@ -905,6 +1220,22 @@
 
     .color-metallicSilver & {
       background: $metallicSilver;
+    }
+
+    .color-glaucous & {
+      background: $glaucous;
+    }
+
+    .color-antiqueBrass & {
+      background: $antiqueBrass;
+    }
+
+    .color-tan & {
+      background: $tan;
+    }
+
+    .color-coolGrey & {
+      background: $coolGrey;
     }
   }
 
@@ -981,6 +1312,50 @@
     }
 
     .color-metallicSilver & {
+      width: 80%;
+      margin: 18px 0 0 auto;
+
+
+      @include u-mqMax {
+        width: 100%;
+        margin: 5.781vw auto 0;
+      }
+    }
+
+    .color-glaucous & {
+      width: 80%;
+      margin: 18px 0 0 auto;
+
+
+      @include u-mqMax {
+        width: 100%;
+        margin: 5.781vw auto 0;
+      }
+    }
+
+    .color-antiqueBrass & {
+      width: 80%;
+      margin: 18px 0 0 auto;
+
+
+      @include u-mqMax {
+        width: 100%;
+        margin: 5.781vw auto 0;
+      }
+    }
+
+    .color-tan & {
+      width: 80%;
+      margin: 18px 0 0 auto;
+
+
+      @include u-mqMax {
+        width: 100%;
+        margin: 5.781vw auto 0;
+      }
+    }
+
+    .color-coolGrey & {
       width: 80%;
       margin: 18px 0 0 auto;
 
@@ -1250,6 +1625,54 @@
         }
       }
     }
+
+    .color-glaucous & {
+      background: $glaucous;
+
+      &:before {
+        border-top: 51px solid $glaucous;
+
+        @include u-mqMax {
+          border-top: 5.469vw solid $glaucous;
+        }
+      }
+    }
+
+    .color-antiqueBrass & {
+      background: $antiqueBrass;
+
+      &:before {
+        border-top: 51px solid $antiqueBrass;
+
+        @include u-mqMax {
+          border-top: 5.469vw solid $antiqueBrass;
+        }
+      }
+    }
+
+    .color-tan & {
+      background: $tan;
+
+      &:before {
+        border-top: 51px solid $tan;
+
+        @include u-mqMax {
+          border-top: 5.469vw solid $tan;
+        }
+      }
+    }
+
+    .color-coolGrey & {
+      background: $coolGrey;
+
+      &:before {
+        border-top: 51px solid $coolGrey;
+
+        @include u-mqMax {
+          border-top: 5.469vw solid $coolGrey;
+        }
+      }
+    }
   }
 
   &__questItemHeaderText {
@@ -1280,37 +1703,46 @@
 
     .color-operaMauve & {
       color: $operaMauve;
-      letter-spacing: 0;
     }
 
     .color-elecBrown & {
       color: $elecBrown;
-      letter-spacing: 0;
     }
 
     .color-roseDust & {
       color: $roseDust;
-      letter-spacing: 0;
     }
 
     .color-grullo & {
       color: $grullo;
-      letter-spacing: 0;
     }
 
     .color-pewterBlue & {
       color: $pewterBlue;
-      letter-spacing: 0;
     }
 
     .color-newYorkPink & {
       color: $newYorkPink;
-      letter-spacing: 0;
     }
 
     .color-metallicSilver & {
       color: $metallicSilver;
-      letter-spacing: 0;
+    }
+
+    .color-glaucous & {
+      color: $glaucous;
+    }
+
+    .color-antiqueBrass & {
+      color: $antiqueBrass;
+    }
+
+    .color-tan & {
+      color: $tan;
+    }
+
+    .color-coolGrey & {
+      color: $coolGrey;
     }
   }
 
@@ -1376,6 +1808,22 @@
       .color-metallicSilver & {
         background: $metallicSilver;
       }
+
+      .color-glaucous & {
+        background: $glaucous;
+      }
+
+      .color-antiqueBrass & {
+        background: $antiqueBrass;
+      }
+
+      .color-tan & {
+        background: $tan;
+      }
+
+      .color-coolGrey & {
+        background: $coolGrey;
+      }
     }
 
     &:after {
@@ -1422,6 +1870,22 @@
 
     .color-metallicSilver & {
       color: $metallicSilver;
+    }
+
+    .color-glaucous & {
+      color: $glaucous;
+    }
+
+    .color-antiqueBrass & {
+      color: $antiqueBrass;
+    }
+
+    .color-tan & {
+      color: $tan;
+    }
+
+    .color-coolGrey & {
+      color: $coolGrey;
     }
   }
 

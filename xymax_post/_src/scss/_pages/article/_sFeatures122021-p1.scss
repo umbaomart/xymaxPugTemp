@@ -787,7 +787,8 @@
 
     &.karitRight {
       &:before {
-        background: url(./../../_images/p1/article121021_icon_karitRight-white.png);
+        background: url(/wxymxp/wp-content/uploads/2021/12/article121021_icon_karitRight-white.png);
+        // background: url(./../../_images/p1/article121021_icon_karitRight-white.png);
         background-size: 100% 100%;
         right: 116px;
 
@@ -799,7 +800,8 @@
 
     &.karitLeft {
       &:before {
-        background: url(./../../_images/p1/article121021_icon_karitLeft-white.png);
+        // background: url(./../../_images/p1/article121021_icon_karitLeft-white.png);
+        background: url(/wxymxp/wp-content/uploads/2021/12/article121021_icon_karitLeft-white.png);
         background-size: 100% 100%;
         left: 110px;
 
@@ -1575,6 +1577,12 @@
         width: 68px;
         top: -21px;
         left: -26px;
+
+        @include u-mqMax {
+          width: 18.125vw;
+          top: -8.281vw;
+          left: -5.063vw;
+        }
       }
     }
 
