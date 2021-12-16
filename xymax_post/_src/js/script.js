@@ -91,10 +91,10 @@ function initSwiper() {
 
 const safariDetect = () => {
   /*  var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-  
+
   if (is_safari) {
     $('html').addClass('u-browserSafari');
-  } 
+  }
   */
   var ua = navigator.userAgent.toLowerCase();
   if (ua.indexOf("safari") != -1) {
@@ -558,7 +558,7 @@ const movePostRating = () => {
       );
       $(".feedSecContainer__likeText.hover").html(
         "いいね！" +
-          $(".secSingle__contentFlex > .post-ratings .u-heartCount").text()
+        $(".secSingle__contentFlex > .post-ratings .u-heartCount").text()
       );
     });
     $(".post-ratings").clone().appendTo(".feedSecContainer__likeIcon");

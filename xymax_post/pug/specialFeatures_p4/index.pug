@@ -1,10 +1,11 @@
 -
-    let myClassPart = "specialFeaturesP2Series specialFeaturesP4Series01"
-    let myClassFooter = "specialFeaturesP4Series01"
+    let myClassPart = "specialFeaturesP2Series specialFeaturesP4Series04"
+    let myClassFooter = "specialFeaturesP4Series04"
     let myClass = "specialFeatures122021"
-    let localPath = "./../../_images/p4/"
-    //- let localPath = "[uploads_path]/2021/12/"
+    //- let localPath = "./../../_images/p4/"
+    let localPath = "[uploads_path]/2021/12/"
     let metaTitle = "Special Features P3"
+    let linkArt = "/article/"
 //-  colors
 -   let silverLakeBlue = "color-silverLakeBlue"; // #5785B7 lakeblue
 -   let burlywood = "color-burlywood"; // #DFBA79 lightbrown
@@ -33,7 +34,8 @@
         label: "ホテル",
         title: "ホテル/リネン/客室<br class='u-pcDb'>清掃",
         body: "XY 常務執行役員<br>からくさホテルズ 代表取締役社長<br>ザイマックスカレス 取締役",
-        name: "佐藤 亮祐"
+        name: "佐藤 亮祐",
+        link: "#01",
      },
      {
         class: "color-antiqueBrass",
@@ -43,6 +45,7 @@
             {data: "MR 取締役 執行役員副社長<br>トラスト 取締役", nameProf: "吉村 竜一"},
             {data: "トラスト<br>代表取締役社長", nameProf: "大山 泉之"},
         ],
+        link: "./2#02",
         //- name: "大山 泉之"
      },
      {
@@ -52,13 +55,15 @@
             {item: "サステナビリティ委員会"},
         ],
         body: "XY 執行役員<br>上場準備室 兼<br>サステナビリティ委員会",
-        name: "稲月 伸仁"
+        name: "稲月 伸仁",
+        link: "./3#03",
      },
      {
         class: "color-coolGrey",
         label: "めっけ",
         body: "XY 常務執行役員<br>ジザイめっけ<br>代表取締役社長",
-        name: "有地 英之"
+        name: "有地 英之",
+        link: "./4#04",
      },
  ]
 
@@ -86,11 +91,11 @@
             },
             {
                 qNo: "Q3.",
-                title: "東京での新規ホテル計画について<br>教えてください！",
+                title: "東京での新規ホテル計画に<br class='u-spDb'>ついて<br class='u-pcDb'>教えてください！",
                 body: "2023年、八重洲エリアに16階建てのホテルを開業予定。オーナー様のXYに対する理解と信頼も深く、「<span class='specialFeatures122021__questItemContentTextBold'>未来の大きな可能性を想像すれば、止める理由がない</span>」と、計画通りに進めています。政治情勢にも寄るけれど、世界の流れは2023年には近距離の海外旅行から再開すべく動いている。それに、八重洲は再開発がどんどん進み、2025年には景色が一変する。<span class='specialFeatures122021__questItemContentTextBold'>明るい未来が待っているからこそ、挑戦するんだよ。</span>",
             },
         ],
-        qoute: "Web版限定記事へ",
+        //- qoute: "Web版限定記事へ",
      },
  ]
 
@@ -104,7 +109,7 @@ html(lang="en")
                     .specialFeatures122021__cards.col2P4
                         -
                         each card in cards
-                            .specialFeatures122021__cardsItem(class=card.class)
+                            a.specialFeatures122021__cardsItem(class=card.class)(href=card.link)
                                 if(card.label)
                                     .specialFeatures122021__cardsItemLabel
                                         p.specialFeatures122021__cardsItemLabelText=card.label
@@ -134,6 +139,7 @@ html(lang="en")
                     |
                     .specialFeatures122021__inner: each prof in profile
                         .specialFeatures122021__innerBorder(class=prof.class)
+                            .specialFeatures122021__innerAnchor#01
                             .specialFeatures122021__prof
                                 .specialFeatures122021__profLabel
                                     p.specialFeatures122021__profLabelNo=prof.no
@@ -179,10 +185,10 @@ html(lang="en")
                 .specialFeatures122021__footer(class=myClassFooter)
                     .specialFeatures122021__next.karitLeft(class=`${antiqueBrass}`)
                         p.specialFeatures122021__nextText NEXT
-                        a.specialFeatures122021__nextItem(href="./2")
+                        a.specialFeatures122021__nextItem(href=`${linkArt}/4994/2`)
                             span.specialFeatures122021__nextItemLabel.label32 資活
                             p.specialFeatures122021__nextItemTitle.title24 MR/トラスト
 
                     .specialFeatures122021__next.listPage
-                        a.specialFeatures122021__nextItem(href="")
+                        a.specialFeatures122021__nextItem(href=`${linkArt}4994/5`)
                             span.specialFeatures122021__nextItemLabel.label17 登場事業一覧ページへ

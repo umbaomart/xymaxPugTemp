@@ -5,6 +5,8 @@
     //- let localPath = "./../../_images/p3/"
     let localPath = "[uploads_path]/2021/12/"
     let metaTitle = "Special Features P3-02"
+    let linkArt = "/article/"
+
 //-  colors
 -   let silverLakeBlue = "color-silverLakeBlue"; // #5785B7 lakeblue
 -   let burlywood = "color-burlywood"; // #DFBA79 lightbrown
@@ -27,6 +29,7 @@
 -
     let profile = [
         {
+            anchor: "03",
             no: "第2の皿",
             labelText: "ZXY/N推",
             description: "企業の働き方・働く場所の変化をチャンスと捉え、約200拠点・会員数46万人のサテライトオフィスサービス「ZXY」をフックに、オフィス・商業不動産・金融店舗など、多様で大量の不動産情報やノウハウを生かし、グループ一体となって営業。",
@@ -58,9 +61,10 @@
                     body: "いま働き方・働く場所を変えたい、変えなきゃと多くの企業が思っている中、XYグループは<span class='specialFeatures122021__questItemContentTextBold'>ZXYで企業にフックすることができる。</span>さらにグループ各所から集まってくる大量かつ多様な物件情報や、グループでの様々なチャレンジで溜まった、働く場所の知見やノウハウもある。そこでN推は、短期的にはワークプレイスという切り口から、他社には提供できないソリューションを提供、もしくはその可能性を感じてもらうことで、企業の経営層に深く入り込んでZXY利用や賃貸・売買仲介などの不動産ビジネスを生み出していきたい。そして中長期的には、10年20年先を見据えた営業基盤を作りたい。<span class='specialFeatures122021__questItemContentTextBold'>変化を迫られている大手企業に対し、いま僕らにしかできない仕事が目の前にあって、「グループの歴史上最も営業しやすい瞬間」を迎えている。頼りにされている今、様々な企業と実績を作り、深い関係を築いていくN推の活動は、グループの将来を見据えても非常に重要な意味を持つと思います。</span><br><br>ちなみに、企業様からの反応は好評で。コンサルや仲介といったFeeビジネスだけでなく<span class='specialFeatures122021__questItemContentTextBold'>ZXYという自社製品を持っていることが、一定の信頼感を得ることに役立っていると感じますね。</span>ただ、N推の営業は数年がかりでやってる先もあったりと、どうしても息の長い活動になるので、腰を据えて粘り強くやっていきたいと思います。",
                 },
             ],
-            qoute: "Web版限定記事へ",
+            //- qoute: "Web版限定記事へ",
         },
          {
+            anchor: "04",
             no: "第2の皿",
             labelText: "企活",
             description: "",
@@ -82,7 +86,7 @@
                     body: "地銀・信金って一番に地域貢献や地域活性化を大切にしています。そのため、余剰床活用で多いのがクリニックや保育所なんですが、<span class='specialFeatures122021__questItemContentTextBold'>働く場の選択肢を増やし、また地域活性化にもつながる「社会課題解決銘柄」としてのZXYはコロナ禍以降、特に受け入れられやすい。</span>ただ、スピード感が遅かったり、テナント区画への導線がなく貸せる床になっていないなど難しさもあります。ZXYの出店ニーズが郊外へと移る中、該当エリアの信金に声をかけたり、信金から取引先の物件をご紹介いただくことも増えてきました。",
                 },
             ],
-            qoute: "Web版限定記事へ",
+            //- qoute: "Web版限定記事へ",
          },
     ]
 
@@ -95,6 +99,7 @@ html(lang="en")
                 article.specialFeatures122021__wrapper
                     .specialFeatures122021__inner: each prof in profile
                         .specialFeatures122021__innerBorder(class=prof.class)
+                            .specialFeatures122021__innerAnchor(id=prof.anchor)
                             .specialFeatures122021__prof
                                 .specialFeatures122021__profLabel
                                     p.specialFeatures122021__profLabelNo=prof.no
@@ -142,10 +147,10 @@ html(lang="en")
                 .specialFeatures122021__footer(class=myClassFooter)
                     .specialFeatures122021__next.karitLeft(class=`${glaucous}`)
                         p.specialFeatures122021__nextText NEXT
-                        a.specialFeatures122021__nextItem(href="")
+                        a.specialFeatures122021__nextItem(href=`${linkArt}4994`)
                             span.specialFeatures122021__nextItemLabel.label32 ホテル
                             p.specialFeatures122021__nextItemTitle.title24 ホテル/リネン/客室清掃
 
                     .specialFeatures122021__next.listPage
-                        a.specialFeatures122021__nextItem(href="")
+                        a.specialFeatures122021__nextItem(href=`${linkArt}4994/5`)
                             span.specialFeatures122021__nextItemLabel.label17 登場事業一覧ページへ

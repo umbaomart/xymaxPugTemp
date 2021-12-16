@@ -5,6 +5,8 @@
     //- let localPath = "./../../_images/p2/"
     let localPath = "[uploads_path]/2021/12/"
     let metaTitle = "Special Features P2-02"
+    let linkArt = "/article/"
+
 //-  colors
 -   let silverLakeBlue = "color-silverLakeBlue"; // #5785B7 lakeblue
 -   let burlywood = "color-burlywood"; // #DFBA79 lightbrown
@@ -21,21 +23,24 @@
         label: "第1の皿",
         title: "東海",
         body: "XYTK 代表取締役社長<br>XY 専務執行役員<br>商業不動産サポート事業部<br>担当",
-        name: "東浦 定宏"
+        name: "東浦 定宏",
+        link: "#01"
      },
      {
         class: "color-elecBrown",
         label: "第1の皿",
         title: "PBM/工事/FM/警備/清掃",
         body: "XY 執行役員<br>不動産マネジメント部<br>業務推進部<br>担当",
-        name: "吉田 源弘"
+        name: "吉田 源弘",
+        link: "./2"
      },
      {
         class: "color-roseDust",
         label: "第1の皿",
         title: "関西",
         body: "XYK 代表取締役社長",
-        name: "吉田 正"
+        name: "吉田 正",
+        link: "./3"
      },
  ]
 
@@ -80,7 +85,7 @@ html(lang="en")
                     .specialFeatures122021__cards.col3
                         -
                         each card in cards
-                            .specialFeatures122021__cardsItem(class=card.class)
+                            a.specialFeatures122021__cardsItem(class=card.class)(href=card.link)
                                 .specialFeatures122021__cardsItemLabel
                                     p.specialFeatures122021__cardsItemLabelText=card.label
                                 .specialFeatures122021__cardsItemTitle
@@ -94,6 +99,7 @@ html(lang="en")
                     |
                     .specialFeatures122021__inner
                         .specialFeatures122021__innerBorder(class=operaMauve)
+                            .specialFeatures122021__innerAnchor#01
                             .specialFeatures122021__prof
                                 .specialFeatures122021__profLabel
                                     p.specialFeatures122021__profLabelNo=profile[0].no
@@ -123,8 +129,8 @@ html(lang="en")
                                         p.specialFeatures122021__questItemContentText!=item.body
                             |
                             |
-                            .specialFeatures122021__qoute
-                                .specialFeatures122021__qouteText Web版限定記事へ
+                            //- .specialFeatures122021__qoute
+                            //-     .specialFeatures122021__qouteText Web版限定記事へ
 
                     .specialFeatures122021__closing
                         .specialFeatures122021__closingHeader
@@ -143,5 +149,5 @@ html(lang="en")
                             p.specialFeatures122021__nextItemTitle.title24 PBM/工事/FM/警備/清掃
 
                     .specialFeatures122021__next.listPage
-                        a.specialFeatures122021__nextItem(href="")
+                        a.specialFeatures122021__nextItem(href=`${linkArt}4994/5`)
                             span.specialFeatures122021__nextItemLabel.label17 登場事業一覧ページへ

@@ -144,6 +144,7 @@
 
   &__cards {
     margin-top: 60px;
+    margin-bottom: 108px;
     @include u-flex($fd: row, $fw: nowrap, $jc: space-between, $ai: stretch);
 
     @include u-mqMax {
@@ -162,7 +163,7 @@
     &.col2 {
       width: 100%;
       max-width: 450px;
-      margin: 60px auto 0;
+      margin: 60px auto 108px;
       @include u-flex($fd: row, $fw: wrap, $jc: flex-start, $ai: stretch);
 
       @include u-mqMax {
@@ -183,6 +184,7 @@
 
   &__cardsItem {
     position: relative;
+    display: block;
 
     @include u-mqMax {
       &:after {
@@ -579,6 +581,7 @@
   &__cardsItemBodyContent {
     @extend %desc_15;
     text-align: center;
+    color: $black;
     letter-spacing: 0;
   }
 
@@ -609,7 +612,7 @@
     }
 
     .color-grullo & {
-      margin: 42px auto 0;
+      margin: 44px auto 0;
 
       @include u-mqMax {
         margin: 1.563vw auto 0;
@@ -662,17 +665,20 @@
   &__cardsItemAuthorName {
     @extend %desc_20;
     text-align: center;
+    color: $black;
   }
 
   &__cardsItemAuthorNameExtra {
     @extend %desc_15;
+    color: $black;
   }
 
   &__inner {
+    position: relative;
+
     .specialFeaturesP2Series & {
       background: $independence;
       padding: 20px;
-      margin-top: 108px;
 
       @include u-mqMax {
         margin-top: 0;
@@ -682,7 +688,18 @@
     }
   }
 
+  &__innerAnchor {
+    position: absolute;
+    top: -145px;
+
+    @include u-mqMax {
+      top: -30vw;
+    }
+  }
+
   &__innerBorder {
+    position: relative;
+
     .specialFeaturesP2Series & {
       background: $white;
       border-radius: 30px;
@@ -726,6 +743,27 @@
       margin: 0 auto;
       height: auto;
       padding: 1.875vw 5.625vw;
+
+      .color-coolGrey & {
+        width: 65.625vw;
+        margin-bottom: 9.375vw;
+        // letter-spacing: 0;
+      }
+
+      .color-tan .u-spDb & {
+        letter-spacing: 0;
+        font-size: 7.031vw;
+
+        &:first-child {
+          width: 60.625vw;
+        }
+
+        &:nth-child(2) {
+          width: 100%;
+          margin-top: 1.719vw;
+          margin-bottom: 9.375vw;
+        }
+      }
     }
 
     .color-operaMauve & {
@@ -920,8 +958,24 @@
     }
 
     .color-glaucous & {
-      // edit me
-      max-width: 630px;
+      max-width: 585px;
+    }
+
+    .color-antiqueBrass & {
+      width: 716px;
+      margin-left: -10px;
+
+      @include u-mqMax {
+        width: 100%;
+      }
+    }
+
+    .color-tan & {
+      max-width: 615px;
+    }
+
+    .color-coolGrey & {
+      max-width: 560px;
     }
 
   }
@@ -1001,7 +1055,8 @@
     }
 
     .color-antiqueBrass & {
-      max-width: 319px;
+      // max-width: 319px;
+      width: 100%;
 
       @include u-mqMax {
         max-width: 100%;
@@ -1018,9 +1073,31 @@
 
     .color-coolGrey & {
       max-width: 319px;
+      margin-right: 0;
+      margin-left: auto;
 
       @include u-mqMax {
         max-width: 100%;
+        margin-right: auto;
+      }
+    }
+  }
+
+  &__profContentFlex {
+    @include u-flex($fd: row, $fw: nowrap, $jc: space-between, $ai: stretch);
+
+    @include u-mqMax {
+      display: block;
+    }
+  }
+
+  &__profContentInner {
+    width: 100%;
+    max-width: 319px;
+
+    &:not(:first-child) {
+      @include u-mqMax {
+        margin: 16.25vw auto 0;
       }
     }
   }
@@ -1064,6 +1141,7 @@
 
         @include u-mqMax {
 
+          .color-coolGrey &,
           .color-metallicSilver &,
           .color-grullo &,
           .color-operaMauve &,
@@ -1073,6 +1151,8 @@
             transform: rotate(45deg);
           }
 
+          .color-tan &,
+          .color-glaucous &,
           .color-newYorkPink &,
           .color-pewterBlue &,
           .color-roseDust & {
@@ -1167,9 +1247,30 @@
     &.karitLeft.color-antiqueBrass {
       &::before {
         border-top: 51px solid $antiqueBrass;
+        right: 43%;
+        bottom: -25px;
 
         @include u-mqMax {
           border-top: 7.969vw solid $antiqueBrass;
+          right: 61%;
+          bottom: -15px;
+        }
+      }
+    }
+
+    &.karitRight.color-antiqueBrass {
+      &::before {
+        border-top: 51px solid $antiqueBrass;
+        right: 43%;
+        top: auto;
+        bottom: -25px;
+        transform: rotate(45deg);
+
+        @include u-mqMax {
+          border-top: 7.969vw solid $antiqueBrass;
+          transform: rotate(-45deg);
+          right: 61%;
+          bottom: -15px;
         }
       }
     }
@@ -1187,9 +1288,16 @@
     &.karitLeft.color-coolGrey {
       &::before {
         border-top: 51px solid $coolGrey;
+        right: auto;
+        left: 4%;
+        transform: rotate(45deg);
 
         @include u-mqMax {
           border-top: 7.969vw solid $coolGrey;
+          bottom: -13%;
+          left: auto;
+          right: 35%;
+          transform: rotate(45deg);
         }
       }
     }
@@ -1243,6 +1351,10 @@
     color: $white;
     @extend %desc_20;
     text-align: center;
+
+    .color-antiqueBrass & {
+      letter-spacing: .05em;
+    }
   }
 
   &__profContentBox {
@@ -1334,8 +1446,29 @@
     }
 
     .color-antiqueBrass & {
-      width: 80%;
-      margin: 18px 0 0 auto;
+      width: 192px;
+      margin-top: 40px;
+      // background: pink;
+
+      @include u-mqMax {
+        width: 100%;
+      }
+
+      &.contentInner01 {
+        margin-left: 0;
+
+        @include u-mqMax {
+          margin-top: 3.125vw;
+        }
+      }
+
+      &.contentInner02 {
+        margin-right: -40px;
+
+        @include u-mqMax {
+          margin: 3.125vw auto 0;
+        }
+      }
 
 
       @include u-mqMax {
@@ -1350,15 +1483,13 @@
 
 
       @include u-mqMax {
-        width: 100%;
         margin: 5.781vw auto 0;
       }
     }
 
     .color-coolGrey & {
-      width: 80%;
-      margin: 18px 0 0 auto;
-
+      width: 140px;
+      margin: 18px 60px 0 auto;
 
       @include u-mqMax {
         width: 100%;
@@ -1464,6 +1595,68 @@
         margin-top: 5.781vw;
         max-width: 73.125vw;
         margin-left: 5vw;
+      }
+    }
+
+    .color-glaucous & {
+      max-width: 328px;
+      bottom: 5px;
+
+      @include u-mqMax {
+        margin-top: 5.781vw;
+        max-width: 60.938vw;
+        margin-left: 0;
+      }
+    }
+
+    .color-antiqueBrass & {
+      max-width: 505px;
+      position: static;
+      margin: -60px auto 0;
+
+      @include u-mqMax {
+        margin-top: 5.781vw;
+        margin-left: 0;
+        // max-width: 60.938vw;
+      }
+    }
+
+    .color-antiqueBrass .contentInner01 & {
+      @include u-mqMax {
+        width: 61.563vw;
+        margin: 5.781vw 15vw 0 auto;
+      }
+    }
+
+    .color-antiqueBrass .contentInner02 & {
+
+      @include u-mqMax {
+        width: 66.406vw;
+        margin: 5.781vw 1vw 0 auto;
+      }
+    }
+
+    .color-tan & {
+      max-width: 351px;
+      bottom: 5px;
+
+      @include u-mqMax {
+        margin-top: 5.781vw;
+        max-width: 66.406vw;
+        margin-left: 1vw;
+      }
+    }
+
+    .color-coolGrey & {
+      max-width: 362px;
+      bottom: 5px;
+      left: 0;
+      right: auto;
+
+      @include u-mqMax {
+        margin-top: -1vw;
+        max-width: 80.625vw;
+        margin-left: 3vw;
       }
     }
   }
@@ -1946,6 +2139,14 @@
 
     @include u-mqMax {
       padding-left: 4.375vw;
+    }
+
+    &:not(:first-child) {
+      margin-top: 21px;
+
+      @include u-mqMax {
+        margin-top: 9.375vw;
+      }
     }
 
     &:before {

@@ -10,6 +10,8 @@
   @include u-mqMax {}
 }
 
+
+
 .specialFeatures122021 {
   $silverLakeBlueLight: rgba(#82B3DE, .4);
   $burlywoodLight: rgba(#DFBA79, .4);
@@ -17,6 +19,7 @@
   $silverLakeBlue: #5785B7;
   $burlywood: #DFBA79;
   $independence: #4F576C;
+  $independence02: #4F576C;
   $operaMauve: #BC7DAA;
   $grenSheen: #6CAB9C;
   $elecBrown: #B46253;
@@ -29,7 +32,12 @@
   $pewterBlue: #7EADB1;
   $newYorkPink: #DB8172;
   $metallicSilver: #9DACAC;
+
+  // part 4
   $glaucous: #667FAA;
+  $antiqueBrass: #C79670;
+  $tan: #D3B187;
+  $coolGrey: #8699B4;
 
   $white: #fff;
   $black: #000;
@@ -1110,7 +1118,7 @@
     }
 
     // remove me later
-    padding-bottom: 300px;
+    // padding-bottom: 300px;
   }
 
   &__footerFlex {
@@ -1213,6 +1221,42 @@
       }
     }
 
+    .specialFeaturesP4Series01 & {
+      width: 100%;
+      max-width: 267px;
+
+      @include u-mqMax {
+        max-width: 41.719vw;
+      }
+    }
+
+    .specialFeaturesP4Series02 & {
+      width: 100%;
+      max-width: 656px;
+
+      @include u-mqMax {
+        max-width: 74.063vw;
+      }
+    }
+
+    .specialFeaturesP4Series03 & {
+      width: 100%;
+      max-width: 265px;
+
+      @include u-mqMax {
+        max-width: 41.406vw;
+      }
+    }
+
+    .specialFeaturesP4Series04 & {
+      width: 100%;
+      max-width: 537px;
+
+      @include u-mqMax {
+        max-width: 83.906vw;
+      }
+    }
+
     &.listPage {
       margin-top: 70px;
       @include u-flex($fd: row, $fw: nowrap, $jc: center, $ai: center);
@@ -1267,6 +1311,22 @@
 
     .color-glaucous & {
       color: $glaucous;
+    }
+
+    .color-antiqueBrass & {
+      color: $antiqueBrass;
+    }
+
+    .color-tan & {
+      color: $tan;
+    }
+
+    .color-coolGrey & {
+      color: $coolGrey;
+    }
+
+    .color-independence02 & {
+      color: $independence02;
     }
   }
 
@@ -1353,6 +1413,45 @@
 
     .color-glaucous & {
       background: $glaucous;
+    }
+
+    .color-antiqueBrass & {
+      background: $antiqueBrass;
+    }
+
+    .color-independence02 & {
+      background: $independence02;
+    }
+
+    .color-tan & {
+      background: $tan;
+
+      height: 123px;
+      @include u-flex($fd: row, $fw: wrap, $jc: center, $ai: center);
+
+      @include u-mqMax {
+        height: 20.469vw;
+      }
+    }
+
+    .color-coolGrey & {
+      background: $coolGrey;
+      height: 123px;
+      @include u-flex($fd: row, $fw: wrap, $jc: center, $ai: center);
+
+      @include u-mqMax {
+        height: 20.469vw;
+      }
+    }
+
+    .color-independence02 & {
+      background: $independence02;
+      height: 123px;
+      @include u-flex($fd: row, $fw: wrap, $jc: center, $ai: center);
+
+      @include u-mqMax {
+        height: 20.469vw;
+      }
     }
 
     .karitLeft & {
@@ -1467,6 +1566,46 @@
 
         @include u-mqMax {
           border-top: 7.813vw solid $glaucous;
+        }
+      }
+    }
+
+    .karitLeft.color-antiqueBrass & {
+      &::before {
+        border-top: 51px solid $antiqueBrass;
+
+        @include u-mqMax {
+          border-top: 7.813vw solid $antiqueBrass;
+        }
+      }
+    }
+
+    .karitLeft.color-tan & {
+      &::before {
+        border-top: 51px solid $tan;
+
+        @include u-mqMax {
+          border-top: 7.813vw solid $tan;
+        }
+      }
+    }
+
+    .karitLeft.color-coolGrey & {
+      &::before {
+        border-top: 51px solid $coolGrey;
+
+        @include u-mqMax {
+          border-top: 7.813vw solid $coolGrey;
+        }
+      }
+    }
+
+    .karitLeft.color-independence02 & {
+      &::before {
+        border-top: 51px solid $independence02;
+
+        @include u-mqMax {
+          border-top: 7.813vw solid $independence02;
         }
       }
     }

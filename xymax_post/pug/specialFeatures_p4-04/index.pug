@@ -1,10 +1,12 @@
 -
-    let myClassPart = "specialFeaturesP2Series specialFeaturesP4Series02"
-    let myClassFooter = "specialFeaturesP4Series03"
+    let myClassPart = "specialFeaturesP2Series specialFeaturesP4Series04"
+    let myClassFooter = "specialFeaturesP4Series04"
     let myClass = "specialFeatures122021"
-    let localPath = "./../../_images/p4/"
-    //- let localPath = "[uploads_path]/2021/12/"
+    //- let localPath = "./../../_images/p4/"
+    let localPath = "[uploads_path]/2021/12/"
     let metaTitle = "Special Features P3"
+    let linkArt = "/article/"
+
 //-  colors
 -   let silverLakeBlue = "color-silverLakeBlue"; // #5785B7 lakeblue
 -   let burlywood = "color-burlywood"; // #DFBA79 lightbrown
@@ -46,16 +48,16 @@
             },
             {
                 qNo: "Q2.",
-                title: "グループ連携って、<br>いまどんなことをしているんですか？",
+                title: "グループ連携って、<br>いまどんなことを<br class='u-spDb'>しているんですか？",
                 body: "企活と連携して地銀・信金へ、また、商サポやXYKと連携して私鉄へ、グループの力をフル活用して営業中。「ご近所商圏」を持った地域のプラットフォーマーを目指す彼らに、地域のお店へMEQQEを展開してもらい、マップの充実を狙っています。<br><br>また、ユーザー獲得のための連携としては、ジザイワーク事業部やからくさホテルズにも協力を依頼し、拠点やホテル周辺のおすすめスポットのマップを作成＆利用者へ紹介してもらったりも。今後、MEQQEを世の中に拡げていくためにも、グループ皆さんのご協力をぜひお願いします。",
             },
             {
                 qNo: "Q3.",
-                title: "今後の展望を<br>教えてください！",
+                title: "今後の展望を<br class='u-pcDb'>教えてください！",
                 body: "まずは、ジャンルごとの「横」の情報、エリアごとの「縦」の情報を拡充させ、アプリを開くだけでユーザーに身の回りの情報が「掘り起こしもん、めっけ！」と入ってくることが目標。そして、地域の事業者の情報発信ツール＝MEQQEとなり収益化へ。最終的に、情報の皿として成長し、これまでのXYビジネスでは接点が持てなかった企業ともつながり、「なにか不動産ビジネスを始めるならXYに相談！」という姿を実現したいですね。",
             },
         ],
-        qoute: "Web版限定記事へ",
+        //- qoute: "Web版限定記事へ",
      },
  ]
 
@@ -66,8 +68,6 @@ html(lang="en")
         .secSingle(class=`${myClass}`)
             .secSingle__content(class=`${myClassPart}`)
                 article.specialFeatures122021__wrapper
-                    |
-                    |
                     .specialFeatures122021__inner: each prof in profile
                         .specialFeatures122021__innerBorder(class=prof.class)
                             .specialFeatures122021__prof
@@ -113,8 +113,6 @@ html(lang="en")
                 |
                 |
                 .specialFeatures122021__footer(class=myClassFooter)
-                    .specialFeatures122021__next.karitLeft(class=`${coolGrey}`)
-                        p.specialFeatures122021__nextText NEXT
-                        a.specialFeatures122021__nextItem(href="./2")
+                    .specialFeatures122021__next.karitLeft(class=`${independence}02`)
+                        a.specialFeatures122021__nextItem(href=`${linkArt}4994/5`)
                             span.specialFeatures122021__nextItemLabel.label32 登場事業一覧ページはこちら
-                            //- p.specialFeatures122021__nextItemTitle.title24 MR/トラスト

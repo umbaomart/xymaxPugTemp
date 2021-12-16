@@ -1,10 +1,11 @@
 -
-    let myClassPart = "specialFeaturesP2Series specialFeaturesP4Series02"
+    let myClassPart = "specialFeaturesP2Series specialFeaturesP4Series03"
     let myClassFooter = "specialFeaturesP4Series03"
     let myClass = "specialFeatures122021"
-    let localPath = "./../../_images/p4/"
-    //- let localPath = "[uploads_path]/2021/12/"
+    //- let localPath = "./../../_images/p4/"
+    let localPath = "[uploads_path]/2021/12/"
     let metaTitle = "Special Features P3"
+    let linkArt = "/article/"
 //-  colors
 -   let silverLakeBlue = "color-silverLakeBlue"; // #5785B7 lakeblue
 -   let burlywood = "color-burlywood"; // #DFBA79 lightbrown
@@ -29,7 +30,11 @@
 -
  let profile = [
    {
-        no: "上場準備室 兼 サステナビリティ委員会",
+        noPc: "上場準備室 兼 サステナビリティ委員会",
+        noSp: [
+            {text: "上場準備室 兼 "},
+            {text: "サステナビリティ委員会"},
+        ],
         //- labelText: "",
         description: "株式上場を目指し体制を整えるべく、上場準備室が発足。また サステナビリティ推進のため、取締役会の諮問機関としてサステナビリティ委員会も設けられた。",
         class: "color-tan",
@@ -60,7 +65,7 @@
                 body: "まず重要なことは<span class='specialFeatures122021__questItemContentTextBold'>「XYグループとして、どこに注力するか」サステナビリティの基本方針を定める</span>こと。実は、すでに<span class='specialFeatures122021__questItemContentTextBold'>「私たちの活動自体が、社会課題を解決している＝サステナブルな社会を目指す取り組み」</span>とも言えて。例えば、社会インフラでもある不動産の利用価値の維持・向上に尽力しているPBMや、より柔軟な働く場の選択肢を提供することで、人々の生産性向上に貢献しているZXYなどもそう。<span class='specialFeatures122021__questItemContentTextBold'>「ビジネスをやればやるほど、社会にとっても良い」という企業モデルはそうそうない。</span>私たちは<span class='specialFeatures122021__questItemContentTextBold'>自然に実践できている</span>んです。なので、我々の経営ビジョンを反映をさせながら<span class='specialFeatures122021__questItemContentTextBold'>「サステナビリティへの考え方を“再整理”している」</span>といった方がいいかも知れないですね。",
             },
         ],
-        qoute: "Web版限定記事へ",
+        //- qoute: "Web版限定記事へ",
      },
  ]
 
@@ -77,7 +82,11 @@ html(lang="en")
                         .specialFeatures122021__innerBorder(class=prof.class)
                             .specialFeatures122021__prof
                                 .specialFeatures122021__profLabel
-                                    p.specialFeatures122021__profLabelNo=prof.no
+                                    .u-pcDb
+                                        p.specialFeatures122021__profLabelNo=prof.noPc
+                                    .u-spDb
+                                        each item in prof.noSp
+                                            p.specialFeatures122021__profLabelNo=item.text
                                     span.specialFeatures122021__profLabelText!=prof.labelText
                                 p.specialFeatures122021__profDesc!=prof.description
                                 .specialFeatures122021__profFlex
@@ -118,12 +127,12 @@ html(lang="en")
                 |
                 |
                 .specialFeatures122021__footer(class=myClassFooter)
-                    .specialFeatures122021__next.karitLeft(class=`${antiqueBrass}`)
+                    .specialFeatures122021__next.karitLeft(class=`${coolGrey}`)
                         p.specialFeatures122021__nextText NEXT
-                        a.specialFeatures122021__nextItem(href="./2")
+                        a.specialFeatures122021__nextItem(href=`${linkArt}4994/4`)
                             span.specialFeatures122021__nextItemLabel.label32 ジザイめっけ
                             //- p.specialFeatures122021__nextItemTitle.title24 MR/トラスト
 
                     .specialFeatures122021__next.listPage
-                        a.specialFeatures122021__nextItem(href="")
+                        a.specialFeatures122021__nextItem(href=`${linkArt}4994/5`)
                             span.specialFeatures122021__nextItemLabel.label17 登場事業一覧ページへ

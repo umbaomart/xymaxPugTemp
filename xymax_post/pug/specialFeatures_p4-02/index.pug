@@ -2,9 +2,10 @@
     let myClassPart = "specialFeaturesP2Series specialFeaturesP4Series02"
     let myClassFooter = "specialFeaturesP4Series02"
     let myClass = "specialFeatures122021"
-    let localPath = "./../../_images/p4/"
-    //- let localPath = "[uploads_path]/2021/12/"
-    let metaTitle = "Special Features P3"
+    //- let localPath = "./../../_images/p4/"
+    let localPath = "[uploads_path]/2021/12/"
+    let metaTitle = "Special Features P4-02"
+    let linkArt = "/article/"
 //-  colors
 -   let silverLakeBlue = "color-silverLakeBlue"; // #5785B7 lakeblue
 -   let burlywood = "color-burlywood"; // #DFBA79 lightbrown
@@ -35,16 +36,20 @@
         class: "color-antiqueBrass",
         bubbleContentGroup: [
             {
-                bubbleData: "グループ連携に<br>力をいれて<br>稼ぎます！",
-                body: "トラスト<br>代表取締役社長",
-                profName: "大山 泉之",
+                bubbleData: "より一層、<br>銀行グループとの<br>関係性を深化させて<br class='u-pcDb'>いきます。",
+                bodyPc: "トラスト<br>代表取締役社長",
+                bodySp: "MR 取締役 執行役員副社長<br>トラスト 取締役",
+                profNamePc: "大山 泉之",
+                profNameSp: "吉村 竜一",
                 bubleKarit: "karitLeft color-antiqueBrass",
                 imgSp: "article121021_prof_kv-09.jpg",
             },
             {
-                bubbleData: "より一層、<br>銀行グループとの<br>関係性を深化させて<br>いきます。",
-                body: "MR 取締役 執行役員副社長<br>トラスト 取締役",
-                profName: "吉村 竜一",
+                bubbleData: "グループ連携に<br>力をいれて<br>稼ぎます！",
+                bodyPc: "MR 取締役 執行役員副社長<br>トラスト 取締役",
+                bodySp: "トラスト<br>代表取締役社長",
+                profNamePc: "吉村 竜一",
+                profNameSp: "大山 泉之",
                 bubleKarit: "karitRight color-antiqueBrass",
                 imgSp: "article121021_prof_kv-09_2.jpg",
             },
@@ -67,7 +72,7 @@
                 body: "金融機関は低金利が長期化常態化する中、金利よりもスプレッド（利ざや）がとれる不動産投資に力を入れている。そこで、SMFGとの合弁会社であるMRはSMFLみらいパートナーズ㈱とタッグを組み、<span class='specialFeatures122021__questItemContentTextBold'>不動産のプロとしての知見を活かしながら、銀行の不動産ビジネスのサポートに注力しています。不動産売買だけでなく、不動産開発や物件の運営管理などXYの事業拡大につながるビジネスを狙っていきたい。</span>そして巨大な資金力を持つ銀行グループとの関係性をより深化させ、融資先のお客様保有の不動産に絡む案件など、我々だけではキャッチできない大型の取り組みを進めていきたいです。",
             },
         ],
-        qoute: "Web版限定記事へ",
+        //- qoute: "Web版限定記事へ",
      },
  ]
 
@@ -91,16 +96,19 @@ html(lang="en")
                                     .specialFeatures122021__profContent
                                         -   let index = 1
                                         .specialFeatures122021__profContentFlex: each item in prof.bubbleContentGroup
-                                            .specialFeatures122021__profContentInner(class=`contentInner0${index++}`)
+                                            .specialFeatures122021__profContentInner(class=`contentInner0${index}`)
                                                 .specialFeatures122021__profContentBuble(class=item.bubleKarit)
-                                                    p.specialFeatures122021__profContentBubleData!=item.bubbleContent
+                                                    p.specialFeatures122021__profContentBubleData!=item.bubbleData
                                                 .u-spDb
                                                     figure.specialFeatures122021__profKv
                                                         img.specialFeatures122021__profKvImg(src=`${localPath}${item.imgSp}`)
-                                                .specialFeatures122021__profContentBox
-                                                    p.specialFeatures122021__profContentText!=prof.body
+                                                .specialFeatures122021__profContentBox(class=`contentInner0${index}`)
+                                                    - index = index + 1
+                                                    p.specialFeatures122021__profContentText.u-pcDb!=item.bodyPc
+                                                    p.specialFeatures122021__profContentText.u-spDb!=item.bodySp
                                                     .specialFeatures122021__profContentName
-                                                        p.specialFeatures122021__profContentNameText=prof.profName
+                                                        p.specialFeatures122021__profContentNameText.u-pcDb=item.profNamePc
+                                                        p.specialFeatures122021__profContentNameText.u-spDb=item.profNameSp
                                                             span.specialFeatures122021__profContentNameExt さん
                                     .u-pcDb
                                         figure.specialFeatures122021__profKv
@@ -130,12 +138,14 @@ html(lang="en")
                 |
                 |
                 .specialFeatures122021__footer(class=myClassFooter)
-                    .specialFeatures122021__next.karitLeft(class=`${antiqueBrass}`)
+                    .specialFeatures122021__next.karitLeft(class=`${tan}`)
                         p.specialFeatures122021__nextText NEXT
-                        a.specialFeatures122021__nextItem(href="./2")
-                            span.specialFeatures122021__nextItemLabel.label32 資活
-                            p.specialFeatures122021__nextItemTitle.title24 MR/トラスト
+                        a.specialFeatures122021__nextItem(href=`${linkArt}4994/3`)
+                            span.specialFeatures122021__nextItemLabel.label32 上場準備室 兼
+                                br.u-spDb
+                                | サステナビリティ委員会
+                            //- p.specialFeatures122021__nextItemTitle.title24 MR/トラスト
 
                     .specialFeatures122021__next.listPage
-                        a.specialFeatures122021__nextItem(href="")
+                        a.specialFeatures122021__nextItem(href=`${linkArt}4994/5`)
                             span.specialFeatures122021__nextItemLabel.label17 登場事業一覧ページへ
