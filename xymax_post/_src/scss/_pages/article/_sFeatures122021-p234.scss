@@ -61,6 +61,18 @@
     }
   }
 
+  %title_23 {
+    font-size: 23px;
+    letter-spacing: .15em;
+    font-weight: bold;
+    line-height: 1.6;
+
+    @include u-mqMax {
+      font-size: 4.688vw;
+      line-height: 1.4;
+    }
+  }
+
   %title_24vw {
     font-size: 24px;
     letter-spacing: .15em;
@@ -405,24 +417,6 @@
 
         @include u-mqMax {
           margin: 7.188vw auto 0;
-        }
-      }
-    }
-
-    .col2P4 & {
-      width: 100%;
-      max-width: 362px;
-
-      &:nth-child(n+3) {
-        margin-top: 70px;
-      }
-
-      @include u-mqMax {
-        max-width: 100%;
-        margin: 0 auto;
-
-        &:not(:first-child) {
-          margin-top: 7.188vw;
         }
       }
     }
@@ -888,6 +882,10 @@
           margin-top: 4.688vw;
         }
       }
+    }
+
+    .specialFeaturesP2Series.specialFeaturesP4Series05 & {
+      padding: 45px 35px 80px;
     }
   }
 
@@ -2259,6 +2257,26 @@
     .color-coolGrey & {
       color: $coolGrey;
     }
+
+    .color-metallicSilver & {
+      color: $metallicSilver;
+    }
+
+    .color-glaucous & {
+      color: $glaucous;
+    }
+
+    .color-antiqueBrass & {
+      color: $antiqueBrass;
+    }
+
+    .color-tan & {
+      color: $tan;
+    }
+
+    .color-coolGrey & {
+      color: $coolGrey;
+    }
   }
 
   &__closing {
@@ -2337,6 +2355,264 @@
   }
 
   //- part5 page 5
-  
+  &__chart {}
+
+  &__chartLabel {
+    @include u-flex($fd: row, $fw: nowrap, $jc: center, $ai: center);
+  }
+
+  &__chartLabelText {
+    @extend %title_27;
+    padding: 8px 30px;
+    background: $independence;
+    color: $white;
+    border-radius: 55px;
+
+    @include u-mqMax {}
+  }
+
+  &__chartWrapper {
+    margin-top: 60px;
+  }
+
+  &__cards {
+
+    .specialFeaturesP4Series05 & {
+      margin: 0;
+      padding: 55px 0 40px;
+
+      &:first-child {
+        padding-top: 0;
+      }
+
+      &:not(:last-child) {
+        border-bottom: 3.5px solid #3D556A;
+      }
+    }
+
+    &.row1 {}
+
+    &.col3P4 {}
+  }
+
+  &__cardsItem {
+
+    .col3P4 & {
+      flex: 1;
+
+      &:nth-child(2) {
+        width: 263px;
+        border-left: 2px dashed #3D556A;
+        border-right: 2px dashed #3D556A;
+      }
+    }
+
+    .row3.col2P4 & {
+
+      &:nth-child(2) {
+        width: 50%;
+        border-left: 2px dashed #3D556A;
+      }
+    }
+
+    .col2P4.row3 & {
+      width: 50%;
+
+      &:nth-child(n+3) {
+        margin-top: 70px;
+      }
+
+      @include u-mqMax {
+        max-width: 100%;
+        margin: 0 auto;
+
+        &:not(:first-child) {
+          margin-top: 7.188vw;
+        }
+      }
+    }
+
+    &.color-tan {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 0 0 auto;
+      border-left: 2px dashed #3D556A;
+    }
+  }
+
+  &__cardsHeader {}
+
+  &__cardsHeaderLabel {
+    @include u-flex($fd: row, $fw: nowrap, $jc: center, $ai: center);
+
+    &:nth-child(2) {
+      margin-top: 10px;
+      margin-bottom: 44px;
+    }
+
+    .color-antiqueBrass & {
+      margin-top: 20px;
+    }
+  }
+
+  &__cardsHeaderLabelText {
+    @extend %title_27;
+    padding: 8px 22px;
+    color: $white;
+    border-radius: 55px;
+
+    .color-operaMauve & {
+      background: $operaMauve;
+    }
+
+    .color-elecBrown & {
+      background: $elecBrown;
+    }
+
+    .color-roseDust & {
+      background: $roseDust;
+    }
+
+    .color-grullo & {
+      background: $grullo;
+    }
+
+    .color-pewterBlue & {
+      background: $pewterBlue;
+    }
+
+    .color-newYorkPink & {
+      background: $newYorkPink;
+    }
+
+    .color-metallicSilver & {
+      background: $metallicSilver;
+    }
+
+    .color-glaucous & {
+      background: $glaucous;
+    }
+
+    .color-antiqueBrass & {
+      background: $antiqueBrass;
+    }
+
+    .color-tan & {
+      background: $tan;
+      @extend %desc_21;
+    }
+
+    .color-coolGrey & {
+      background: $coolGrey;
+    }
+  }
+
+  &__cardsHeaderTitle {
+    height: 105px;
+    width: 100%;
+    text-align: center;
+    @extend %title_23;
+
+    @include u-flex($fd: column, $fw: nowrap, $jc: center, $ai: center);
+
+    .color-operaMauve & {
+      color: $operaMauve;
+    }
+
+    .color-elecBrown & {
+      color: $elecBrown;
+    }
+
+    .color-roseDust & {
+      color: $roseDust;
+    }
+
+    .color-grullo & {
+      color: $grullo;
+    }
+
+    .color-pewterBlue & {
+      color: $pewterBlue;
+    }
+
+    .color-newYorkPink & {
+      color: $newYorkPink;
+    }
+
+    .color-metallicSilver & {
+      color: $metallicSilver;
+    }
+
+    .color-glaucous & {
+      color: $glaucous;
+    }
+
+    .color-antiqueBrass & {
+      color: $antiqueBrass;
+      height: 75px;
+    }
+
+    .color-tan & {
+      color: $tan;
+    }
+
+    .color-coolGrey & {
+      color: $coolGrey;
+    }
+  }
+
+  &__cardsBody {}
+
+  &__cardsBodyFlex {
+    @include u-flex($fd: row, $fw: nowrap, $jc: space-between, $ai: stretch);
+  }
+
+  &__cardsBodyKv {
+    width: 97px;
+    margin: 0 auto;
+
+    @include u-mqMax {
+      width: 15.156vw;
+      margin: 0;
+    }
+  }
+
+  &__cardsBodyData {
+    margin: 18px auto 0;
+  }
+
+  &__cardsBodyDataText {
+    text-align: center;
+    @extend %desc_15;
+    color: $black;
+    // height: 109px;
+    height: 65px;
+    letter-spacing: 0;
+    @include u-flex($fd: row, $fw: nowrap, $jc: center, $ai: center);
+
+    .row1 & {
+      height: 85px;
+    }
+  }
+
+  &__cardsBodyDataName {
+    color: $black;
+    text-align: center;
+    @extend %desc_20;
+    letter-spacing: 0;
+    margin-top: 27px;
+  }
+
+  &__cardsBodyDataNameSm {
+    color: $black;
+    @extend %desc_15;
+    letter-spacing: 0;
+  }
+
+  &__cardsBubble {}
+
+  &__cardsBubbleContent {}
+
+  &__cardsBubbleSm {}
 
 }

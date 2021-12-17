@@ -94,9 +94,9 @@
                name: "守谷 尚子"
            },
            {
-               class: "color-metallicSilver",
+               class: "color-glaucous",
                label: "ホテル",
-               title: "ホテル/リネン/客室清掃",
+               title: "ホテル/リネン/<br>客室清掃",
                kv: "article121021_prof_sm-06.png",
                content: "XY 常務執行役員<br>からくさホテルズ 代表取締役社長<br>ザイマックスカレス 取締役",
                name: "佐藤 亮祐"
@@ -105,6 +105,7 @@
        group4: [
            {
                 class: "color-antiqueBrass",
+                label: "資活",
                 title: "MR/トラスト",
                 twin: [
                     {
@@ -164,12 +165,13 @@ html(lang="en")
                     .specialFeatures122021__inner
                         .specialFeatures122021__innerBorder
                             .specialFeatures122021__chart
-                                .specialFeatures122021__chartLabel=chart[0].main
+                                .specialFeatures122021__chartLabel
+                                    p.specialFeatures122021__chartLabelText=chart[0].main
                                 .specialFeatures122021__chartWrapper
                                     //- Row 1
-                                    .specialFeatures122021__cards.row1.col3
+                                    .specialFeatures122021__cards.row1.col3P4
                                         each card1 in chart[0].group1
-                                            .specialFeatures122021__cardsItem(class=card1.class)
+                                            a.specialFeatures122021__cardsItem(class=card1.class href)
                                                 .specialFeatures122021__cardsHeader
                                                     .specialFeatures122021__cardsHeaderLabel
                                                         p.specialFeatures122021__cardsHeaderLabelText!=card1.label
@@ -180,10 +182,11 @@ html(lang="en")
                                                     .specialFeatures122021__cardsBodyData
                                                         p.specialFeatures122021__cardsBodyDataText!=card1.content
                                                         p.specialFeatures122021__cardsBodyDataName=card1.name
+                                                            span.specialFeatures122021__cardsBodyDataNameSm さん
                                     //- Row 2
-                                    .specialFeatures122021__cards.row2.col3
+                                    .specialFeatures122021__cards.row2.col3P4
                                         each card2 in chart[0].group2
-                                            .specialFeatures122021__cardsItem(class=card2.class)
+                                            a.specialFeatures122021__cardsItem(class=card2.class href)
                                                 .specialFeatures122021__cardsHeader
                                                     .specialFeatures122021__cardsHeaderLabel
                                                         p.specialFeatures122021__cardsHeaderLabelText!=card2.label
@@ -194,10 +197,11 @@ html(lang="en")
                                                     .specialFeatures122021__cardsBodyData
                                                         p.specialFeatures122021__cardsBodyDataText!=card2.content
                                                         p.specialFeatures122021__cardsBodyDataName=card2.name
+                                                            span.specialFeatures122021__cardsBodyDataNameSm さん
                                     //- Row 3
-                                    .specialFeatures122021__cards.row3.col2
+                                    .specialFeatures122021__cards.row3.col2P4
                                         each card3 in chart[0].group3
-                                            .specialFeatures122021__cardsItem(class=card3.class)
+                                            a.specialFeatures122021__cardsItem(class=card3.class href)
                                                 .specialFeatures122021__cardsHeader
                                                     .specialFeatures122021__cardsHeaderLabel
                                                         p.specialFeatures122021__cardsHeaderLabelText!=card3.label
@@ -208,10 +212,11 @@ html(lang="en")
                                                     .specialFeatures122021__cardsBodyData
                                                         p.specialFeatures122021__cardsBodyDataText!=card3.content
                                                         p.specialFeatures122021__cardsBodyDataName=card3.name
+                                                            span.specialFeatures122021__cardsBodyDataNameSm さん
                                     //- Row 4
-                                    .specialFeatures122021__cards.row4.col2
+                                    .specialFeatures122021__cards.row4.col2P4
                                         each card4 in chart[0].group4
-                                            .specialFeatures122021__cardsItem(class=card4.class)
+                                            a.specialFeatures122021__cardsItem(class=card4.class href)
                                                 .specialFeatures122021__cardsHeader
                                                     if(card4.labelGroup)
                                                         each label in card4.labelGroup
@@ -223,13 +228,15 @@ html(lang="en")
                                                     if(card4.title)
                                                         p.specialFeatures122021__cardsHeaderTitle!=card4.title
                                                 if(card4.twin)
-                                                    each item in card4.twin
-                                                        .specialFeatures122021__cardsBody
-                                                            .specialFeatures122021__cardsBodyKv
-                                                                img(src=`${localPath}${item.kv}`, alt="")
-                                                            .specialFeatures122021__cardsBodyData
-                                                                p.specialFeatures122021__cardsBodyDataText!=item.content
-                                                                p.specialFeatures122021__cardsBodyDataName=item.name
+                                                    .specialFeatures122021__cardsBodyFlex
+                                                        each item in card4.twin
+                                                            .specialFeatures122021__cardsBody
+                                                                .specialFeatures122021__cardsBodyKv
+                                                                    img(src=`${localPath}${item.kv}`, alt="")
+                                                                .specialFeatures122021__cardsBodyData
+                                                                    p.specialFeatures122021__cardsBodyDataText!=item.content
+                                                                    p.specialFeatures122021__cardsBodyDataName=item.name
+                                                                        span.specialFeatures122021__cardsBodyDataNameSm さん
                                                 else
                                                     .specialFeatures122021__cardsBody
                                                         .specialFeatures122021__cardsBodyKv
@@ -237,10 +244,11 @@ html(lang="en")
                                                         .specialFeatures122021__cardsBodyData
                                                             p.specialFeatures122021__cardsBodyDataText!=card4.content
                                                             p.specialFeatures122021__cardsBodyDataName=card4.name
+                                                                span.specialFeatures122021__cardsBodyDataNameSm さん
                                     //- Row 5
-                                    .specialFeatures122021__cards.row5.col2
+                                    .specialFeatures122021__cards.row5.col2P4
                                         each card5 in chart[0].group5
-                                            .specialFeatures122021__cardsItem(class=card5.class)
+                                            a.specialFeatures122021__cardsItem(class=card5.class href)
                                                 .specialFeatures122021__cardsHeader
                                                     if(card5.label)
                                                         .specialFeatures122021__cardsHeaderLabel
@@ -251,6 +259,7 @@ html(lang="en")
                                                             .specialFeatures122021__cardsBodyData
                                                                 p.specialFeatures122021__cardsBodyDataText!=card5.content
                                                                 p.specialFeatures122021__cardsBodyDataName=card5.name
+                                                                    span.specialFeatures122021__cardsBodyDataNameSm さん
                                                 if(card5.bubbleClass)
                                                     .specialFeatures122021__cardsBubble
                                                         .specialFeatures122021__cardsBubbleContent!=card5.bubbleContent

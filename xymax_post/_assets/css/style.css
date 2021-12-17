@@ -24383,14 +24383,14 @@ a.sFeatures082021__compTopLink:hover {
     font-size: 7.813vw;
   }
 }
-.specialFeatures122021 .specialFeatures122021__profLabelText, .specialFeatures122021 .specialFeatures122021__profLabelNo {
+.specialFeatures122021 .specialFeatures122021__cardsHeaderLabelText, .specialFeatures122021 .specialFeatures122021__chartLabelText, .specialFeatures122021 .specialFeatures122021__profLabelText, .specialFeatures122021 .specialFeatures122021__profLabelNo {
   font-size: 27px;
   letter-spacing: 0.15em;
   font-weight: bold;
   line-height: 1.6;
 }
 @media screen and (max-width: 768px) {
-  .specialFeatures122021 .specialFeatures122021__profLabelText, .specialFeatures122021 .specialFeatures122021__profLabelNo {
+  .specialFeatures122021 .specialFeatures122021__cardsHeaderLabelText, .specialFeatures122021 .specialFeatures122021__chartLabelText, .specialFeatures122021 .specialFeatures122021__profLabelText, .specialFeatures122021 .specialFeatures122021__profLabelNo {
     font-size: 7.813vw;
   }
 }
@@ -24402,6 +24402,18 @@ a.sFeatures082021__compTopLink:hover {
 }
 @media screen and (max-width: 768px) {
   .specialFeatures122021 .specialFeatures122021__cardsItemTitleText, .specialFeatures122021 .specialFeatures122021__cardsItemLabelText {
+    font-size: 4.688vw;
+    line-height: 1.4;
+  }
+}
+.specialFeatures122021 .specialFeatures122021__cardsHeaderTitle {
+  font-size: 23px;
+  letter-spacing: 0.15em;
+  font-weight: bold;
+  line-height: 1.6;
+}
+@media screen and (max-width: 768px) {
+  .specialFeatures122021 .specialFeatures122021__cardsHeaderTitle {
     font-size: 4.688vw;
     line-height: 1.4;
   }
@@ -24419,23 +24431,23 @@ a.sFeatures082021__compTopLink:hover {
     letter-spacing: 0;
   }
 }
-.specialFeatures122021 .specialFeatures122021__qouteText {
+.specialFeatures122021 .color-tan .specialFeatures122021__cardsHeaderLabelText, .color-tan .specialFeatures122021 .specialFeatures122021__cardsHeaderLabelText, .specialFeatures122021 .specialFeatures122021__qouteText {
   font-size: 21px;
   font-weight: bold;
   line-height: 1.6;
 }
 @media screen and (max-width: 768px) {
-  .specialFeatures122021 .specialFeatures122021__qouteText {
+  .specialFeatures122021 .color-tan .specialFeatures122021__cardsHeaderLabelText, .color-tan .specialFeatures122021 .specialFeatures122021__cardsHeaderLabelText, .specialFeatures122021 .specialFeatures122021__qouteText {
     font-size: 5.313vw;
   }
 }
-.specialFeatures122021 .specialFeatures122021__profContentNameText, .specialFeatures122021 .specialFeatures122021__profContentBubleData, .specialFeatures122021 .specialFeatures122021__cardsItemAuthorName {
+.specialFeatures122021 .specialFeatures122021__cardsBodyDataName, .specialFeatures122021 .specialFeatures122021__profContentNameText, .specialFeatures122021 .specialFeatures122021__profContentBubleData, .specialFeatures122021 .specialFeatures122021__cardsItemAuthorName {
   font-size: 20px;
   font-weight: bold;
   line-height: 1.6;
 }
 @media screen and (max-width: 768px) {
-  .specialFeatures122021 .specialFeatures122021__profContentNameText, .specialFeatures122021 .specialFeatures122021__profContentBubleData, .specialFeatures122021 .specialFeatures122021__cardsItemAuthorName {
+  .specialFeatures122021 .specialFeatures122021__cardsBodyDataName, .specialFeatures122021 .specialFeatures122021__profContentNameText, .specialFeatures122021 .specialFeatures122021__profContentBubleData, .specialFeatures122021 .specialFeatures122021__cardsItemAuthorName {
     font-size: 4.688vw;
   }
 }
@@ -24458,13 +24470,13 @@ a.sFeatures082021__compTopLink:hover {
     font-size: 4.5vw;
   }
 }
-.specialFeatures122021 .specialFeatures122021__profContentNameExt, .specialFeatures122021 .specialFeatures122021__profContentText, .specialFeatures122021 .specialFeatures122021__cardsItemAuthorNameExtra, .specialFeatures122021 .specialFeatures122021__cardsItemBodyContent {
+.specialFeatures122021 .specialFeatures122021__cardsBodyDataNameSm, .specialFeatures122021 .specialFeatures122021__cardsBodyDataText, .specialFeatures122021 .specialFeatures122021__profContentNameExt, .specialFeatures122021 .specialFeatures122021__profContentText, .specialFeatures122021 .specialFeatures122021__cardsItemAuthorNameExtra, .specialFeatures122021 .specialFeatures122021__cardsItemBodyContent {
   font-size: 15px;
   font-weight: bold;
   line-height: 1.6;
 }
 @media screen and (max-width: 768px) {
-  .specialFeatures122021 .specialFeatures122021__profContentNameExt, .specialFeatures122021 .specialFeatures122021__profContentText, .specialFeatures122021 .specialFeatures122021__cardsItemAuthorNameExtra, .specialFeatures122021 .specialFeatures122021__cardsItemBodyContent {
+  .specialFeatures122021 .specialFeatures122021__cardsBodyDataNameSm, .specialFeatures122021 .specialFeatures122021__cardsBodyDataText, .specialFeatures122021 .specialFeatures122021__profContentNameExt, .specialFeatures122021 .specialFeatures122021__profContentText, .specialFeatures122021 .specialFeatures122021__cardsItemAuthorNameExtra, .specialFeatures122021 .specialFeatures122021__cardsItemBodyContent {
     font-size: 4.063vw;
   }
 }
@@ -24711,22 +24723,6 @@ a.sFeatures082021__compTopLink:hover {
 @media screen and (max-width: 768px) {
   .col2 .specialFeatures122021__cardsItem:nth-child(n+3) {
     margin: 7.188vw auto 0;
-  }
-}
-.col2P4 .specialFeatures122021__cardsItem {
-  width: 100%;
-  max-width: 362px;
-}
-.col2P4 .specialFeatures122021__cardsItem:nth-child(n+3) {
-  margin-top: 70px;
-}
-@media screen and (max-width: 768px) {
-  .col2P4 .specialFeatures122021__cardsItem {
-    max-width: 100%;
-    margin: 0 auto;
-  }
-  .col2P4 .specialFeatures122021__cardsItem:not(:first-child) {
-    margin-top: 7.188vw;
   }
 }
 .specialFeatures122021__cardsItemLabel {
@@ -25145,6 +25141,9 @@ a.sFeatures082021__compTopLink:hover {
   .specialFeaturesP2Series .specialFeatures122021__innerBorder:not(:first-child) {
     margin-top: 4.688vw;
   }
+}
+.specialFeaturesP2Series.specialFeaturesP4Series05 .specialFeatures122021__innerBorder {
+  padding: 45px 35px 80px;
 }
 .specialFeatures122021__profLabel {
   display: -webkit-box;
@@ -26426,6 +26425,21 @@ a.sFeatures082021__compTopLink:hover {
 .color-coolGrey .specialFeatures122021__qouteText {
   color: #8699B4;
 }
+.color-metallicSilver .specialFeatures122021__qouteText {
+  color: #9DACAC;
+}
+.color-glaucous .specialFeatures122021__qouteText {
+  color: #667FAA;
+}
+.color-antiqueBrass .specialFeatures122021__qouteText {
+  color: #C79670;
+}
+.color-tan .specialFeatures122021__qouteText {
+  color: #D3B187;
+}
+.color-coolGrey .specialFeatures122021__qouteText {
+  color: #8699B4;
+}
 .specialFeatures122021__closing {
   margin-top: 58px;
 }
@@ -26494,4 +26508,255 @@ a.sFeatures082021__compTopLink:hover {
   content: "•";
   position: absolute;
   left: 0;
+}
+.specialFeatures122021__chartLabel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.specialFeatures122021__chartLabelText {
+  padding: 8px 30px;
+  background: #4F576C;
+  color: #fff;
+  border-radius: 55px;
+}
+.specialFeatures122021__chartWrapper {
+  margin-top: 60px;
+}
+.specialFeaturesP4Series05 .specialFeatures122021__cards {
+  margin: 0;
+  padding: 55px 0 40px;
+}
+.specialFeaturesP4Series05 .specialFeatures122021__cards:first-child {
+  padding-top: 0;
+}
+.specialFeaturesP4Series05 .specialFeatures122021__cards:not(:last-child) {
+  border-bottom: 3.5px solid #3D556A;
+}
+.col3P4 .specialFeatures122021__cardsItem {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.col3P4 .specialFeatures122021__cardsItem:nth-child(2) {
+  width: 263px;
+  border-left: 2px dashed #3D556A;
+  border-right: 2px dashed #3D556A;
+}
+.row3.col2P4 .specialFeatures122021__cardsItem:nth-child(2) {
+  width: 50%;
+  border-left: 2px dashed #3D556A;
+}
+.col2P4.row3 .specialFeatures122021__cardsItem {
+  width: 50%;
+}
+.col2P4.row3 .specialFeatures122021__cardsItem:nth-child(n+3) {
+  margin-top: 70px;
+}
+@media screen and (max-width: 768px) {
+  .col2P4.row3 .specialFeatures122021__cardsItem {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .col2P4.row3 .specialFeatures122021__cardsItem:not(:first-child) {
+    margin-top: 7.188vw;
+  }
+}
+.specialFeatures122021__cardsItem.color-tan {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 0 0 auto;
+  border-left: 2px dashed #3D556A;
+}
+.specialFeatures122021__cardsHeaderLabel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.specialFeatures122021__cardsHeaderLabel:nth-child(2) {
+  margin-top: 10px;
+  margin-bottom: 44px;
+}
+.color-antiqueBrass .specialFeatures122021__cardsHeaderLabel {
+  margin-top: 20px;
+}
+.specialFeatures122021__cardsHeaderLabelText {
+  padding: 8px 22px;
+  color: #fff;
+  border-radius: 55px;
+}
+.color-operaMauve .specialFeatures122021__cardsHeaderLabelText {
+  background: #BC7DAA;
+}
+.color-elecBrown .specialFeatures122021__cardsHeaderLabelText {
+  background: #B46253;
+}
+.color-roseDust .specialFeatures122021__cardsHeaderLabelText {
+  background: #9D5F72;
+}
+.color-grullo .specialFeatures122021__cardsHeaderLabelText {
+  background: #ADA679;
+}
+.color-pewterBlue .specialFeatures122021__cardsHeaderLabelText {
+  background: #7EADB1;
+}
+.color-newYorkPink .specialFeatures122021__cardsHeaderLabelText {
+  background: #DB8172;
+}
+.color-metallicSilver .specialFeatures122021__cardsHeaderLabelText {
+  background: #9DACAC;
+}
+.color-glaucous .specialFeatures122021__cardsHeaderLabelText {
+  background: #667FAA;
+}
+.color-antiqueBrass .specialFeatures122021__cardsHeaderLabelText {
+  background: #C79670;
+}
+.color-tan .specialFeatures122021__cardsHeaderLabelText {
+  background: #D3B187;
+}
+.color-coolGrey .specialFeatures122021__cardsHeaderLabelText {
+  background: #8699B4;
+}
+.specialFeatures122021__cardsHeaderTitle {
+  height: 105px;
+  width: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.color-operaMauve .specialFeatures122021__cardsHeaderTitle {
+  color: #BC7DAA;
+}
+.color-elecBrown .specialFeatures122021__cardsHeaderTitle {
+  color: #B46253;
+}
+.color-roseDust .specialFeatures122021__cardsHeaderTitle {
+  color: #9D5F72;
+}
+.color-grullo .specialFeatures122021__cardsHeaderTitle {
+  color: #ADA679;
+}
+.color-pewterBlue .specialFeatures122021__cardsHeaderTitle {
+  color: #7EADB1;
+}
+.color-newYorkPink .specialFeatures122021__cardsHeaderTitle {
+  color: #DB8172;
+}
+.color-metallicSilver .specialFeatures122021__cardsHeaderTitle {
+  color: #9DACAC;
+}
+.color-glaucous .specialFeatures122021__cardsHeaderTitle {
+  color: #667FAA;
+}
+.color-antiqueBrass .specialFeatures122021__cardsHeaderTitle {
+  color: #C79670;
+  height: 75px;
+}
+.color-tan .specialFeatures122021__cardsHeaderTitle {
+  color: #D3B187;
+}
+.color-coolGrey .specialFeatures122021__cardsHeaderTitle {
+  color: #8699B4;
+}
+.specialFeatures122021__cardsBodyFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+.specialFeatures122021__cardsBodyKv {
+  width: 97px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .specialFeatures122021__cardsBodyKv {
+    width: 15.156vw;
+    margin: 0;
+  }
+}
+.specialFeatures122021__cardsBodyData {
+  margin: 18px auto 0;
+}
+.specialFeatures122021__cardsBodyDataText {
+  text-align: center;
+  color: #000;
+  height: 65px;
+  letter-spacing: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.row1 .specialFeatures122021__cardsBodyDataText {
+  height: 85px;
+}
+.specialFeatures122021__cardsBodyDataName {
+  color: #000;
+  text-align: center;
+  letter-spacing: 0;
+  margin-top: 27px;
+}
+.specialFeatures122021__cardsBodyDataNameSm {
+  color: #000;
+  letter-spacing: 0;
 }
