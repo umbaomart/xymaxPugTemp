@@ -174,7 +174,7 @@
 
     &.col2P4 {
       width: 100%;
-      @include u-flex($fd: row, $fw: wrap, $jc: flex-start, $ai: stretch);
+      @include u-flex($fd: row, $fw: wrap, $jc: space-between, $ai: stretch);
 
       @include u-mqMax {
         max-width: 65.469vw;
@@ -185,6 +185,92 @@
   &__cardsItem {
     position: relative;
     display: block;
+    transition: all .3s;
+
+    &:hover {
+      .specialFeatures122021__cardsItemAuthorName {
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+
+    &.color-operaMauve:hover {
+      .specialFeatures122021__cardsItemLabelText {
+        color: $operaMauve;
+        background: rgba($operaMauve, $alpha: .25);
+      }
+    }
+
+    &.color-elecBrown:hover {
+      .specialFeatures122021__cardsItemLabelText {
+        color: $elecBrown;
+        background: rgba($elecBrown, $alpha: .25);
+      }
+    }
+
+    &.color-roseDust:hover {
+      .specialFeatures122021__cardsItemLabelText {
+        color: $roseDust;
+        background: rgba($roseDust, $alpha: .25);
+      }
+    }
+
+    &.color-grullo:hover {
+      .specialFeatures122021__cardsItemLabelText {
+        color: $grullo;
+        background: rgba($grullo, $alpha: .25);
+      }
+    }
+
+    &.color-pewterBlue:hover {
+      .specialFeatures122021__cardsItemLabelText {
+        color: $pewterBlue;
+        background: rgba($pewterBlue, $alpha: .25);
+      }
+    }
+
+    &.color-newYorkPink:hover {
+      .specialFeatures122021__cardsItemLabelText {
+        color: $newYorkPink;
+        background: rgba($newYorkPink, $alpha: .25);
+      }
+    }
+
+    &.color-metallicSilver:hover {
+      .specialFeatures122021__cardsItemLabelText {
+        color: $metallicSilver;
+        background: rgba($metallicSilver, $alpha: .25);
+      }
+    }
+
+    &.color-glaucous:hover {
+      .specialFeatures122021__cardsItemLabelText {
+        color: $glaucous;
+        background: rgba($glaucous, $alpha: .25);
+      }
+    }
+
+    &.color-antiqueBrass:hover {
+      .specialFeatures122021__cardsItemLabelText {
+        color: $antiqueBrass;
+        background: rgba($antiqueBrass, $alpha: .25);
+      }
+    }
+
+    &.color-tan:hover {
+      .specialFeatures122021__cardsItemLabelText {
+        color: $tan;
+        background: rgba($tan, $alpha: .25);
+      }
+    }
+
+    &.color-coolGrey:hover {
+      .specialFeatures122021__cardsItemLabelText {
+        color: $coolGrey;
+        background: rgba($coolGrey, $alpha: .25);
+      }
+    }
 
     @include u-mqMax {
       &:after {
@@ -369,6 +455,8 @@
     padding: 3px 20px;
     @extend %title_24;
     border-radius: 55px;
+    position: relative;
+    transition: all .3s;
 
     @include u-mqMax {
       padding: 1.25vw 3.438vw;
@@ -586,6 +674,7 @@
   }
 
   &__cardsItemAuthor {
+    @include u-flex($fd: row, $fw: nowrap, $jc: center, $ai: center);
 
     .color-operaMauve & {
       margin: 26px auto 0;
@@ -666,6 +755,88 @@
     @extend %desc_20;
     text-align: center;
     color: $black;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      left: 0;
+      bottom: 0;
+      opacity: 0;
+      transition: all .3s;
+
+      @include u-mqMax {
+        content: none;
+      }
+    }
+
+    .color-operaMauve & {
+      &:before {
+        background: $operaMauve;
+      }
+    }
+
+    .color-elecBrown & {
+      &:before {
+        background: $elecBrown;
+      }
+    }
+
+    .color-roseDust & {
+      &:before {
+        background: $roseDust;
+      }
+    }
+
+    .color-grullo & {
+      &:before {
+        background: $grullo;
+      }
+    }
+
+    .color-pewterBlue & {
+      &:before {
+        background: $pewterBlue;
+      }
+    }
+
+    .color-newYorkPink & {
+      &:before {
+        background: $newYorkPink;
+      }
+    }
+
+    .color-metallicSilver & {
+      &:before {
+        background: $metallicSilver;
+      }
+    }
+
+    .color-glaucous & {
+      &:before {
+        background: $glaucous;
+      }
+    }
+
+    .color-antiqueBrass & {
+      &:before {
+        background: $antiqueBrass;
+      }
+    }
+
+    .color-tan & {
+      &:before {
+        background: $tan;
+      }
+    }
+
+    .color-coolGrey & {
+      &:before {
+        background: $coolGrey;
+      }
+    }
   }
 
   &__cardsItemAuthorNameExtra {
@@ -690,7 +861,7 @@
 
   &__innerAnchor {
     position: absolute;
-    top: -145px;
+    top: -120px;
 
     @include u-mqMax {
       top: -30vw;
@@ -814,6 +985,7 @@
   &__profLabelText {
     @extend %title_27;
     margin-left: 16px;
+    transition: all .3s;
 
     @include u-mqMax {
       text-align: center;
@@ -967,6 +1139,7 @@
 
       @include u-mqMax {
         width: 100%;
+        margin-left: auto;
       }
     }
 
@@ -1094,6 +1267,11 @@
   &__profContentInner {
     width: 100%;
     max-width: 319px;
+
+    @include u-mqMax {
+      margin: 0 auto;
+      max-width: 100%;
+    }
 
     &:not(:first-child) {
       @include u-mqMax {
@@ -1253,7 +1431,7 @@
         @include u-mqMax {
           border-top: 7.969vw solid $antiqueBrass;
           right: 61%;
-          bottom: -15px;
+          bottom: -4.344vw;
         }
       }
     }
@@ -1270,7 +1448,7 @@
           border-top: 7.969vw solid $antiqueBrass;
           transform: rotate(-45deg);
           right: 61%;
-          bottom: -15px;
+          bottom: -4.344vw;
         }
       }
     }
@@ -1709,6 +1887,7 @@
     @include u-flex($fd: row, $fw: nowrap, $jc: center, $ai: center);
     position: relative;
     z-index: 1;
+    font-family: Arial, sans-serif;
 
     @include u-mqMax {
       width: 22.344vw;
@@ -2156,4 +2335,8 @@
       @extend %desc_13;
     }
   }
+
+  //- part5 page 5
+  
+
 }

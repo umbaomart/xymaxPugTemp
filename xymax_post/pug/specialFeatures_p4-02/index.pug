@@ -36,7 +36,8 @@
         class: "color-antiqueBrass",
         bubbleContentGroup: [
             {
-                bubbleData: "より一層、<br>銀行グループとの<br>関係性を深化させて<br class='u-pcDb'>いきます。",
+                bubbleDataPc: "グループ連携に<br>力をいれて<br>稼ぎます！",
+                bubbleDataSp: "より一層、<br>銀行グループとの<br>関係性を深化させて<br class='u-pcDb'>いきます。",
                 bodyPc: "トラスト<br>代表取締役社長",
                 bodySp: "MR 取締役 執行役員副社長<br>トラスト 取締役",
                 profNamePc: "大山 泉之",
@@ -45,7 +46,8 @@
                 imgSp: "article121021_prof_kv-09.jpg",
             },
             {
-                bubbleData: "グループ連携に<br>力をいれて<br>稼ぎます！",
+                bubbleDataPc: "より一層、<br>銀行グループとの<br>関係性を深化させて<br class='u-pcDb'>いきます。",
+                bubbleDataSp: "グループ連携に<br>力をいれて<br>稼ぎます！",
                 bodyPc: "MR 取締役 執行役員副社長<br>トラスト 取締役",
                 bodySp: "トラスト<br>代表取締役社長",
                 profNamePc: "吉村 竜一",
@@ -98,7 +100,8 @@ html(lang="en")
                                         .specialFeatures122021__profContentFlex: each item in prof.bubbleContentGroup
                                             .specialFeatures122021__profContentInner(class=`contentInner0${index}`)
                                                 .specialFeatures122021__profContentBuble(class=item.bubleKarit)
-                                                    p.specialFeatures122021__profContentBubleData!=item.bubbleData
+                                                    p.specialFeatures122021__profContentBubleData.u-pcDb!=item.bubbleDataPc
+                                                    p.specialFeatures122021__profContentBubleData.u-spDb!=item.bubbleDataSp
                                                 .u-spDb
                                                     figure.specialFeatures122021__profKv
                                                         img.specialFeatures122021__profKvImg(src=`${localPath}${item.imgSp}`)
