@@ -2,8 +2,8 @@
     let myClassPart = "specialFeaturesP2Series specialFeaturesP4Series05"
     let myClassFooter = "specialFeaturesP4Series05"
     let myClass = "specialFeatures122021"
-    let localPath = "./../../_images/p4/"
-    //- let localPath = "[uploads_path]/2021/12/"
+    //- let localPath = "./../../_images/p4/"
+    let localPath = "[uploads_path]/2021/12/"
     let metaTitle = "Special Features P3"
     let linkArt = "/article/"
 
@@ -39,15 +39,17 @@
                title: "東海",
                kv: "article121021_prof_sm-01.png",
                content: "XYTK 代表取締役社長<br>XY 専務執行役員<br>商業不動産サポート事業部<br>担当",
-               name: "東浦 定宏"
+               name: "東浦 定宏",
+               href: `${linkArt}4933#01`,
            },
            {
                class: "color-elecBrown",
                label: "第1の皿",
-               title: "PBM/工事/FM/<br class='u-pcDb'>警備/清掃",
+               title: "PBM/工事/FM/<br class='u-pcDb'>警備/<br class='u-spDb'>清掃",
                kv: "article121021_prof_sm-11.png",
                content: "XY 執行役員<br>不動産マネジメント部<br>業務推進部<br>担当",
-               name: "吉田 源弘"
+               name: "吉田 源弘",
+               href: `${linkArt}4933/2#02`,
            },
            {
                class: "color-roseDust",
@@ -55,7 +57,8 @@
                title: "関西",
                kv: "article121021_prof_sm-12.png",
                content: "XYK 代表取締役社長",
-               name: "吉田 正"
+               name: "吉田 正",
+               href: `${linkArt}4933/3#03`,
            },
        ],
        group2: [
@@ -65,7 +68,8 @@
                title: "XI",
                kv: "article121021_prof_sm-02.png",
                content: "XI 取締役",
-               name: "山口 嘉昭"
+               name: "山口 嘉昭",
+               href: `${linkArt}4949#01`,
            },
            {
                class: "color-pewterBlue",
@@ -73,7 +77,8 @@
                title: "商業",
                kv: "article121021_prof_sm-03.png",
                content: "XY 商業不動産<br>サポート事業部<br>営業企画部長",
-               name: "藤原 真"
+               name: "藤原 真",
+               href: `${linkArt}4949#02`,
            },
            {
                class: "color-newYorkPink",
@@ -81,7 +86,8 @@
                title: "ZXY/N推",
                kv: "article121021_prof_sm-04.png",
                content: "XY 執行役員<br>ジザイワーク事業部<br>担当",
-               name: "長田 健登"
+               name: "長田 健登",
+               href: `${linkArt}4949/02#03`,
            },
        ],
        group3: [
@@ -91,7 +97,8 @@
                title: "企活",
                kv: "article121021_prof_sm-05.png",
                content: "XY 常務執行役員<br>企業不動産活用事業部<br>担当",
-               name: "守谷 尚子"
+               name: "守谷 尚子",
+               href: `${linkArt}4949/02#04`,
            },
            {
                class: "color-glaucous",
@@ -99,7 +106,8 @@
                title: "ホテル/リネン/<br>客室清掃",
                kv: "article121021_prof_sm-06.png",
                content: "XY 常務執行役員<br>からくさホテルズ 代表取締役社長<br>ザイマックスカレス 取締役",
-               name: "佐藤 亮祐"
+               name: "佐藤 亮祐",
+               href: `${linkArt}4994/#01`,
            },
        ],
        group4: [
@@ -120,7 +128,8 @@
                         content: "MR 取締役 執行役員副社長<br>トラスト 取締役",
                         name: "吉村 竜一",
                     },
-                ]
+                ],
+                href: `${linkArt}4994/2/`,
            },
            {
                class: "color-tan",
@@ -130,7 +139,8 @@
                ],
                kv: "article121021_prof_sm-09.png",
                content: "XY 執行役員<br>上場準備室 兼<br>サステナビリティ委員会",
-               name: "稲月 伸仁"
+               name: "稲月 伸仁",
+               href: `${linkArt}4994/3/`,
            },
        ],
        group5: [
@@ -141,14 +151,16 @@
                 kv: "article121021_prof_sm-10.png",
                 content: "XY 常務執行役員<br>ジザイめっけ<br>代表取締役社長",
                 name: "有地 英之",
+                href: `${linkArt}4994/4/`,
             },
             {
                 class: "color-independence",
                 bubbleClass: "karitRight color-independence",
-                bubbleContent: "<span class='label'>事業<small>の</small>いま</span><span class='year'>2021</span><span class='label24'>特集TOPに戻る</span>",
+                bubbleContent: "<span class='label'>事業<small>の</small>いま</span><span class='year'>2021</span><span class='label16'>特集TOPに戻る</span>",
                 //- bubbleAds: "事業の",
-                bubbleSmKv01: "article121021_icon_dotLeft-burlywood.png",
+                bubbleSmKv01: "article121021_icon_dotLeft-burlywoodp5.png",
                 bubbleSmKv02: "article121021_icon_exClamRight-silverlakeblue.png",
+                href: `${linkArt}4893/`,
             }
        ]
    },
@@ -171,7 +183,7 @@ html(lang="en")
                                     //- Row 1
                                     .specialFeatures122021__cards.row1.col3P4
                                         each card1 in chart[0].group1
-                                            a.specialFeatures122021__cardsItem(class=card1.class href)
+                                            a.specialFeatures122021__cardsItem(class=card1.class href=card1.href)
                                                 .specialFeatures122021__cardsHeader
                                                     .specialFeatures122021__cardsHeaderLabel
                                                         p.specialFeatures122021__cardsHeaderLabelText!=card1.label
@@ -181,12 +193,13 @@ html(lang="en")
                                                         img(src=`${localPath}${card1.kv}`, alt="")
                                                     .specialFeatures122021__cardsBodyData
                                                         p.specialFeatures122021__cardsBodyDataText!=card1.content
-                                                        p.specialFeatures122021__cardsBodyDataName=card1.name
-                                                            span.specialFeatures122021__cardsBodyDataNameSm さん
+                                                        .specialFeatures122021__cardsBodyDataName
+                                                            p.specialFeatures122021__cardsBodyDataNameText=card1.name
+                                                                span.specialFeatures122021__cardsBodyDataNameTextSm さん
                                     //- Row 2
                                     .specialFeatures122021__cards.row2.col3P4
                                         each card2 in chart[0].group2
-                                            a.specialFeatures122021__cardsItem(class=card2.class href)
+                                            a.specialFeatures122021__cardsItem(class=card2.class href=card2.href)
                                                 .specialFeatures122021__cardsHeader
                                                     .specialFeatures122021__cardsHeaderLabel
                                                         p.specialFeatures122021__cardsHeaderLabelText!=card2.label
@@ -196,12 +209,13 @@ html(lang="en")
                                                         img(src=`${localPath}${card2.kv}`, alt="")
                                                     .specialFeatures122021__cardsBodyData
                                                         p.specialFeatures122021__cardsBodyDataText!=card2.content
-                                                        p.specialFeatures122021__cardsBodyDataName=card2.name
-                                                            span.specialFeatures122021__cardsBodyDataNameSm さん
+                                                        .specialFeatures122021__cardsBodyDataName
+                                                            p.specialFeatures122021__cardsBodyDataNameText=card2.name
+                                                                span.specialFeatures122021__cardsBodyDataNameTextSm さん
                                     //- Row 3
                                     .specialFeatures122021__cards.row3.col2P4
                                         each card3 in chart[0].group3
-                                            a.specialFeatures122021__cardsItem(class=card3.class href)
+                                            a.specialFeatures122021__cardsItem(class=card3.class href=card3.href)
                                                 .specialFeatures122021__cardsHeader
                                                     .specialFeatures122021__cardsHeaderLabel
                                                         p.specialFeatures122021__cardsHeaderLabelText!=card3.label
@@ -211,12 +225,13 @@ html(lang="en")
                                                         img(src=`${localPath}${card3.kv}`, alt="")
                                                     .specialFeatures122021__cardsBodyData
                                                         p.specialFeatures122021__cardsBodyDataText!=card3.content
-                                                        p.specialFeatures122021__cardsBodyDataName=card3.name
-                                                            span.specialFeatures122021__cardsBodyDataNameSm さん
+                                                        .specialFeatures122021__cardsBodyDataName
+                                                            p.specialFeatures122021__cardsBodyDataNameText=card3.name
+                                                                span.specialFeatures122021__cardsBodyDataNameTextSm さん
                                     //- Row 4
                                     .specialFeatures122021__cards.row4.col2P4
                                         each card4 in chart[0].group4
-                                            a.specialFeatures122021__cardsItem(class=card4.class href)
+                                            a.specialFeatures122021__cardsItem(class=card4.class href=card4.href)
                                                 .specialFeatures122021__cardsHeader
                                                     if(card4.labelGroup)
                                                         each label in card4.labelGroup
@@ -235,22 +250,24 @@ html(lang="en")
                                                                     img(src=`${localPath}${item.kv}`, alt="")
                                                                 .specialFeatures122021__cardsBodyData
                                                                     p.specialFeatures122021__cardsBodyDataText!=item.content
-                                                                    p.specialFeatures122021__cardsBodyDataName=item.name
-                                                                        span.specialFeatures122021__cardsBodyDataNameSm さん
+                                                                    .specialFeatures122021__cardsBodyDataName
+                                                                        p.specialFeatures122021__cardsBodyDataNameText=item.name
+                                                                            span.specialFeatures122021__cardsBodyDataNameTextSm さん
                                                 else
                                                     .specialFeatures122021__cardsBody
                                                         .specialFeatures122021__cardsBodyKv
                                                             img(src=`${localPath}${card4.kv}`, alt="")
                                                         .specialFeatures122021__cardsBodyData
                                                             p.specialFeatures122021__cardsBodyDataText!=card4.content
-                                                            p.specialFeatures122021__cardsBodyDataName=card4.name
-                                                                span.specialFeatures122021__cardsBodyDataNameSm さん
+                                                            .specialFeatures122021__cardsBodyDataName
+                                                                p.specialFeatures122021__cardsBodyDataNameText=card4.name
+                                                                    span.specialFeatures122021__cardsBodyDataNameTextSm さん
                                     //- Row 5
                                     .specialFeatures122021__cards.row5.col2P4
                                         each card5 in chart[0].group5
-                                            a.specialFeatures122021__cardsItem(class=card5.class href)
-                                                .specialFeatures122021__cardsHeader
-                                                    if(card5.label)
+                                            a.specialFeatures122021__cardsItem(class=card5.class href=card5.href)
+                                                if(card5.label)
+                                                    .specialFeatures122021__cardsHeader
                                                         .specialFeatures122021__cardsHeaderLabel
                                                             .specialFeatures122021__cardsHeaderLabelText=card5.label
                                                         .specialFeatures122021__cardsBody
@@ -258,12 +275,13 @@ html(lang="en")
                                                                 img(src=`${localPath}${card5.kv}`, alt="")
                                                             .specialFeatures122021__cardsBodyData
                                                                 p.specialFeatures122021__cardsBodyDataText!=card5.content
-                                                                p.specialFeatures122021__cardsBodyDataName=card5.name
-                                                                    span.specialFeatures122021__cardsBodyDataNameSm さん
+                                                                .specialFeatures122021__cardsBodyDataName
+                                                                    p.specialFeatures122021__cardsBodyDataNameText=card5.name
+                                                                        span.specialFeatures122021__cardsBodyDataNameTextSm さん
                                                 if(card5.bubbleClass)
                                                     .specialFeatures122021__cardsBubble
                                                         .specialFeatures122021__cardsBubbleContent!=card5.bubbleContent
-                                                        figure.specialFeatures122021__cardsBubbleSm
+                                                        figure.specialFeatures122021__cardsBubbleSm.icon-dot
                                                             img(src=`${localPath}${card5.bubbleSmKv01}`, alt="")
-                                                        figure.specialFeatures122021__cardsBubbleSm
+                                                        figure.specialFeatures122021__cardsBubbleSm.icon-exClam
                                                             img(src=`${localPath}${card5.bubbleSmKv02}`, alt="")

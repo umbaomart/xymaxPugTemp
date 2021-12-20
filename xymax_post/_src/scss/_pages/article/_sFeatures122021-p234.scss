@@ -1,7 +1,3 @@
-.secSingle {}
-
-.secSingle__content {}
-
 .specialFeatures122021 {
   // variables
   $silverLakeBlue: #5785B7;
@@ -38,9 +34,20 @@
     }
   }
 
+  %title_32 {
+    font-size: 32px;
+    letter-spacing: .015em;
+    font-weight: bold;
+    line-height: 1.6;
+
+    @include u-mqMax {
+      font-size: 6.25vw;
+    }
+  }
+
   %title_27 {
     font-size: 27px;
-    letter-spacing: .15em;
+    letter-spacing: .015em;
     font-weight: bold;
     line-height: 1.6;
 
@@ -49,9 +56,31 @@
     }
   }
 
+  %title_27vw {
+    font-size: 27px;
+    letter-spacing: .015em;
+    font-weight: bold;
+    line-height: 1.6;
+
+    @include u-mqMax {
+      font-size: 5vw;
+    }
+  }
+
+  %title_27vw2 {
+    font-size: 27px;
+    letter-spacing: .015em;
+    font-weight: bold;
+    line-height: 1.6;
+
+    @include u-mqMax {
+      font-size: 4.688vw;
+    }
+  }
+
   %title_24 {
     font-size: 24px;
-    letter-spacing: .15em;
+    letter-spacing: .015em;
     font-weight: bold;
     line-height: 1.6;
 
@@ -63,7 +92,7 @@
 
   %title_23 {
     font-size: 23px;
-    letter-spacing: .15em;
+    letter-spacing: .015em;
     font-weight: bold;
     line-height: 1.6;
 
@@ -75,7 +104,7 @@
 
   %title_24vw {
     font-size: 24px;
-    letter-spacing: .15em;
+    letter-spacing: .015em;
     font-weight: bold;
     line-height: 1.6;
 
@@ -102,7 +131,7 @@
     line-height: 1.6;
 
     @include u-mqMax {
-      font-size: 4.688vw;
+      font-size: 5vw;
     }
   }
 
@@ -125,13 +154,41 @@
     }
   }
 
+  %desc_17vw {
+    font-size: 17px;
+    line-height: 1.8;
+
+    @include u-mqMax {
+      font-size: 4.063vw;
+      line-height: 1;
+    }
+  }
+
+  %desc_16 {
+    font-size: 16px;
+    line-height: 2;
+
+    @include u-mqMax {
+      font-size: 3.125vw;
+    }
+  }
+
+  %desc_16vw {
+    font-size: 16px;
+    line-height: 2;
+
+    @include u-mqMax {
+      font-size: 3.438vw;
+    }
+  }
+
   %desc_15 {
     font-size: 15px;
     font-weight: bold;
     line-height: 1.6;
 
     @include u-mqMax {
-      font-size: 4.063vw;
+      font-size: 3.75vw;
     }
   }
 
@@ -189,7 +246,8 @@
       @include u-flex($fd: row, $fw: wrap, $jc: space-between, $ai: stretch);
 
       @include u-mqMax {
-        max-width: 65.469vw;
+        max-width: 100%;
+        display: block;
       }
     }
   }
@@ -204,14 +262,22 @@
 
       &:not(:last-child) {
         margin-bottom: 85px;
+
+        @include u-mqMax {
+          margin-bottom: 8.75vw;
+        }
       }
 
       &.u-p4tan {
         max-width: 330px !important;
         margin: 0;
         border: none;
+
+        @include u-mqMax {
+          margin-bottom: 8.75vw;
+        }
       }
-      
+
     }
 
     &:hover {
@@ -903,6 +969,10 @@
 
     .specialFeaturesP2Series.specialFeaturesP4Series05 & {
       padding: 45px 35px 80px;
+
+      @include u-mqMax {
+        padding: 15.156vw 3.438vw;
+      }
     }
   }
 
@@ -2385,11 +2455,21 @@
     color: $white;
     border-radius: 55px;
 
-    @include u-mqMax {}
+    @include u-mqMax {
+      width: 71.094vw;
+      text-align: center;
+      height: 16.563vw;
+      // padding: 0;
+      @include u-flex($fd: row, $fw: nowrap, $jc: center, $ai: center);
+    }
   }
 
   &__chartWrapper {
     margin-top: 60px;
+
+    @include u-mqMax {
+      margin-top: 10.625vw;
+    }
   }
 
   &__cards {
@@ -2398,13 +2478,26 @@
       margin: 0;
       padding: 55px 0 40px;
 
+      @include u-mqMax {
+        padding: 0;
+      }
+
       &:first-child {
         padding-top: 0;
       }
 
       &:not(:last-child) {
         border-bottom: 3.5px solid #3D556A;
+
+        @include u-mqMax {
+          border-bottom: 0.313vw dashed #3D556A;
+        }
       }
+    }
+
+    .specialFeaturesP4Series05 &.row5 {
+      align-items: center;
+      padding-bottom: 0;
     }
 
     &.row1 {}
@@ -2416,11 +2509,156 @@
 
     .col3P4 & {
       flex: 1;
+    }
+
+    .specialFeaturesP4Series05 & {
+
+      @include u-mqMax {
+        width: 100%;
+        padding: 6.25vw 2.656vw 5.625vw !important;
+
+        &:not(:last-child) {
+          border-bottom: 0.313vw dashed #3D556A;
+        }
+
+        &:after {
+          content: none;
+          border-left: none !important;
+          border-right: none !important;
+        }
+      }
+
+      &.color-operaMauve:hover {
+        .specialFeatures122021__cardsHeaderLabelText {
+          background: rgba($color: $operaMauve, $alpha: .25);
+          color: $operaMauve;
+        }
+
+        .specialFeatures122021__cardsBodyDataNameText:before {
+          background: $operaMauve;
+        }
+      }
+
+      &.color-elecBrown:hover {
+        .specialFeatures122021__cardsHeaderLabelText {
+          background: rgba($color: $elecBrown, $alpha: .25);
+          color: $elecBrown;
+        }
+
+        .specialFeatures122021__cardsBodyDataNameText:before {
+          background: $elecBrown;
+        }
+      }
+
+      &.color-roseDust:hover {
+        .specialFeatures122021__cardsHeaderLabelText {
+          background: rgba($color: $roseDust, $alpha: .25);
+          color: $roseDust;
+        }
+
+        .specialFeatures122021__cardsBodyDataNameText:before {
+          background: $roseDust;
+        }
+      }
+
+      &.color-grullo:hover {
+        .specialFeatures122021__cardsHeaderLabelText {
+          background: rgba($color: $grullo, $alpha: .25);
+          color: $grullo;
+        }
+
+        .specialFeatures122021__cardsBodyDataNameText:before {
+          background: $grullo;
+        }
+      }
+
+      &.color-pewterBlue:hover {
+        .specialFeatures122021__cardsHeaderLabelText {
+          background: rgba($color: $pewterBlue, $alpha: .25);
+          color: $pewterBlue;
+        }
+
+        .specialFeatures122021__cardsBodyDataNameText:before {
+          background: $pewterBlue;
+        }
+      }
+
+      &.color-newYorkPink:hover {
+        .specialFeatures122021__cardsHeaderLabelText {
+          background: rgba($color: $newYorkPink, $alpha: .25);
+          color: $newYorkPink;
+        }
+
+        .specialFeatures122021__cardsBodyDataNameText:before {
+          background: $newYorkPink;
+        }
+      }
+
+      &.color-metallicSilver:hover {
+        .specialFeatures122021__cardsHeaderLabelText {
+          background: rgba($color: $metallicSilver, $alpha: .25);
+          color: $metallicSilver;
+        }
+
+        .specialFeatures122021__cardsBodyDataNameText:before {
+          background: $metallicSilver;
+        }
+      }
+
+      &.color-glaucous:hover {
+        .specialFeatures122021__cardsHeaderLabelText {
+          background: rgba($color: $glaucous, $alpha: .25);
+          color: $glaucous;
+        }
+
+        .specialFeatures122021__cardsBodyDataNameText:before {
+          background: $glaucous;
+        }
+      }
+
+      &.color-antiqueBrass:hover {
+        .specialFeatures122021__cardsHeaderLabelText {
+          background: rgba($color: $antiqueBrass, $alpha: .25);
+          color: $antiqueBrass;
+        }
+
+        .specialFeatures122021__cardsBodyDataNameText:before {
+          background: $antiqueBrass;
+        }
+      }
+
+      &.color-tan:hover {
+        .specialFeatures122021__cardsHeaderLabelText {
+          background: rgba($color: $tan, $alpha: .25);
+          color: $tan;
+        }
+
+        .specialFeatures122021__cardsBodyDataNameText:before {
+          background: $tan;
+        }
+      }
+
+      &.color-coolGrey:hover {
+        .specialFeatures122021__cardsHeaderLabelText {
+          background: rgba($color: $coolGrey, $alpha: .25);
+          color: $coolGrey;
+        }
+
+        .specialFeatures122021__cardsBodyDataNameText:before {
+          background: $coolGrey;
+        }
+      }
 
       &:nth-child(2) {
         width: 263px;
         border-left: 2px dashed #3D556A;
         border-right: 2px dashed #3D556A;
+
+        @include u-mqMax {
+          width: 100%;
+          border-left: 0;
+          border-right: 0;
+        }
       }
     }
 
@@ -2429,11 +2667,20 @@
       &:nth-child(2) {
         width: 50%;
         border-left: 2px dashed #3D556A;
+
+        @include u-mqMax {
+          width: 100%;
+          border-left: 0;
+        }
       }
     }
 
     .col2P4.row3 & {
       width: 50%;
+
+      @include u-mqMax {
+        width: 100%;
+      }
 
       &:nth-child(n+3) {
         margin-top: 70px;
@@ -2444,39 +2691,165 @@
         margin: 0 auto;
 
         &:not(:first-child) {
-          margin-top: 7.188vw;
+          margin-top: 0;
         }
       }
     }
 
-    &.color-tan {
+    .row4.col2P4 &.color-tan {
       width: 100%;
       max-width: 300px;
       margin: 0 0 0 auto;
       border-left: 2px dashed #3D556A;
+
+      @include u-mqMax {
+        max-width: 100%;
+        border-left: 0;
+      }
+    }
+
+    .row4.col2P4 &.color-antiqueBrass {
+      flex: 1;
+      padding: 0 20px 0 45px;
+      margin: 0 0 0 auto;
+
+      @include u-mqMax {
+        padding: 0;
+      }
+    }
+
+    .row5.col2P4 &.color-coolGrey {
+      padding-left: 71px;
+    }
+
+    .row5.col2P4 &.color-independence {
+      background: $independence;
+      position: relative;
+      width: 242px;
+      margin-right: 62px;
+      height: 136px;
+      border-radius: 111px;
+      margin-top: 35px;
+
+      &:hover {
+        opacity: .7;
+      }
+
+      @include u-mqMax {
+        border-radius: 17.344vw;
+        width: 47.5vw;
+        margin: 16.719vw auto 4.063vw;
+        height: 26.719vw;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        right: 43%;
+        bottom: -18%;
+        width: 0;
+        height: 0;
+        border-left: 17px solid transparent;
+        border-right: 17px solid transparent;
+        transform: rotate(45deg);
+        border-top: 51px solid $independence;
+
+        @include u-mqMax {
+          bottom: -19%;
+          right: 42%;
+          border-left: 3.125vw solid transparent;
+          border-right: 3.125vw solid transparent;
+          border-top: 10.813vw solid $independence;
+        }
+      }
+    }
+
+  }
+
+  &__cardsBubble {
+    @include u-flex($fd: center, $fw: nowrap, $jc: center, $ai: center);
+    height: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__cardsBubbleSm {
+    position: absolute;
+
+    &.icon-dot {
+      width: 99px;
+      top: -25px;
+      left: -58px;
+
+      @include u-mqMax {
+        width: 19.375vw;
+        top: -37px;
+        left: -45px;
+      }
+    }
+
+    &.icon-exClam {
+      width: 82px;
+      bottom: -26px;
+      right: -42px;
+
+      @include u-mqMax {
+        width: 16.094vw;
+        bottom: -30px;
+      }
     }
   }
 
-  &__cardsHeader {}
+  &__cardsHeader {
+    @include u-mqMax {
+      @include u-flex($fd: row, $fw: nowrap, $jc: flex-start, $ai: flex-start);
+    }
+
+    .color-coolGrey &,
+    .color-tan & {
+      @include u-mqMax {
+        display: block;
+      }
+    }
+  }
 
   &__cardsHeaderLabel {
     @include u-flex($fd: row, $fw: nowrap, $jc: center, $ai: center);
 
+    @include u-mqMax {
+      margin-right: 17px;
+      justify-content: flex-start;
+    }
+
     &:nth-child(2) {
       margin-top: 10px;
       margin-bottom: 44px;
+
+      @include u-mqMax {
+        margin: 1.25vw 0 0 0;
+      }
     }
 
     .color-antiqueBrass & {
       margin-top: 20px;
+
+      @include u-mqMax {
+        margin: 0 17px 0 0;
+      }
     }
   }
 
   &__cardsHeaderLabelText {
-    @extend %title_27;
-    padding: 8px 22px;
+    @extend %title_27vw;
+    padding: 8px 25px;
     color: $white;
     border-radius: 55px;
+    @include u-trs;
+
+    @include u-mqMax {
+      padding: 1.25vw 3.906vw;
+
+    }
 
     .color-operaMauve & {
       background: $operaMauve;
@@ -2521,6 +2894,11 @@
 
     .color-coolGrey & {
       background: $coolGrey;
+      margin-bottom: 27px;
+
+      @include u-mqMax {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -2529,8 +2907,17 @@
     width: 100%;
     text-align: center;
     @extend %title_23;
-
     @include u-flex($fd: column, $fw: nowrap, $jc: center, $ai: center);
+
+    @include u-mqMax {
+      height: auto;
+      display: block;
+      width: auto;
+      padding-top: 1.875vw;
+      white-space: normal;
+      text-align: left;
+      word-break: break-all;
+    }
 
     .color-operaMauve & {
       color: $operaMauve;
@@ -2567,6 +2954,10 @@
     .color-antiqueBrass & {
       color: $antiqueBrass;
       height: 75px;
+
+      @include u-mqMax {
+        height: 0;
+      }
     }
 
     .color-tan & {
@@ -2578,10 +2969,24 @@
     }
   }
 
-  &__cardsBody {}
+  &__cardsBody {
+
+    @include u-mqMax {
+      margin-top: 18px;
+      @include u-flex($fd: row, $fw: nowrap, $jc: flex-start, $ai: flex-start);
+
+      @include u-mqMax {
+        margin-top: 4.219vw;
+      }
+    }
+  }
 
   &__cardsBodyFlex {
     @include u-flex($fd: row, $fw: nowrap, $jc: space-between, $ai: stretch);
+
+    @include u-mqMax {
+      display: block;
+    }
   }
 
   &__cardsBodyKv {
@@ -2596,6 +3001,11 @@
 
   &__cardsBodyData {
     margin: 18px auto 0;
+
+    @include u-mqMax {
+      display: block;
+      margin: 0 0 0 4.531vw;
+    }
   }
 
   &__cardsBodyDataText {
@@ -2607,29 +3017,90 @@
     letter-spacing: 0;
     @include u-flex($fd: row, $fw: nowrap, $jc: center, $ai: center);
 
+    @include u-mqMax {
+      height: auto;
+      text-align: left;
+      display: block;
+    }
+
     .row1 & {
       height: 85px;
+
+      @include u-mqMax {
+        height: auto;
+      }
     }
   }
 
   &__cardsBodyDataName {
+    @include u-flex($fd: row, $fw: nowrap, $jc: center, $ai: center);
+
+    @include u-mqMax {
+      display: block;
+    }
+  }
+
+  &__cardsBodyDataNameText {
     color: $black;
     text-align: center;
     @extend %desc_20;
     letter-spacing: 0;
     margin-top: 27px;
+    position: relative;
+    @include u-trs;
+
+    @include u-mqMax {
+      margin: 0;
+      text-align: left;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      left: 0;
+      bottom: 0;
+      // opacity: 0;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+
+      @include u-mqMax {
+        content: none;
+      }
+    }
   }
 
-  &__cardsBodyDataNameSm {
+  &__cardsBodyDataNameTextSm {
     color: $black;
     @extend %desc_15;
     letter-spacing: 0;
   }
 
-  &__cardsBubble {}
+  &__cardsBubbleContent {
+    color: $white;
+    text-align: center;
 
-  &__cardsBubbleContent {}
+    .label {
+      @extend %title_32;
+      display: block;
 
-  &__cardsBubbleSm {}
+      small {
+        @extend %desc_16;
+      }
+    }
+
+    .year {
+      display: block;
+      @extend %desc_17vw;
+      font-weight: bold;
+    }
+
+    .label16 {
+      @extend %desc_16vw;
+      display: block;
+      font-weight: bold;
+    }
+  }
 
 }
