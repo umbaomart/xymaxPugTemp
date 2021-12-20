@@ -1199,6 +1199,13 @@
     @include u-mqMax {
       max-width: 71.875vw;
     }
+
+    &.u-link {
+      @include u-trs;
+      &:hover {
+        opacity: .7;
+      }
+    }
   }
 
   &__next {
@@ -1421,6 +1428,12 @@
 
     &:hover {
       opacity: .7;
+    }
+
+    &.u-notLink {
+      &:hover {
+        opacity: 1;
+      }
     }
 
     &:before {

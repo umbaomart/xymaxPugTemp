@@ -199,6 +199,21 @@
     display: block;
     transition: all .3s;
 
+    &.u-p4 {
+      width: 330px;
+
+      &:not(:last-child) {
+        margin-bottom: 85px;
+      }
+
+      &.u-p4tan {
+        max-width: 330px !important;
+        margin: 0;
+        border: none;
+      }
+      
+    }
+
     &:hover {
       .specialFeatures122021__cardsItemAuthorName {
         &::before {
@@ -854,6 +869,8 @@
   }
 
   &__innerAnchor {
+    width: 1px;
+    height: 1px;
     position: absolute;
     top: -120px;
 

@@ -157,11 +157,11 @@ postSec (common) PC
     @include u-trs;
     
     &.u-tagRevert {
-      background:$red;
+      // background:$red;
       
-      .postSec__postTagText {
-        color: $white;
-      }
+      // .postSec__postTagText {
+      //   color: $white;
+      // }
       
       &:hover {
         background: $white;

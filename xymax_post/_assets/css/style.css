@@ -23804,6 +23804,13 @@ a.sFeatures082021__compTopLink:hover {
     max-width: 71.875vw;
   }
 }
+.specialFeatures122021__footerFlex.u-link {
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+.specialFeatures122021__footerFlex.u-link:hover {
+  opacity: 0.7;
+}
 .specialFeatures122021__next {
   margin: 0 auto;
 }
@@ -24010,6 +24017,9 @@ a.sFeatures082021__compTopLink:hover {
 }
 .specialFeatures122021__nextItem:hover {
   opacity: 0.7;
+}
+.specialFeatures122021__nextItem.u-notLink:hover {
+  opacity: 1;
 }
 .specialFeatures122021__nextItem:before {
   content: "";
@@ -24580,6 +24590,17 @@ a.sFeatures082021__compTopLink:hover {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
+.specialFeatures122021__cardsItem.u-p4 {
+  width: 330px;
+}
+.specialFeatures122021__cardsItem.u-p4:not(:last-child) {
+  margin-bottom: 85px;
+}
+.specialFeatures122021__cardsItem.u-p4.u-p4tan {
+  max-width: 330px !important;
+  margin: 0;
+  border: none;
+}
 .specialFeatures122021__cardsItem:hover .specialFeatures122021__cardsItemAuthorName::before {
   opacity: 1;
 }
@@ -25111,6 +25132,8 @@ a.sFeatures082021__compTopLink:hover {
   }
 }
 .specialFeatures122021__innerAnchor {
+  width: 1px;
+  height: 1px;
   position: absolute;
   top: -120px;
 }
